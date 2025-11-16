@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naples Professional Home Organizer | Luxury Closet & Bedroom Organization</title>
     <meta name="description" content="Luxury closet, walk-in wardrobe, and bedroom organization in Naples, Florida. Christian-based, rooted in 1 Corinthians 14:40.">
-   
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-   
+
     <style>
         :root {
             --gold: #D4AF37;
@@ -25,720 +25,325 @@
             --text-light: #666666;
             --accent-gradient: linear-gradient(135deg, var(--deep-pink), var(--soft-pink));
         }
-       
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-       
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--white);
-            color: var(--text-dark);
-            line-height: 1.8;
-            font-size: 1.1rem;
-            overflow-x: hidden;
-        }
-       
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            color: var(--navy);
-            line-height: 1.25;
-            margin-bottom: 1rem;
-        }
-       
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-       
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-       
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(14px);
-            z-index: 1000;
-            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
-            transition: all 0.4s ease;
-        }
-       
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 6%;
-            max-width: 1700px;
-            margin: 0 auto;
-        }
-       
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 3.5rem;
-            align-items: center;
-            margin-left: auto;
-        }
-       
-        .nav-links a {
-            font-weight: 500;
-            font-size: 1.05rem;
-            color: var(--navy);
-            position: relative;
-            transition: color 0.35s ease;
-            padding: 0.5rem 0;
-        }
-       
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: var(--accent-gradient);
-            transition: width 0.35s ease;
-            border-radius: 2px;
-        }
-       
-        .nav-links a:hover {
-            color: var(--deep-pink);
-        }
-       
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-       
+
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Inter',sans-serif; background:var(--white); color:var(--text-dark); line-height:1.8; font-size:1.1rem; overflow-x:hidden; }
+        h1,h2,h3,h4,h5,h6 { font-family:'Playfair Display',serif; color:var(--navy); line-height:1.25; margin-bottom:1rem; }
+        a { text-decoration:none; color:inherit; }
+        img { max-width:100%; height:auto; display:block; }
+
+        /* Header */
+        header { position:fixed; top:0; width:100%; background:rgba(255,255,255,.97); backdrop-filter:blur(14px); z-index:1000; box-shadow:0 6px 30px rgba(0,0,0,.08); transition:all .4s; }
+        nav { display:flex; justify-content:space-between; align-items:center; padding:1.5rem 6%; max-width:1700px; margin:auto; }
+        .logo { font-family:'Playfair Display',serif; font-weight:700; font-size:1.6rem; color:var(--navy); }
+        .nav-links { display:flex; gap:2.5rem; list-style:none; }
+        .nav-links a { font-weight:500; font-size:1.05rem; color:var(--navy); position:relative; padding:.5rem 0; transition:color .35s; }
+        .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:3px; background:var(--accent-gradient); transition:width .35s; border-radius:2px; }
+        .nav-links a:hover { color:var(--deep-pink); }
+        .nav-links a:hover::after { width:100%; }
+
         .btn-primary {
-            background: var(--deep-pink);
-            color: white;
-            padding: 0.9rem 2.2rem;
-            border-radius: 60px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.45s ease;
-            box-shadow: 0 8px 22px rgba(232, 160, 191, 0.38);
-            letter-spacing: 0.6px;
-            border: 2px solid transparent;
+            background:var(--deep-pink); color:#fff; padding:.9rem 2.2rem; border-radius:60px; font-weight:600; font-size:1rem;
+            transition:all .45s; box-shadow:0 8px 22px rgba(232,160,191,.38); letter-spacing:.6px; border:2px solid transparent;
         }
-       
-        .btn-primary:hover {
-            background: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 14px 32px rgba(212, 175, 55, 0.5);
-            border-color: var(--gold);
-        }
-       
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            min-height: 780px;
-            background:
-                linear-gradient(135deg, rgba(26, 42, 68, 0.88), rgba(232, 160, 191, 0.15)),
-                url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-       
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at center, rgba(232, 160, 191, 0.12), transparent 70%);
-            z-index: 0;
-        }
-       
-        .hero-content {
-            max-width: 1200px;
-            padding: 3rem;
-            position: relative;
-            z-index: 1;
-            animation: fadeInUp 1.2s ease-out;
-        }
-       
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-       
-        .hero h1 {
-            font-size: 3.8rem;
-            margin-bottom: 1.4rem;
-            color: white;
-            text-shadow: 0 6px 20px rgba(0,0,0,0.5);
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            line-height: 1.15;
-        }
-       
-        .hero .subtitle {
-            font-size: 1.65rem;
-            margin-bottom: 2rem;
-            font-weight: 400;
-            opacity: 0.98;
-            letter-spacing: 1px;
-            color: #f8f8f8;
-        }
-       
-        .bible-verse {
-            font-style: italic;
-            font-size: 1.45rem;
-            margin: 2.5rem 0;
-            opacity: 0.96;
-            font-weight: 400;
-            color: var(--soft-pink);
-            text-shadow: 0 3px 12px rgba(0,0,0,0.5);
-            letter-spacing: 0.8px;
-            padding: 1.2rem 2rem;
-            border-left: 4px solid var(--gold);
-            background: rgba(26, 42, 68, 0.3);
-            border-radius: 0 12px 12px 0;
-            display: inline-block;
-        }
-       
-        /* Section General */
-        section {
-            padding: 130px 6%;
-            max-width: 1700px;
-            margin: 0 auto;
-        }
-       
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 4rem;
-            position: relative;
-            color: var(--navy);
-            font-weight: 700;
-            letter-spacing: 0.8px;
-        }
-       
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -22px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 5px;
-            background: var(--accent-gradient);
-            border-radius: 4px;
-        }
-       
-        /* About Me */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-       
-        .about-text p {
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-            color: var(--text-light);
-            line-height: 1.9;
-        }
-       
-        .about-text strong {
-            color: var(--navy);
-            font-weight: 600;
+        .btn-primary:hover { background:var(--gold); transform:translateY(-5px); box-shadow:0 14px 32px rgba(212,175,55,.5); border-color:var(--gold); }
+
+        /* Mobile menu */
+        .menu-toggle { display:none; cursor:pointer; font-size:1.8rem; color:var(--navy); }
+        @media (max-width:768px){
+            .menu-toggle { display:block; }
+            .nav-links { position:fixed; top:100%; left:0; width:100%; background:var(--white); flex-direction:column; align-items:center; padding:2rem 0; transform:translateY(-150%); transition:transform .4s; box-shadow:0 10px 30px rgba(0,0,0,.1); }
+            .nav-links.active { transform:translateY(0); }
+            .nav-links a { padding:1rem 0; font-size:1.2rem; }
         }
 
-        /* SMALL IMAGE UNDER BUTTON */
-        .transformation-image {
-            max-width: 300px;
-            margin: 2.5rem auto 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 18px 45px rgba(232, 160, 191, 0.22);
-            border: 5px solid var(--soft-pink);
-            transition: all 0.5s ease;
+        /* Hero */
+        .hero{
+            height:100vh; min-height:780px;
+            background:linear-gradient(135deg,rgba(26,42,68,.88),rgba(232,160,191,.15)),
+                       url('https://images.unsplash.com/photo-1558618666-9142c2d5ff9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;
+            background-attachment:fixed; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; position:relative;
         }
+        .hero::before{ content:""; position:absolute; inset:0; background:radial-gradient(circle at center,rgba(232,160,191,.12),transparent 70%); z-index:0; }
+        .hero-content{ max-width:1200px; padding:3rem; position:relative; z-index:1; animation:fadeInUp 1.2s ease-out; }
+        @keyframes fadeInUp{ from{opacity:0;transform:translateY(40px);} to{opacity:1;transform:translateY(0);} }
+        .hero h1{ font-size:3.8rem; margin-bottom:1.4rem; text-shadow:0 6px 20px rgba(0,0,0,.5); letter-spacing:1.5px; font-weight:700; line-height:1.15; }
+        .hero .subtitle{ font-size:1.65rem; margin-bottom:2rem; opacity:.98; letter-spacing:1px; color:#f8f8f8; }
+        .bible-verse{ font-style:italic; font-size:1.45rem; margin:2.5rem 0; opacity:.96; color:var(--soft-pink); text-shadow:0 3px 12px rgba(0,0,0,.5); padding:1.2rem 2rem; border-left:4px solid var(--gold); background:rgba(26,42,68,.3); border-radius:0 12px 12px 0; display:inline-block; }
 
-        .transformation-image:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 28px 60px rgba(232, 160, 191, 0.28);
-        }
+        /* Sections */
+        section{ padding:130px 6%; max-width:1700px; margin:auto; }
+        .section-title{ text-align:center; font-size:2.8rem; margin-bottom:4rem; position:relative; color:var(--navy); font-weight:700; letter-spacing:.8px; }
+        .section-title::after{ content:''; position:absolute; bottom:-22px; left:50%; transform:translateX(-50%); width:120px; height:5px; background:var(--accent-gradient); border-radius:4px; }
 
-        .transformation-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
+        /* About */
+        .about-grid{ display:grid; gap:2rem; align-items:center; }
+        .about-text p{ margin-bottom:2rem; font-size:1.2rem; color:var(--text-light); line-height:1.9; }
+        .about-text strong{ color:var(--navy); font-weight:600; }
+        .transformation-image{ max-width:300px; margin:2.5rem auto 0; border-radius:20px; overflow:hidden; box-shadow:0 18px 45px rgba(232,160,191,.22); border:5px solid var(--soft-pink); transition:all .5s; }
+        .transformation-image:hover{ transform:translateY(-8px); box-shadow:0 28px 60px rgba(232,160,191,.28); }
+        .transformation-image img{ transition:transform .7s; }
+        .transformation-image:hover img{ transform:scale(1.07); }
 
-        .transformation-image:hover img {
-            transform: scale(1.07);
-        }
-       
-        /* Specializations - BULLET POINTS (•), NO 'Check' */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 3.5rem;
-            margin-top: 5rem;
-        }
-       
-        .service-card {
-            background: white;
-            border-radius: 26px;
-            overflow: hidden;
-            box-shadow: 0 18px 48px rgba(232, 160, 191, 0.15);
-            transition: all 0.6s ease;
-            border: 1px solid var(--light-gray);
-            position: relative;
-            overflow: hidden;
-        }
-       
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 6px;
-            background: var(--accent-gradient);
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
-       
-        .service-card:hover::before {
-            opacity: 1;
-        }
-       
-        .service-card:hover {
-            transform: translateY(-18px);
-            box-shadow: 0 35px 70px rgba(232, 160, 191, 0.28);
-            border-color: var(--deep-pink);
-        }
-       
-        .service-header {
-            background: linear-gradient(135deg, var(--navy), #2c3e5a);
-            color: white;
-            padding: 2.4rem;
-            text-align: center;
-        }
-       
-        .service-header h3 {
-            color: white;
-            margin-bottom: 0.8rem;
-            font-size: 1.85rem;
-            font-weight: 600;
-        }
-       
-        .price {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--gold);
-            letter-spacing: 0.6px;
-        }
-       
-        .price span {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-       
-        .service-body {
-            padding: 2.2rem 2.8rem;
-        }
-       
-        .service-body ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-       
-        .service-body li {
-            padding: 0.35rem 0;
-            position: relative;
-            padding-left: 1.8rem;
-            font-size: 0.92rem;
-            color: var(--text-light);
-            line-height: 1.4;
-            transition: color 0.3s ease;
-        }
-       
-        .service-body li:hover {
-            color: var(--navy);
-        }
-       
-        .service-body li::before {
-            content: '•';
-            position: absolute;
-            left: 0;
-            color: var(--deep-pink);
-            font-weight: bold;
-            font-size: 1.2rem;
-            line-height: 1;
-        }
-       
-        .note {
-            font-size: 0.82rem;
-            color: #888;
-            margin-top: 1.2rem;
-            font-style: italic;
-            line-height: 1.35;
-            padding: 0.8rem;
-            background: var(--light-gray);
-            border-radius: 10px;
-        }
+        /* Services */
+        .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(380px,1fr)); gap:3.5rem; margin-top:5rem; }
+        .service-card{ background:#fff; border-radius:26px; overflow:hidden; box-shadow:0 18px 48px rgba(232,160,191,.15); transition:all .6s; border:1px solid var(--light-gray); position:relative; }
+        .service-card::before{ content:''; position:absolute; top:0; left:0; right:0; height:6px; background:var(--accent-gradient); opacity:0; transition:opacity .6s; }
+        .service-card:hover::before{ opacity:1; }
+        .service-card:hover{ transform:translateY(-18px); box-shadow:0 35px 70px rgba(232,160,191,.28); border-color:var(--deep-pink); }
+        .service-header{ background:linear-gradient(135deg,var(--navy),#2c3e5a); color:#fff; padding:2.4rem; text-align:center; }
+        .service-header h3{ margin-bottom:.8rem; font-size:1.85rem; font-weight:600; }
+        .price{ font-size:2.8rem; font-weight:700; color:var(--gold); letter-spacing:.6px; }
+        .price span{ font-size:1.1rem; font-weight:500; }
+        .service-body{ padding:2.2rem 2.8rem; }
+        .service-body ul{ list-style:none; }
+        .service-body li{ padding:.35rem 0 .35rem 1.8rem; position:relative; font-size:.92rem; color:var(--text-light); line-height:1.4; transition:color .3s; }
+        .service-body li:hover{ color:var(--navy); }
+        .service-body li::before{ content:'•'; position:absolute; left:0; color:var(--deep-pink); font-weight:bold; font-size:1.2rem; }
+        .note{ font-size:.82rem; color:#888; margin-top:1.2rem; font-style:italic; padding:.8rem; background:var(--light-gray); border-radius:10px; }
 
         /* Memberships */
-        .membership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3.2rem;
-            margin-top: 5rem;
-        }
-       
-        .membership-card {
-            background: linear-gradient(135deg, #fdfaf7, #ffffff);
-            border-radius: 28px;
-            padding: 2.8rem;
-            text-align: center;
-            box-shadow: 0 22px 50px rgba(232, 160, 191, 0.15);
-            border: 2px solid transparent;
-            transition: all 0.6s ease;
-            position: relative;
-        }
-       
-        .membership-card::after {
-            content: '';
-            position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
-            background: var(--accent-gradient);
-            border-radius: 30px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.6s ease;
-        }
-       
-        .membership-card:hover::after {
-            opacity: 1;
-        }
-       
-        .membership-card:hover {
-            border-color: transparent;
-            transform: translateY(-15px);
-            box-shadow: 0 32px 65px rgba(232, 160, 191, 0.22);
-        }
-       
-        .membership-price {
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: var(--deep-pink);
-            margin: 1.2rem 0;
-            letter-spacing: 0.6px;
-        }
-       
-        .membership-card ul {
-            text-align: left;
-            margin: 1.8rem 0;
-        }
-       
-        .membership-card li {
-            margin: 0.8rem 0;
-            padding-left: 2.2rem;
-            position: relative;
-            font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.35;
-        }
-       
-        .membership-card li::before {
-            content: '✦';
-            position: absolute;
-            left: 0;
-            color: var(--deep-pink);
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+        .membership-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:3.2rem; margin-top:5rem; }
+        .membership-card{ background:linear-gradient(135deg,#fdfaf7,#fff); border-radius:28px; padding:2.8rem; text-align:center; box-shadow:0 22px 50px rgba(232,160,191,.15); border:2px solid transparent; transition:all .6s; position:relative; }
+        .membership-card::after{ content:''; position:absolute; inset:-2px; background:var(--accent-gradient); border-radius:30px; z-index:-1; opacity:0; transition:opacity .6s; }
+        .membership-card:hover::after{ opacity:1; }
+        .membership-card:hover{ border-color:transparent; transform:translateY(-15px); box-shadow:0 32px 65px rgba(232,160,191,.22); }
+        .membership-price{ font-size:3.2rem; font-weight:700; color:var(--deep-pink); margin:1.2rem 0; letter-spacing:.6px; }
+        .membership-card ul{ text-align:left; margin:1.8rem 0; }
+        .membership-card li{ margin:.8rem 0; padding-left:2.2rem; position:relative; font-size:.95rem; color:var(--text-light); line-height:1.35; }
+        .membership-card li::before{ content:'✦'; position:absolute; left:0; color:var(--deep-pink); font-weight:bold; font-size:1.1rem; }
+        .note-small{ font-size:.82rem; color:#888; margin-top:1rem; font-style:italic; }
 
-        .note-small {
-            font-size: 0.82rem;
-            color: #888;
-            margin-top: 1rem;
-            font-style: italic;
-        }
+        /* Footer */
+        footer{ background:var(--navy); color:#fff; padding:4rem 6% 2rem; }
+        .footer-content{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:3rem; max-width:1700px; margin:auto; }
+        .footer-col h4{ font-size:1.4rem; margin-bottom:1rem; color:var(--gold); }
+        .footer-col p, .footer-col a{ color:#ddd; font-size:.95rem; }
+        .footer-col a:hover{ color:var(--gold); }
+        .social-links{ display:flex; gap:1rem; margin-top:1rem; }
+        .social-links a{ font-size:1.5rem; color:#ddd; transition:color .3s; }
+        .social-links a:hover{ color:var(--gold); }
+        .copyright{ text-align:center; margin-top:3rem; font-size:.85rem; color:#aaa; }
 
         /* Responsive */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 3.2rem; }
-            .hero .subtitle { font-size: 1.5rem; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .transformation-image { max-width: 260px; }
-            .hero h1 { font-size: 2.8rem; }
-            .service-body li { font-size: 0.88rem; }
+        @media (max-width:992px){ .hero h1{font-size:3.2rem;} .hero .subtitle{font-size:1.5rem;} }
+        @media (max-width:768px){
+            .hero h1{font-size:2.8rem;}
+            .transformation-image{max-width:260px;}
+            .service-body li{font-size:.88rem;}
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#specializations">Services</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn-primary">Book Now</a>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Naples Professional Home Organizer</h1>
-            <p class="subtitle">Luxury Closet & Bedroom Organization in Naples, Florida</p>
-            <p class="bible-verse">"Let all things be done decently and in order." — 1 Corinthians 14:40</p>
-            <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
-        </div>
-    </section>
+<!-- Header -->
+<header>
+    <nav>
+        <div class="logo">Naples Organizer</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#specializations">Services</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-primary">Book Now</a>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+    </nav>
+</header>
 
-    <!-- About Me -->
-    <section id="about">
-        <h2 class="section-title">Meet Rhina</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>Hi, I'm <strong>Rhina</strong>, founder of <strong>Naples Professional Home Organizer</strong> — a faith-centered luxury organization service for Naples' most discerning residents.</p>
-               
-                <p>My mission is simple: create serene, functional spaces that enhance your lifestyle and reflect biblical order. As 1 Corinthians 14:40 reminds us, <em>"Let all things be done decently and in order."</em> This verse is the heartbeat of every closet, bedroom, and home I transform.</p>
-               
-                <p>With over a decade of experience in high-end residential organization, I specialize in walk-in closets, luxury wardrobes, and master suites. Discretion, precision, and excellence define my work.</p>
-               
-                <p>Whether you're transitioning seasons, downsizing, or craving daily peace in your space, I bring calm, clarity, and beauty to your home — one perfectly folded sweater at a time.</p>
-               
-                <a href="#contact" class="btn-primary" style="display: inline-block; margin-top: 2.5rem;">Start Your Transformation</a>
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Naples Professional Home Organizer</h1>
+        <p class="subtitle">Luxury Closet & Bedroom Organization in Naples, Florida</p>
+        <p class="bible-verse">"Let all things be done decently and in order." — 1 Corinthians 14:40</p>
+        <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
+    </div>
+</section>
 
-                <!-- SMALL IMAGE UNDER BUTTON -->
-                <div class="transformation-image">
-                    <img src="https://i.imgur.com/8vJqK9L.jpeg" alt="Rhina - Start Your Transformation">
-                </div>
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">Meet Rhina</h2>
+    <div class="about-grid">
+        <div class="about-text">
+            <p>Hi, I'm <strong>Rhina</strong>, founder of <strong>Naples Professional Home Organizer</strong> — a faith-centered luxury organization service for Naples' most discerning residents.</p>
+            <p>My mission is simple: create serene, functional spaces that enhance your lifestyle and reflect biblical order. As 1 Corinthians 14:40 reminds us, <em>"Let all things be done decently and in order."</em> This verse is the heartbeat of every closet, bedroom, and home I transform.</p>
+            <p>With over a decade of experience in high-end residential organization, I specialize in walk-in closets, luxury wardrobes, and master suites. Discretion, precision, and excellence define my work.</p>
+            <p>Whether you're transitioning seasons, downsizing, or craving daily peace in your space, I bring calm, clarity, and beauty to your home — one perfectly folded sweater at a time.</p>
+            <a href="#contact" class="btn-primary" style="display:inline-block;margin-top:2.5rem;">Start Your Transformation</a>
+            <div class="transformation-image">
+                <img src="https://i.imgur.com/8vjqk9l.jpeg" alt="Rhina - Start Your Transformation">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Specializations - BULLET POINTS (•) INSTEAD OF 'Check' -->
-    <section id="specializations" style="background: var(--beige);">
-        <h2 class="section-title">Luxury Organization Services</h2>
-       
-        <div class="services-grid">
-            <!-- BASIC CLOSET -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Basic Closet</h3>
-                    <p>4ft x 5ft</p>
-                    <div class="price">$50<span>/hour</span></div>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Assess and measure the closet</li>
-                        <li>Discuss client preferences and needs</li>
-                        <li>Estimate costs at $50 per hour 5 hour minimum</li>
-                        <li>Create a tailored organization plan</li>
-                        <li>Sort and categorize current items</li>
-                        <li>Prepare and light clean the closet space</li>
-                        <li>Shopping for organize storage container (cost not included) will be charge to client up front</li>
-                        <li>No structural changes for storage units</li>
-                        <li>Arrange and hang clothing and accessories</li>
-                        <li>Organize by client's preferences (e.g., color, type, season)</li>
-                        <li>Declutter keeping, donating and selling</li>
-                        <li>Ensure easy item access</li>
-                        <li>Offer maintenance tips</li>
-                        <li>Conduct a final walkthrough for client satisfaction</li>
-                        <li>Calculate the total project cost based on hours worked</li>
-                        <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
-                    </ul>
-                    <p class="note">
-                        Note: Deep Cleaning and large debris disposal may entail extra charges, requiring a junk removal service (additional cost).<br>
-                        Monthly membership offers bi-monthly light organization sessions.<br>
-                        Charges may vary for a full closet redo, not included in the membership.<br>
-                        Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
-                    </p>
-                </div>
+<!-- Services -->
+<section id="specializations" style="background:var(--beige);">
+    <h2 class="section-title">Luxury Organization Services</h2>
+
+    <div class="services-grid">
+        <!-- BASIC CLOSET -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Basic Closet</h3>
+                <p>4ft x 5ft</p>
+                <div class="price">$50<span>/hour</span></div>
             </div>
-
-            <!-- DEEP WALK-IN CLOSET -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Deep Walk-In Closet</h3>
-                    <p>7ft x 10ft</p>
-                    <div class="price">$60<span>/hour</span></div>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Assess and measure the closet</li>
-                        <li>Discuss client preferences and needs</li>
-                        <li>Estimate costs at $60 per hour 5 hour minimum</li>
-                        <li>Develop a personalized organization plan</li>
-                        <li>Categorize current items</li>
-                        <li>Prepare and light clean the closet space</li>
-                        <li>Assist with purchasing necessary storage container organizer (cost not included will be charge up front)</li>
-                        <li>No structural changes will be done for storage units</li>
-                        <li>Arrange and hang clothing and accessories</li>
-                        <li>Organize items according to client preferences (e.g., by color, type, season)</li>
-                        <li>Maximize space efficiency</li>
-                        <li>Ensure easy item access</li>
-                        <li>Declutter: keeping, donating and selling</li>
-                        <li>Conduct a final satisfaction walkthrough</li>
-                        <li>Calculate the total project cost based on hours worked</li>
-                        <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
-                    </ul>
-                    <p class="note">
-                        Note: Deep cleaning and large debris disposal may incur additional charges, requiring a junk removal service (additional cost).<br>
-                        A monthly membership is available, offering bi-monthly light organization sessions.<br>
-                        Separate charges apply for a full closet redo, which is not included in the membership.<br>
-                        Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
-                    </p>
-                </div>
-            </div>
-
-            <!-- MASTER BEDROOM -->
-            <div class="service-card">
-                <div class="service-header">
-                    <h3>Master Bedroom</h3>
-                    <p>12ft x 18ft</p>
-                    <div class="price">$70<span>/hour</span></div>
-                </div>
-                <div class="service-body">
-                    <ul>
-                        <li>Evaluate 12x18 bedroom; please note that deep cleaning is an extra cost paid directly to a cleaning company</li>
-                        <li>Engage in a discussion about the client's preferences and organizational needs</li>
-                        <li>Provide a pricing quote of $70 per hour for organizational services. 5 hour minimum</li>
-                        <li>Craft a personalized comprehensive closet organization plan</li>
-                        <li>Shopping for Organize storage container and additional fees will be charge to the client upfront</li>
-                        <li>Important: Disposing of large debris might necessitate the hiring of a junk removal service, which incurs an additional cost</li>
-                        <li>No structural modifications will be made for storage additions</li>
-                        <li>Consider a monthly membership option with bi-monthly light organization sessions</li>
-                        <li>Full closet redo services are available but are subject to separate charges and are not included in the membership</li>
-                        <li>If desired, a referral for custom storage upgrades featuring luxury elements can be provided; however, this cost is separate from my services</li>
-                    </ul>
-                </div>
+            <div class="service-body">
+                <ul>
+                    <li>Assess and measure the closet</li>
+                    <li>Discuss client preferences and needs</li>
+                    <li>Estimate costs at $50 per hour 5 hour minimum</li>
+                    <li>Create a tailored organization plan</li>
+                    <li>Sort and categorize current items</li>
+                    <li>Prepare and light clean the closet space</li>
+                    <li>Shopping for organize storage container (cost not included) will be charge to client up front</li>
+                    <li>No structural changes for storage units</li>
+                    <li>Arrange and hang clothing and accessories</li>
+                    <li>Organize by client's preferences (e.g., color, type, season)</li>
+                    <li>Declutter keeping, donating and selling</li>
+                    <li>Ensure easy item access</li>
+                    <li>Offer maintenance tips</li>
+                    <li>Conduct a final walkthrough for client satisfaction</li>
+                    <li>Calculate the total project cost based on hours worked</li>
+                    <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
+                </ul>
+                <p class="note">
+                    Note: Deep Cleaning and large debris disposal may entail extra charges, requiring a junk removal service (additional cost).<br>
+                    Monthly membership offers bi-monthly light organization sessions.<br>
+                    Charges may vary for a full closet redo, not included in the membership.<br>
+                    Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
+                </p>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 5rem;">
-            <p style="font-size: 1.2rem; max-width: 1000px; margin: 0 auto 3rem; color: var(--text-light);">
-                <strong>Ongoing Care Available:</strong> Monthly or bi-monthly touch-ups to maintain your sanctuary. Full redesigns and custom built-ins quoted separately.
-            </p>
-            <a href="#memberships" class="btn-primary">Explore Memberships</a>
+        <!-- DEEP WALK-IN CLOSET -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Deep Walk-In Closet</h3>
+                <p>7ft x 10ft</p>
+                <div class="price">$60<span>/hour</span></div>
+            </div>
+            <div class="service-body">
+                <ul>
+                    <li>Assess and measure the closet</li>
+                    <li>Discuss client preferences and needs</li>
+                    <li>Estimate costs at $60 per hour 5 hour minimum</li>
+                    <li>Develop a personalized organization plan</li>
+                    <li>Categorize current items</li>
+                    <li>Prepare and light clean the closet space</li>
+                    <li>Assist with purchasing necessary storage container organizer (cost not included will be charge up front)</li>
+                    <li>No structural changes will be done for storage units</li>
+                    <li>Arrange and hang clothing and accessories</li>
+                    <li>Organize items according to client preferences (e.g., by color, type, season)</li>
+                    <li>Maximize space efficiency</li>
+                    <li>Ensure easy item access</li>
+                    <li>Declutter: keeping, donating and selling</li>
+                    <li>Conduct a final satisfaction walkthrough</li>
+                    <li>Calculate the total project cost based on hours worked</li>
+                    <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
+                </ul>
+                <p class="note">
+                    Note: Deep cleaning and large debris disposal may incur additional charges, requiring a junk removal service (additional cost).<br>
+                    A monthly membership is available, offering bi-monthly light organization sessions.<br>
+                    Separate charges apply for a full closet redo, which is not included in the membership.<br>
+                    Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
+                </p>
+            </div>
         </div>
-    </section>
 
-    <!-- Memberships -->
-    <section id="memberships" style="background: var(--beige);">
-        <h2 class="section-title">Peace of Mind Memberships</h2>
-        <p style="text-align: center; max-width: 1000px; margin: 0 auto 5rem; font-size: 1.2rem; color: var(--text-light);">
-            Keep your space pristine year-round with regular light touch-ups. Full closet redo services require separate payment.
+        <!-- MASTER BEDROOM -->
+        <div class="service-card">
+            <div class="service-header">
+                <h3>Master Bedroom</h3>
+                <p>12ft x 18ft</p>
+                <div class="price">$70<span>/hour</span></div>
+            </div>
+            <div class="service-body">
+                <ul>
+                    <li>Evaluate 12x18 bedroom; please note that deep cleaning is an extra cost paid directly to a cleaning company</li>
+                    <li>Engage in a discussion about the client's preferences and organizational needs</li>
+                    <li>Provide a pricing quote of $70 per hour for organizational services. 5 hour minimum</li>
+                    <li>Craft a personalized comprehensive closet organization plan</li>
+                    <li>Shopping for Organize storage container and additional fees will be charge to the client upfront</li>
+                    <li>Important: Disposing of large debris might necessitate the hiring of a junk removal service, which incurs an additional cost</li>
+                    <li>No structural modifications will be made for storage additions</li>
+                    <li>Consider a monthly membership option with bi-monthly light organization sessions</li>
+                    <li>Full closet redo services are available but are subject to separate charges and are not included in the membership</li>
+                    <li>If desired, a referral for custom storage upgrades featuring luxury elements can be provided; however, this cost is separate from my services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:5rem;">
+        <p style="font-size:1.2rem;max-width:1000px;margin:0 auto 3rem;color:var(--text-light);">
+            <strong>Ongoing Care Available:</strong> Monthly or bi-monthly touch-ups to maintain your sanctuary. Full redesigns and custom built-ins quoted separately.
         </p>
-       
-        <div class="membership-grid">
-            <div class="membership-card">
-                <h3>Essential</h3>
-                <div class="membership-price">$110</div>
-                <p><em>per month</em></p>
-                <ul>
-                    <li>Covers two light organization sessions monthly</li>
-                    <li>Priority booking</li>
-                    <li>Email organization tips</li>
-                </ul>
-                <p class="note-small">Full closet redo services require separate payment</p>
-            </div>
-           
-            <div class="membership-card" style="border-color: var(--deep-pink); transform: scale(1.08);">
-                <h3 style="color: var(--deep-pink);">Premium</h3>
-                <div class="membership-price">$120</div>
-                <p><em>per month</em></p>
-                <ul>
-                    <li>Covers two light organization sessions monthly</li>
-                    <li>Seasonal wardrobe swap</li>
-                    <li>Monthly digital guide</li>
-                    <li>Priority support</li>
-                </ul>
-                <p class="note-small">Most Popular • Full closet redo services require separate payment</p>
-            </div>
-           
-            <div class="membership-card">
-                <h3>Elite</h3>
-                <div class="membership-price">$130</div>
-                <p><em>per month</em></p>
-                <ul>
-                    <li>Covers two light organization sessions monthly</li>
-                    <li>Quarterly deep review</li>
-                    <li>Custom maintenance plan</li>
-                    <li>VIP scheduling</li>
-                </ul>
-                <p class="note-small">Full peace of mind • Full closet redo services require separate payment</p>
-            </div>
-        </div>
-       
-        <div style="text-align: center; margin-top: 5rem;">
-            <a href="#contact" class="btn-primary">Join Today</a>
-        </div>
-    </section>
+        <a href="#memberships" class="btn-primary">Explore Memberships</a>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Naples Professional Home Organizer</h4>
-                <p>Luxury organization rooted in faith, precision, and peace.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#about">About Rhina</a></li>
-                    <li><a href="#specializations">Services</a></li>
-                    <li><a href="#memberships">Memberships</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p><a href="mailto:rhina@naplesprofessionalhomeorganizer.com">rhina@naplesprofessionalhomeorganizer.com</a></p>
-                <p>Naples, Florida</p>
-                <p><em>By appointment only</em></p>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2025 Naples Professional Home Organizer. All rights reserved.
-        </div>
-    </footer>
+<!-- Memberships -->
+<section id="memberships" style="background:var(--beige);">
+    <h2 class="section-title">Peace of Mind Memberships</h2>
+    <p style="text-align:center;max-width:1000px;margin:0 auto 5rem;font-size:1.2rem;color:var(--text-light);">
+        Keep your space pristine year-round with regular light touch-ups. Full closet redo services require separate payment.
+    </p>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+    <div class="membership-grid">
+        <div class="membership-card">
+            <h3>Essential</h3>
+            <div class="membership-price">$110</div>
+            <p><em>per month</em></p>
+            <ul>
+                <li>Covers two light organization sessions monthly</li>
+                <li>Priority booking</li>
+                <li>Email organization tips</li>
+            </ul>
+            <p class="note-small">Full closet redo services require separate payment</p>
+        </div>
+
+        <div class="membership-card" style="border-color:var(--deep-pink);transform:scale(1.08);">
+            <h3 style="color:var(--deep-pink);">Premium</h3>
+            <div class="membership-price">$120</div>
+            <p><em>per month</em></p>
+            <ul>
+                <li>Covers two light organization sessions monthly</li>
+                <li>Seasonal wardrobe swap</li>
+                <li>Monthly digital guide</li>
+                <li>Priority support</li>
+            </ul>
+            <p class="note-small">Most Popular • Full closet redo services require separate payment</p>
+        </div>
+
+        <div class="membership-card">
+            <h3>Elite</h3>
+            <div class="membership-price">$130</div>
+            <p><em>per month</em></p>
+            <ul>
+                <li>Covers two light organization sessions monthly</li>
+                <li>Quarterly deep review</li>
+                <li>Custom maintenance plan</li>
+                <li>VIP scheduling</li>
+            </ul>
+            <p class="note-small">Full peace of mind • Full closet redo services require separate payment</p>
+        </div>
+    </div>
+
+    <div style="text-align:center;margin-top:5rem;">
+        <a href="#contact" class="btn-primary">Join Today</a>
+    </div>
+</section>
+
+<!-- Placeholder sections (replace with real content later) -->
+<section id="gallery" style="background:var(--white);">
+    <h2 class="section-title">Gallery</h2>
+    <p style="text-align:center;color:var(--text-light);">Coming soon – beautiful before-and-after transformations.</p>
+</section>
+
+<section id="blog" style="background:var(--beige
