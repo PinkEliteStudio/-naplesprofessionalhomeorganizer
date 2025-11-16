@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naples Professional Home Organizer | Luxury Closet & Bedroom Organization</title>
-    <meta name="description" content="Naples Professional Home Organizer by Rhina. Luxury closet, walk-in wardrobe, and bedroom organization in Naples, Florida. Christian-based, rooted in 1 Corinthians 14:40.">
-    
-    <!-- Google Fonts: Playfair Display + Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <meta name="description" content="Luxury closet, walk-in wardrobe, and bedroom organization in Naples, Florida. Christian-based, rooted in 1 Corinthians 14:40.">
+   
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
+   
     <style>
         :root {
             --gold: #D4AF37;
@@ -23,145 +23,128 @@
             --light-gray: #F0E6EA;
             --text-dark: #2D2D2D;
             --text-light: #666666;
+            --accent-gradient: linear-gradient(135deg, var(--deep-pink), var(--soft-pink));
         }
-        
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+       
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--white);
             color: var(--text-dark);
-            line-height: 1.75;
-            font-size: 1.05rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            overflow-x: hidden;
         }
-        
+       
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
             color: var(--navy);
-            line-height: 1.3;
+            line-height: 1.25;
+            margin-bottom: 1rem;
         }
-        
+       
         a {
             text-decoration: none;
             color: inherit;
         }
-        
+       
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
-        
+       
         /* Header & Navigation */
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(14px);
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            transition: all 0.3s ease;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
         }
-        
+       
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.3rem 5%;
-            max-width: 1600px;
+            padding: 1.5rem 6%;
+            max-width: 1700px;
             margin: 0 auto;
         }
-        
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.1rem;
-            font-weight: 700;
-            color: var(--deep-pink);
-            letter-spacing: 0.6px;
-            line-height: 1.1;
-            white-space: nowrap;
-        }
-        
-        .logo .main {
-            display: block;
-            font-size: 1.8rem;
-            color: var(--deep-pink);
-        }
-        
-        .logo .sub {
-            display: block;
-            font-size: 1.4rem;
-            color: var(--navy);
-            font-weight: 600;
-            letter-spacing: 0.8px;
-            margin-top: -4px;
-        }
-        
+       
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 3rem;
+            gap: 3.5rem;
             align-items: center;
+            margin-left: auto;
         }
-        
+       
         .nav-links a {
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 1.05rem;
             color: var(--navy);
             position: relative;
-            transition: color 0.3s ease;
+            transition: color 0.35s ease;
+            padding: 0.5rem 0;
         }
-        
+       
         .nav-links a::after {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: 0;
             left: 0;
             width: 0;
-            height: 2.5px;
-            background: var(--deep-pink);
-            transition: width 0.3s ease;
+            height: 3px;
+            background: var(--accent-gradient);
+            transition: width 0.35s ease;
             border-radius: 2px;
         }
-        
+       
         .nav-links a:hover {
             color: var(--deep-pink);
         }
-        
+       
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+       
         .btn-primary {
             background: var(--deep-pink);
             color: white;
-            padding: 0.85rem 2rem;
-            border-radius: 50px;
+            padding: 0.9rem 2.2rem;
+            border-radius: 60px;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.4s ease;
-            box-shadow: 0 6px 18px rgba(232, 160, 191, 0.35);
-            letter-spacing: 0.5px;
+            font-size: 1rem;
+            transition: all 0.45s ease;
+            box-shadow: 0 8px 22px rgba(232, 160, 191, 0.38);
+            letter-spacing: 0.6px;
+            border: 2px solid transparent;
         }
-        
+       
         .btn-primary:hover {
             background: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.45);
+            transform: translateY(-5px);
+            box-shadow: 0 14px 32px rgba(212, 175, 55, 0.5);
+            border-color: var(--gold);
         }
-        
+       
         /* Hero Section */
         .hero {
             height: 100vh;
-            min-height: 700px;
-            background: 
-                linear-gradient(rgba(26, 42, 68, 0.82), rgba(26, 42, 68, 0.82)),
-                url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=85') center/cover no-repeat;
+            min-height: 780px;
+            background:
+                linear-gradient(135deg, rgba(26, 42, 68, 0.88), rgba(232, 160, 191, 0.15)),
+                url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=90') center/cover no-repeat;
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -170,503 +153,337 @@
             position: relative;
             overflow: hidden;
         }
-        
+       
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(232, 160, 191, 0.12), transparent 70%);
+            z-index: 0;
+        }
+       
         .hero-content {
-            max-width: 1000px;
-            padding: 2.5rem;
+            max-width: 1200px;
+            padding: 3rem;
             position: relative;
             z-index: 1;
+            animation: fadeInUp 1.2s ease-out;
         }
-        
+       
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+       
         .hero h1 {
-            font-size: 5.2rem;
-            margin-bottom: 1.2rem;
+            font-size: 3.8rem;
+            margin-bottom: 1.4rem;
             color: white;
-            text-shadow: 0 4px 16px rgba(0,0,0,0.5);
-            letter-spacing: 1.2px;
+            text-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            letter-spacing: 1.5px;
             font-weight: 700;
+            line-height: 1.15;
         }
-        
+       
         .hero .subtitle {
-            font-size: 1.6rem;
-            margin-bottom: 1.8rem;
+            font-size: 1.65rem;
+            margin-bottom: 2rem;
             font-weight: 400;
-            opacity: 0.96;
-            letter-spacing: 0.8px;
-            color: #f0f0f0;
+            opacity: 0.98;
+            letter-spacing: 1px;
+            color: #f8f8f8;
         }
-        
+       
         .bible-verse {
             font-style: italic;
             font-size: 1.45rem;
-            margin: 2.2rem 0;
-            opacity: 0.94;
+            margin: 2.5rem 0;
+            opacity: 0.96;
             font-weight: 400;
             color: var(--soft-pink);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-            letter-spacing: 0.6px;
+            text-shadow: 0 3px 12px rgba(0,0,0,0.5);
+            letter-spacing: 0.8px;
+            padding: 1.2rem 2rem;
+            border-left: 4px solid var(--gold);
+            background: rgba(26, 42, 68, 0.3);
+            border-radius: 0 12px 12px 0;
+            display: inline-block;
         }
-        
+       
         /* Section General */
         section {
-            padding: 110px 5%;
-            max-width: 1600px;
+            padding: 130px 6%;
+            max-width: 1700px;
             margin: 0 auto;
         }
-        
+       
         .section-title {
             text-align: center;
-            font-size: 3.4rem;
-            margin-bottom: 3.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
             position: relative;
             color: var(--navy);
-            font-weight: 600;
+            font-weight: 700;
+            letter-spacing: 0.8px;
         }
-        
+       
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -18px;
+            bottom: -22px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: var(--deep-pink);
-            border-radius: 3px;
+            width: 120px;
+            height: 5px;
+            background: var(--accent-gradient);
+            border-radius: 4px;
         }
-        
+       
         /* About Me */
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
+            grid-template-columns: 1fr;
+            gap: 2rem;
             align-items: center;
         }
-        
+       
         .about-text p {
-            margin-bottom: 1.8rem;
-            font-size: 1.15rem;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
             color: var(--text-light);
+            line-height: 1.9;
         }
-        
+       
         .about-text strong {
             color: var(--navy);
+            font-weight: 600;
         }
-        
-        .about-image {
+
+        /* SMALL IMAGE UNDER BUTTON */
+        .transformation-image {
+            max-width: 300px;
+            margin: 2.5rem auto 0;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 22px 50px rgba(232, 160, 191, 0.22);
+            box-shadow: 0 18px 45px rgba(232, 160, 191, 0.22);
             border: 5px solid var(--soft-pink);
             transition: all 0.5s ease;
         }
-        
-        .about-image:hover {
+
+        .transformation-image:hover {
             transform: translateY(-8px);
-            box-shadow: 0 30px 60px rgba(232, 160, 191, 0.28);
+            box-shadow: 0 28px 60px rgba(232, 160, 191, 0.28);
         }
-        
-        .about-image img {
+
+        .transformation-image img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
             transition: transform 0.7s ease;
         }
-        
-        .about-image:hover img {
+
+        .transformation-image:hover img {
             transform: scale(1.07);
         }
-        
-        /* Specializations */
+       
+        /* Specializations - BULLET POINTS (•), NO 'Check' */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3.5rem;
+            margin-top: 5rem;
         }
-        
+       
         .service-card {
             background: white;
-            border-radius: 22px;
+            border-radius: 26px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(232, 160, 191, 0.12);
-            transition: all 0.5s ease;
+            box-shadow: 0 18px 48px rgba(232, 160, 191, 0.15);
+            transition: all 0.6s ease;
             border: 1px solid var(--light-gray);
+            position: relative;
+            overflow: hidden;
         }
-        
+       
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 6px;
+            background: var(--accent-gradient);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+       
+        .service-card:hover::before {
+            opacity: 1;
+        }
+       
         .service-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 60px rgba(232, 160, 191, 0.22);
+            transform: translateY(-18px);
+            box-shadow: 0 35px 70px rgba(232, 160, 191, 0.28);
             border-color: var(--deep-pink);
         }
-        
+       
         .service-header {
             background: linear-gradient(135deg, var(--navy), #2c3e5a);
             color: white;
-            padding: 2rem;
+            padding: 2.4rem;
             text-align: center;
         }
-        
+       
         .service-header h3 {
             color: white;
-            margin-bottom: 0.7rem;
-            font-size: 1.7rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.85rem;
             font-weight: 600;
         }
-        
+       
         .price {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             color: var(--gold);
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
         }
-        
+       
+        .price span {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+       
         .service-body {
-            padding: 2.5rem;
+            padding: 2.2rem 2.8rem;
         }
-        
+       
         .service-body ul {
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
-        
+       
         .service-body li {
-            padding: 0.8rem 0;
+            padding: 0.35rem 0;
             position: relative;
-            padding-left: 2.2rem;
-            font-size: 1rem;
+            padding-left: 1.8rem;
+            font-size: 0.92rem;
             color: var(--text-light);
+            line-height: 1.4;
+            transition: color 0.3s ease;
         }
-        
+       
+        .service-body li:hover {
+            color: var(--navy);
+        }
+       
         .service-body li::before {
-            content: '✓';
+            content: '•';
             position: absolute;
             left: 0;
             color: var(--deep-pink);
             font-weight: bold;
             font-size: 1.2rem;
+            line-height: 1;
         }
-        
+       
         .note {
-            font-size: 0.9rem;
+            font-size: 0.82rem;
             color: #888;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             font-style: italic;
-            line-height: 1.5;
+            line-height: 1.35;
+            padding: 0.8rem;
+            background: var(--light-gray);
+            border-radius: 10px;
         }
-        
-        /* Gallery */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(232, 160, 191, 0.15);
-            border: 2px solid transparent;
-            transition: all 0.5s ease;
-        }
-        
-        .gallery-item:hover {
-            border-color: var(--deep-pink);
-            transform: translateY(-8px);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.12);
-        }
-        
-        .gallery-label {
-            position: absolute;
-            bottom: 25px;
-            right: 25px;
-            background: rgba(232, 160, 191, 0.96);
-            color: var(--navy);
-            padding: 0.7rem 1.4rem;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-        }
-        
+
         /* Memberships */
         .membership-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.8rem;
-            margin-top: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3.2rem;
+            margin-top: 5rem;
         }
-        
+       
         .membership-card {
             background: linear-gradient(135deg, #fdfaf7, #ffffff);
-            border-radius: 25px;
-            padding: 3rem;
+            border-radius: 28px;
+            padding: 2.8rem;
             text-align: center;
-            box-shadow: 0 20px 45px rgba(232, 160, 191, 0.12);
+            box-shadow: 0 22px 50px rgba(232, 160, 191, 0.15);
             border: 2px solid transparent;
-            transition: all 0.5s ease;
+            transition: all 0.6s ease;
+            position: relative;
         }
-        
+       
+        .membership-card::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: var(--accent-gradient);
+            border-radius: 30px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+       
+        .membership-card:hover::after {
+            opacity: 1;
+        }
+       
         .membership-card:hover {
-            border-color: var(--deep-pink);
-            transform: translateY(-12px);
+            border-color: transparent;
+            transform: translateY(-15px);
+            box-shadow: 0 32px 65px rgba(232, 160, 191, 0.22);
         }
-        
+       
         .membership-price {
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             font-weight: 700;
             color: var(--deep-pink);
             margin: 1.2rem 0;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
         }
-        
+       
         .membership-card ul {
             text-align: left;
-            margin: 2rem 0;
+            margin: 1.8rem 0;
         }
-        
+       
         .membership-card li {
-            margin: 1rem 0;
-            padding-left: 1.8rem;
+            margin: 0.8rem 0;
+            padding-left: 2.2rem;
             position: relative;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--text-light);
+            line-height: 1.35;
         }
-        
+       
         .membership-card li::before {
             content: '✦';
             position: absolute;
             left: 0;
             color: var(--deep-pink);
             font-weight: bold;
-        }
-        
-        /* Blog */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(232, 160, 191, 0.1);
-            transition: all 0.5s ease;
-            border: 1px solid var(--light-gray);
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--deep-pink);
-            box-shadow: 0 25px 50px rgba(232, 160, 191, 0.18);
-        }
-        
-        .blog-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        
-        .blog-content {
-            padding: 2rem;
-        }
-        
-        .blog-content h4 {
-            margin-bottom: 1rem;
-            font-size: 1.45rem;
-            color: var(--navy);
-            line-height: 1.4;
-        }
-        
-        .blog-meta {
-            font-size: 0.92rem;
-            color: #888;
-            margin-bottom: 1.2rem;
-            font-weight: 500;
-        }
-        
-        /* Contact */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        
-        .contact-info h3 {
-            margin-bottom: 1.8rem;
-            color: var(--deep-pink);
-            font-size: 2rem;
-            font-weight: 600;
-        }
-        
-        .contact-info p {
-            margin-bottom: 1.2rem;
             font-size: 1.1rem;
-            color: var(--text-light);
         }
-        
-        .contact-info i {
-            color: var(--deep-pink);
-            margin-right: 0.8rem;
-            width: 20px;
+
+        .note-small {
+            font-size: 0.82rem;
+            color: #888;
+            margin-top: 1rem;
+            font-style: italic;
         }
-        
-        .calendly-inline-widget {
-            min-height: 750px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(232, 160, 191, 0.18);
-            border: 4px solid var(--soft-pink);
-        }
-        
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, var(--navy), #15253b);
-            color: white;
-            padding: 4rem 5% 2rem;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-col h4 {
-            color: var(--deep-pink);
-            margin-bottom: 1.4rem;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        
-        .footer-col ul {
-            list-style: none;
-        }
-        
-        .footer-col li {
-            margin: 0.7rem 0;
-        }
-        
-        .footer-col a {
-            color: rgba(255,255,255,0.85);
-            transition: color 0.3s;
-        }
-        
-        .footer-col a:hover {
-            color: var(--soft-pink);
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.4rem;
-            margin: 2rem 0;
-        }
-        
-        .social-links a {
-            width: 48px;
-            height: 48px;
-            background: rgba(248, 200, 220, 0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s ease;
-            color: white;
-            font-size: 1.2rem;
-        }
-        
-        .social-links a:hover {
-            background: var(--deep-pink);
-            transform: translateY(-5px) scale(1.12);
-        }
-        
-        .copyright {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            font-size: 0.98rem;
-            opacity: 0.85;
-        }
-        
-        .copyright a {
-            color: var(--soft-pink);
-            font-weight: 500;
-        }
-        
+
         /* Responsive */
         @media (max-width: 992px) {
-            .about-grid, .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero h1 {
-                font-size: 4rem;
-            }
-            
-            .hero .subtitle {
-                font-size: 1.4rem;
-            }
+            .hero h1 { font-size: 3.2rem; }
+            .hero .subtitle { font-size: 1.5rem; }
         }
-        
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .logo .main {
-                font-size: 1.6rem;
-            }
-            
-            .logo .sub {
-                font-size: 1.2rem;
-            }
-            
-            .hero {
-                height: 90vh;
-            }
-            
-            .hero h1 {
-                font-size: 3.2rem;
-            }
-            
-            section {
-                padding: 90px 5%;
-            }
-            
-            .section-title {
-                font-size: 2.8rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .btn-primary {
-                padding: 0.75rem 1.6rem;
-                font-size: 0.9rem;
-            }
+            .nav-links { display: none; }
+            .transformation-image { max-width: 260px; }
+            .hero h1 { font-size: 2.8rem; }
+            .service-body li { font-size: 0.88rem; }
         }
     </style>
 </head>
@@ -674,10 +491,6 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">
-                <span class="main">Naples</span>
-                <span class="sub">Professional Home Organizer</span>
-            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -707,260 +520,179 @@
         <div class="about-grid">
             <div class="about-text">
                 <p>Hi, I'm <strong>Rhina</strong>, founder of <strong>Naples Professional Home Organizer</strong> — a faith-centered luxury organization service for Naples' most discerning residents.</p>
-                
+               
                 <p>My mission is simple: create serene, functional spaces that enhance your lifestyle and reflect biblical order. As 1 Corinthians 14:40 reminds us, <em>"Let all things be done decently and in order."</em> This verse is the heartbeat of every closet, bedroom, and home I transform.</p>
-                
+               
                 <p>With over a decade of experience in high-end residential organization, I specialize in walk-in closets, luxury wardrobes, and master suites. Discretion, precision, and excellence define my work.</p>
-                
+               
                 <p>Whether you're transitioning seasons, downsizing, or craving daily peace in your space, I bring calm, clarity, and beauty to your home — one perfectly folded sweater at a time.</p>
-                
-                <a href="#contact" class="btn-primary" style="display: inline-block; margin-top: 2rem;">Start Your Transformation</a>
-            </div>
-            <div class="about-image">
-                <img src="https://i.imgur.com/8vJqK9L.jpeg" alt="Rhina - Naples Professional Home Organizer">
+               
+                <a href="#contact" class="btn-primary" style="display: inline-block; margin-top: 2.5rem;">Start Your Transformation</a>
+
+                <!-- SMALL IMAGE UNDER BUTTON -->
+                <div class="transformation-image">
+                    <img src="https://i.imgur.com/8vJqK9L.jpeg" alt="Rhina - Start Your Transformation">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Specializations -->
+    <!-- Specializations - BULLET POINTS (•) INSTEAD OF 'Check' -->
     <section id="specializations" style="background: var(--beige);">
         <h2 class="section-title">Luxury Organization Services</h2>
-        
+       
         <div class="services-grid">
-            <!-- Signature Closet -->
+            <!-- BASIC CLOSET -->
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Signature Closet</h3>
+                    <h3>Basic Closet</h3>
                     <p>4ft x 5ft</p>
-                    <div class="price">$50<span style="font-size: 1rem;">/hour</span></div>
+                    <div class="price">$50<span>/hour</span></div>
                 </div>
                 <div class="service-body">
                     <ul>
-                        <li>Full assessment & measurement</li>
-                        <li>Custom organization blueprint</li>
-                        <li>Declutter, sort, categorize</li>
-                        <li>Color-coded hanging system</li>
-                        <li>Seasonal rotation planning</li>
-                        <li>Premium storage solutions</li>
-                        <li>Final styling & labeling</li>
-                        <li>Maintenance guide</li>
+                        <li>Assess and measure the closet</li>
+                        <li>Discuss client preferences and needs</li>
+                        <li>Estimate costs at $50 per hour 5 hour minimum</li>
+                        <li>Create a tailored organization plan</li>
+                        <li>Sort and categorize current items</li>
+                        <li>Prepare and light clean the closet space</li>
+                        <li>Shopping for organize storage container (cost not included) will be charge to client up front</li>
+                        <li>No structural changes for storage units</li>
+                        <li>Arrange and hang clothing and accessories</li>
+                        <li>Organize by client's preferences (e.g., color, type, season)</li>
+                        <li>Declutter keeping, donating and selling</li>
+                        <li>Ensure easy item access</li>
+                        <li>Offer maintenance tips</li>
+                        <li>Conduct a final walkthrough for client satisfaction</li>
+                        <li>Calculate the total project cost based on hours worked</li>
+                        <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
                     </ul>
-                    <p class="note">5-hour minimum. Deep cleaning & disposal extra.</p>
+                    <p class="note">
+                        Note: Deep Cleaning and large debris disposal may entail extra charges, requiring a junk removal service (additional cost).<br>
+                        Monthly membership offers bi-monthly light organization sessions.<br>
+                        Charges may vary for a full closet redo, not included in the membership.<br>
+                        Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
+                    </p>
                 </div>
             </div>
 
-            <!-- Luxury Walk-In -->
+            <!-- DEEP WALK-IN CLOSET -->
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Luxury Walk-In</h3>
+                    <h3>Deep Walk-In Closet</h3>
                     <p>7ft x 10ft</p>
-                    <div class="price">$60<span style="font-size: 1rem;">/hour</span></div>
+                    <div class="price">$60<span>/hour</span></div>
                 </div>
                 <div class="service-body">
                     <ul>
-                        <li>Comprehensive space analysis</li>
-                        <li>Designer-level organization plan</li>
-                        <li>Full declutter & donation</li>
-                        <li>Custom storage procurement</li>
-                        <li>Jewelry & accessory zones</li>
-                        <li>Lighting & flow optimization</li>
-                        <li>Final reveal walkthrough</li>
+                        <li>Assess and measure the closet</li>
+                        <li>Discuss client preferences and needs</li>
+                        <li>Estimate costs at $60 per hour 5 hour minimum</li>
+                        <li>Develop a personalized organization plan</li>
+                        <li>Categorize current items</li>
+                        <li>Prepare and light clean the closet space</li>
+                        <li>Assist with purchasing necessary storage container organizer (cost not included will be charge up front)</li>
+                        <li>No structural changes will be done for storage units</li>
+                        <li>Arrange and hang clothing and accessories</li>
+                        <li>Organize items according to client preferences (e.g., by color, type, season)</li>
+                        <li>Maximize space efficiency</li>
+                        <li>Ensure easy item access</li>
+                        <li>Declutter: keeping, donating and selling</li>
+                        <li>Conduct a final satisfaction walkthrough</li>
+                        <li>Calculate the total project cost based on hours worked</li>
+                        <li>Present the final bill, including the standard hourly rate and additional expenses (storage solutions, item disposal, hangers, etc.)</li>
                     </ul>
-                    <p class="note">5-hour minimum. Custom upgrades available.</p>
+                    <p class="note">
+                        Note: Deep cleaning and large debris disposal may incur additional charges, requiring a junk removal service (additional cost).<br>
+                        A monthly membership is available, offering bi-monthly light organization sessions.<br>
+                        Separate charges apply for a full closet redo, which is not included in the membership.<br>
+                        Upon request, a referral for custom storage upgrade with luxury features will be provided; this cost is separate from my services.
+                    </p>
                 </div>
             </div>
 
-            <!-- Master Suite -->
+            <!-- MASTER BEDROOM -->
             <div class="service-card">
                 <div class="service-header">
-                    <h3>Master Suite</h3>
+                    <h3>Master Bedroom</h3>
                     <p>12ft x 18ft</p>
-                    <div class="price">$70<span style="font-size: 1rem;">/hour</span></div>
+                    <div class="price">$70<span>/hour</span></div>
                 </div>
                 <div class="service-body">
                     <ul>
-                        <li>Full room evaluation</li>
-                        <li>Integrated closet + bedroom flow</li>
-                        <li>Linen & drawer systems</li>
-                        <li>Nightstand & vanity organization</li>
-                        <li>Seasonal bedding rotation</li>
-                        <li>Calming aesthetic styling</li>
-                        <li>Peaceful morning routine</li>
+                        <li>Evaluate 12x18 bedroom; please note that deep cleaning is an extra cost paid directly to a cleaning company</li>
+                        <li>Engage in a discussion about the client's preferences and organizational needs</li>
+                        <li>Provide a pricing quote of $70 per hour for organizational services. 5 hour minimum</li>
+                        <li>Craft a personalized comprehensive closet organization plan</li>
+                        <li>Shopping for Organize storage container and additional fees will be charge to the client upfront</li>
+                        <li>Important: Disposing of large debris might necessitate the hiring of a junk removal service, which incurs an additional cost</li>
+                        <li>No structural modifications will be made for storage additions</li>
+                        <li>Consider a monthly membership option with bi-monthly light organization sessions</li>
+                        <li>Full closet redo services are available but are subject to separate charges and are not included in the membership</li>
+                        <li>If desired, a referral for custom storage upgrades featuring luxury elements can be provided; however, this cost is separate from my services</li>
                     </ul>
-                    <p class="note">5-hour minimum. Cleaning partner recommended.</p>
                 </div>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 4rem;">
-            <p style="font-size: 1.2rem; max-width: 900px; margin: 0 auto 2.5rem; color: var(--text-light);">
+        <div style="text-align: center; margin-top: 5rem;">
+            <p style="font-size: 1.2rem; max-width: 1000px; margin: 0 auto 3rem; color: var(--text-light);">
                 <strong>Ongoing Care Available:</strong> Monthly or bi-monthly touch-ups to maintain your sanctuary. Full redesigns and custom built-ins quoted separately.
             </p>
             <a href="#memberships" class="btn-primary">Explore Memberships</a>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <section id="gallery">
-        <h2 class="section-title">Before & After Transformations</h2>
-        <p style="text-align: center; max-width: 900px; margin: 0 auto 4rem; font-size: 1.2rem; color: var(--text-light);">
-            Witness the power of professional organization in Naples' finest homes.
-        </p>
-        
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1558618666-426ebd2e2a4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Cluttered Closet Before">
-                <div class="gallery-label">Before</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1558618666-fcd0b9d3c0c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Organized Luxury Closet">
-                <div class="gallery-label">After</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1556020685-ae8ab030c249?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Messy Bedroom Before">
-                <div class="gallery-label">Before</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1586023427055-06c5e0a1a7f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Serene Bedroom After">
-                <div class="gallery-label">After</div>
-            </div>
-        </div>
-    </section>
-
     <!-- Memberships -->
     <section id="memberships" style="background: var(--beige);">
         <h2 class="section-title">Peace of Mind Memberships</h2>
-        <p style="text-align: center; max-width: 900px; margin: 0 auto 4rem; font-size: 1.2rem; color: var(--text-light);">
-            Keep your space pristine year-round with regular light touch-ups. Ideal for Naples' busy elite.
+        <p style="text-align: center; max-width: 1000px; margin: 0 auto 5rem; font-size: 1.2rem; color: var(--text-light);">
+            Keep your space pristine year-round with regular light touch-ups. Full closet redo services require separate payment.
         </p>
-        
+       
         <div class="membership-grid">
             <div class="membership-card">
                 <h3>Essential</h3>
                 <div class="membership-price">$110</div>
                 <p><em>per month</em></p>
                 <ul>
-                    <li>2 visits/month</li>
-                    <li>30-minute sessions</li>
+                    <li>Covers two light organization sessions monthly</li>
                     <li>Priority booking</li>
                     <li>Email organization tips</li>
                 </ul>
-                <p class="note">Maintenance only</p>
+                <p class="note-small">Full closet redo services require separate payment</p>
             </div>
-            
-            <div class="membership-card" style="border-color: var(--deep-pink); transform: scale(1.07);">
+           
+            <div class="membership-card" style="border-color: var(--deep-pink); transform: scale(1.08);">
                 <h3 style="color: var(--deep-pink);">Premium</h3>
                 <div class="membership-price">$120</div>
                 <p><em>per month</em></p>
                 <ul>
-                    <li>2 visits/month</li>
-                    <li>45-minute sessions</li>
+                    <li>Covers two light organization sessions monthly</li>
                     <li>Seasonal wardrobe swap</li>
                     <li>Monthly digital guide</li>
                     <li>Priority support</li>
                 </ul>
-                <p class="note">Most Popular</p>
+                <p class="note-small">Most Popular • Full closet redo services require separate payment</p>
             </div>
-            
+           
             <div class="membership-card">
                 <h3>Elite</h3>
                 <div class="membership-price">$130</div>
                 <p><em>per month</em></p>
                 <ul>
-                    <li>2 visits/month</li>
-                    <li>60-minute sessions</li>
+                    <li>Covers two light organization sessions monthly</li>
                     <li>Quarterly deep review</li>
                     <li>Custom maintenance plan</li>
                     <li>VIP scheduling</li>
                 </ul>
-                <p class="note">Full peace of mind</p>
+                <p class="note-small">Full peace of mind • Full closet redo services require separate payment</p>
             </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 4rem;">
+       
+        <div style="text-align: center; margin-top: 5rem;">
             <a href="#contact" class="btn-primary">Join Today</a>
-        </div>
-    </section>
-
-    <!-- Blog -->
-    <section id="blog">
-        <h2 class="section-title">Organization Wisdom</h2>
-        <p style="text-align: center; max-width: 900px; margin: 0 auto 4rem; font-size: 1.2rem; color: var(--text-light);">
-            Faith, function, and beauty — tips for an orderly life.
-        </p>
-        
-        <div class="blog-grid">
-            <div class="blog-card">
-                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Seasonal Wardrobe">
-                <div class="blog-content">
-                    <div class="blog-meta">November 16, 2025 • 5 min</div>
-                    <h4>Seasonal Wardrobe Rotation for Naples Climate</h4>
-                    <p>Master the art of transitioning your luxury wardrobe between Naples' seasons with grace and efficiency...</p>
-                    <a href="#" style="color: var(--deep-pink); font-weight: 600;">Read More →</a>
-                </div>
-            </div>
-            
-            <div class="blog-card">
-                <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Biblical Order">
-                <div class="blog-content">
-                    <div class="blog-meta">November 10, 2025 • 4 min</div>
-                    <h4>Order in the Home: A Biblical Foundation</h4>
-                    <p>How 1 Corinthians 14:40 transforms modern homes into sanctuaries of peace and purpose...</p>
-                    <a href="#" style="color: var(--deep-pink); font-weight: 600;">Read More →</a>
-                </div>
-            </div>
-            
-            <div class="blog-card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Naples Luxury">
-                <div class="blog-content">
-                    <div class="blog-meta">November 5, 2025 • 6 min</div>
-                    <h4>Maximizing Space in Waterfront Estates</h4>
-                    <p>Tailored strategies for Port Royal, Pelican Bay, and Old Naples luxury residences...</p>
-                    <a href="#" style="color: var(--deep-pink); font-weight: 600;">Read More →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" style="background: var(--beige);">
-        <h2 class="section-title">Begin Your Journey to Order</h2>
-        
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Let's Connect</h3>
-                <p><i class="fas fa-user"></i> <strong>Rhina</strong> — Founder & Lead Organizer</p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:rhina@naplesprofessionalhomeorganizer.com">rhina@naplesprofessionalhomeorganizer.com</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> Naples, Florida & Surrounding Areas</p>
-                <p><i class="fas fa-calendar-alt"></i> By appointment only</p>
-                
-                <div style="margin-top: 3rem;">
-                    <h4>Proudly Serving</h4>
-                    <p>Naples • Port Royal • Pelican Bay • Old Naples • Aqualane Shores • Park Shore • Royal Harbor</p>
-                </div>
-                
-                <div style="margin-top: 3rem;">
-                    <a href="mailto:rhina@naplesprofessionalhomeorganizer.com" class="btn-primary">Send Email</a>
-                </div>
-            </div>
-            
-            <div>
-                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                <div id="calendly-widget" 
-                     data-url="https://calendly.com/pinkelitestudio" 
-                     style="min-height: 750px;">
-                </div>
-                <script type="text/javascript">
-                    window.onload = function() { 
-                        Calendly.initInlineWidget({
-                            url: 'https://calendly.com/pinkelitestudio',
-                            parentElement: document.getElementById('calendly-widget'),
-                            prefill: {},
-                            utm: {}
-                        });
-                    };
-                </script>
-            </div>
         </div>
     </section>
 
@@ -976,7 +708,6 @@
                     <a href="#"><i class="fab fa-pinterest"></i></a>
                 </div>
             </div>
-            
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
@@ -987,7 +718,6 @@
                     <li><a href="#blog">Blog</a></li>
                 </ul>
             </div>
-            
             <div class="footer-col">
                 <h4>Contact</h4>
                 <p><a href="mailto:rhina@naplesprofessionalhomeorganizer.com">rhina@naplesprofessionalhomeorganizer.com</a></p>
@@ -995,40 +725,18 @@
                 <p><em>By appointment only</em></p>
             </div>
         </div>
-        
         <div class="copyright">
-            &copy; 2025 Naples Professional Home Organizer. All rights reserved. | 
-            <a href="https://www.naplesprofessionalhomeorganizer.com">www.naplesprofessionalhomeorganizer.com</a>
+            &copy; 2025 Naples Professional Home Organizer. All rights reserved.
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-            });
-        });
-        
-        // Active nav on scroll
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 250) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.classList.add('active');
-                }
             });
         });
     </script>
