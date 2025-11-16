@@ -37,13 +37,13 @@
         section{padding:130px 6%;max-width:1700px;margin:auto}
         .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--navy);font-weight:700}
         .section-title::after{content:'';position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);width:120px;height:5px;background:var(--accent-gradient);border-radius:4px}
-        .about-grid{display:grid;gap:2rem}
-        .about-text p{margin-bottom:2rem;font-size:1.2rem;color:var(--text-light);line-height:1.9}
+        .about-grid{text-align:center}
+        .about-image{max-width:320px;margin:0 auto 2.5rem;border-radius:20px;overflow:hidden;box-shadow:0 18px 45px rgba(232,160,191,.22);border:5px solid var(--soft-pink);transition:.5s}
+        .about-image:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(232,160,191,.28)}
+        .about-image img{transition:transform .7s}
+        .about-image:hover img{transform:scale(1.07)}
+        .about-text p{margin-bottom:2rem;font-size:1.2rem;color:var(--text-light);line-height:1.9;max-width:800px;margin-left:auto;margin-right:auto}
         .about-text strong{color:var(--navy);font-weight:600}
-        .transformation-image{max-width:300px;margin:2.5rem auto 0;border-radius:20px;overflow:hidden;box-shadow:0 18px 45px rgba(232,160,191,.22);border:5px solid var(--soft-pink);transition:.5s}
-        .transformation-image:hover{transform:translateY(-8px);box-shadow:0 28px 60px rgba(232,160,191,.28)}
-        .transformation-image img{transition:transform .7s}
-        .transformation-image:hover img{transform:scale(1.07)}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:3.5rem;margin-top:5rem}
         .service-card{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 18px 48px rgba(232,160,191,.15);transition:.6s;border:1px solid var(--light-gray);position:relative}
         .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--accent-gradient);opacity:0;transition:.6s}
@@ -88,7 +88,7 @@
         .social-links a:hover{color:var(--gold)}
         .copyright{text-align:center;margin-top:3rem;font-size:.85rem;color:#aaa}
         @media(max-width:992px){.hero h1{font-size:3.2rem}.hero .subtitle{font-size:1.5rem}}
-        @media(max-width:768px){.hero h1{font-size:2.8rem}.transformation-image{max-width:260px}.service-body li{font-size:.88rem}section{padding:80px 3%}}
+        @media(max-width:768px){.hero h1{font-size:2.8rem}.service-body li{font-size:.88rem}section{padding:80px 3%}}
     </style>
 </head>
 <body>
@@ -122,23 +122,27 @@
 <section id="about">
     <h2 class="section-title">Meet Rhina</h2>
     <div class="about-grid">
+        <!-- Rhina's Image -->
+        <div class="about-image">
+            <img src="Rhina'simage.jpg" alt="Rhina Delgado - Naples Professional Home Organizer">
+        </div>
+
         <div class="about-text">
             <p>Hi, I'm <strong>Rhina</strong>, founder of <strong>Naples Professional Home Organizer</strong> — a faith-centered luxury organization service for Naples' most discerning residents.</p>
             <p>My mission is simple: create serene, functional spaces that enhance your lifestyle and reflect biblical order. As 1 Corinthians 14:40 reminds us, <em>"Let all things be done decently and in order."</em> This verse is the heartbeat of every closet, bedroom, and home I transform.</p>
             <p>With over a decade of experience in high-end residential organization, I specialize in walk-in closets, luxury wardrobes, and master suites. Discretion, precision, and excellence define my work.</p>
             <p>Whether you're transitioning seasons, downsizing, or craving daily peace in your space, I bring calm, clarity, and beauty to your home — one perfectly folded sweater at a time.</p>
             <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank" style="display:inline-block;margin-top:2.5rem;">Book Free Consultation / Discovery Call</a>
-            <div class="transformation-image">
-                <img src="https://i.imgur.com/8vjqk9l.jpeg" alt="Rhina">
-            </div>
         </div>
     </div>
 </section>
 
+<!-- [Rest of the sections: Services, Memberships, Testimonials, Blog, Contact, Footer] -->
+<!-- (Same as previous version — only About section changed) -->
+
 <section id="specializations" style="background:var(--beige);">
     <h2 class="section-title">Luxury Organization Services</h2>
     <div class="services-grid">
-        <!-- BASIC -->
         <div class="service-card">
             <div class="service-header"><h3>Basic Closet</h3><p>4ft x 5ft</p><div class="price">$50<span>/hour</span></div></div>
             <div class="service-body">
@@ -163,8 +167,6 @@
                 <p class="note">Deep cleaning & junk removal = extra cost. Full redo not in membership.</p>
             </div>
         </div>
-
-        <!-- DEEP WALK-IN -->
         <div class="service-card">
             <div class="service-header"><h3>Deep Walk-In Closet</h3><p>7ft x 10ft</p><div class="price">$60<span>/hour</span></div></div>
             <div class="service-body">
@@ -181,8 +183,6 @@
                 <p class="note">Deep cleaning & debris removal = extra. Full redo not in membership.</p>
             </div>
         </div>
-
-        <!-- MASTER BEDROOM -->
         <div class="service-card">
             <div class="service-header"><h3>Master Bedroom</h3><p>12ft x 18ft</p><div class="price">$70<span>/hour</span></div></div>
             <div class="service-body">
@@ -241,7 +241,6 @@
     </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section id="testimonials" style="background:var(--white);">
     <h2 class="section-title">Client Love</h2>
     <div class="testimonials-grid">
@@ -260,7 +259,6 @@
     </div>
 </section>
 
-<!-- BLOG -->
 <section id="blog" style="background:var(--beige);">
     <h2 class="section-title">Organization Insights</h2>
     <div class="blog-grid">
