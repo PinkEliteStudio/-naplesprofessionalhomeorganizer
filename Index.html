@@ -55,6 +55,7 @@
             .nav-links { position:fixed; top:100%; left:0; width:100%; background:var(--white); flex-direction:column; align-items:center; padding:2rem 0; transform:translateY(-150%); transition:transform .4s; box-shadow:0 10px 30px rgba(0,0,0,.1); }
             .nav-links.active { transform:translateY(0); }
             .nav-links a { padding:1rem 0; font-size:1.2rem; }
+            nav { padding:1.5rem 3%; }
         }
 
         /* Hero */
@@ -131,6 +132,7 @@
             .hero h1{font-size:2.8rem;}
             .transformation-image{max-width:260px;}
             .service-body li{font-size:.88rem;}
+            section { padding:80px 3%; }
         }
     </style>
 </head>
@@ -201,7 +203,7 @@
                     <li>Create a tailored organization plan</li>
                     <li>Sort and categorize current items</li>
                     <li>Prepare and light clean the closet space</li>
-                    <li>Shopping for organize storage container (cost not included) will be charge to client up front</li>
+                    <li>Shopping for organization storage containers (cost not included) will be charged to client up front</li>
                     <li>No structural changes for storage units</li>
                     <li>Arrange and hang clothing and accessories</li>
                     <li>Organize by client's preferences (e.g., color, type, season)</li>
@@ -269,7 +271,7 @@
                     <li>Engage in a discussion about the client's preferences and organizational needs</li>
                     <li>Provide a pricing quote of $70 per hour for organizational services. 5 hour minimum</li>
                     <li>Craft a personalized comprehensive closet organization plan</li>
-                    <li>Shopping for Organize storage container and additional fees will be charge to the client upfront</li>
+                    <li>Shopping for organization storage containers and additional fees will be charged to the client upfront</li>
                     <li>Important: Disposing of large debris might necessitate the hiring of a junk removal service, which incurs an additional cost</li>
                     <li>No structural modifications will be made for storage additions</li>
                     <li>Consider a monthly membership option with bi-monthly light organization sessions</li>
@@ -346,4 +348,70 @@
     <p style="text-align:center;color:var(--text-light);">Coming soon – beautiful before-and-after transformations.</p>
 </section>
 
-<section id="blog" style="background:var(--beige
+<section id="blog" style="background:var(--beige);">
+    <h2 class="section-title">Blog</h2>
+    <p style="text-align:center;color:var(--text-light);">Tips, inspiration, and faith-centered organization advice.</p>
+</section>
+
+<section id="contact" style="background:var(--white);">
+    <h2 class="section-title">Get In Touch</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;color:var(--text-light);">
+        Ready for a serene, organized home? Send me a message or book a free consultation.
+    </p>
+    <div style="text-align:center;margin-top:3rem;">
+        <a href="mailto:rhina@naplesprofessionalhomeorganizer.com" class="btn-primary">Email Me</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>Naples Professional Home Organizer</h4>
+            <p>Luxury organization rooted in faith, precision, and peace.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul style="list-style:none;">
+                <li><a href="#about">About Rhina</a></li>
+                <li><a href="#specializations">Services</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact</h4>
+            <p><a href="mailto:rhina@naplesprofessionalhomeorganizer.com">rhina@naplesprofessionalhomeorganizer.com</a></p>
+            <p>Naples, Florida</p>
+            <p><em>By appointment only</em></p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2025 Naples Professional Home Organizer. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    }
+</script>
+</body>
+</html>
