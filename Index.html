@@ -69,7 +69,7 @@
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
         .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px; color:#fff} 
         .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0;max-width:90%}
-        section{padding:120px 5%;max-width:1400px;margin:auto;position: relative;} /* Added relative position for absolute overlay */
+        section{padding:120px 5%;max-width:1400px;margin:auto;position: relative;} 
         .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)} 
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
         .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
@@ -214,7 +214,7 @@
         </div>
         <div class="about-text">
             <h3 class="your-name">Rhina Delgado</h3>
-            <p>With over a decade serving Naples’ most exclusive residences, I bring calm, clarity, and timeless elegance to every closet and master suite.</p>
+            <p>Bringing **unparalleled expertise** to Naples’ most exclusive residences, I cultivate calm, clarity, and timeless elegance in every closet and master suite.</p>
             <p>My faith-centered approach reflects the belief that true order creates peace — in your home and in your heart.</p>
             <p>By appointment and referral only.</p>
             <br>
@@ -366,11 +366,11 @@
 
     // NEW: Services section background slideshow
     const servicesSection = document.getElementById('services');
-    // **IMPORTANT:** Ensure these organized closet/kitchen images exist in your project folder
+    // Using the uploaded files for the slideshow: closet.jpg, closet 2.jpg, and duplicating closet 2.jpg for a third slide
     const serviceBgImages = [
-        "url('service-bg1.jpg') center/cover no-repeat fixed", 
-        "url('service-bg2.jpg') center/cover no-repeat fixed", 
-        "url('service-bg3.jpg') center/cover no-repeat fixed" 
+        "url('closet.jpg') center/cover no-repeat fixed", 
+        "url('closet 2.jpg') center/cover no-repeat fixed", 
+        "url('closet 2.jpg') center/cover no-repeat fixed" 
     ];
     let currentServiceBg = 0;
     
