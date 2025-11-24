@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rhina Delgado | Naples Luxury Home Organizer</title>
     <meta name="description" content="Naples premier faith-centered luxury closet & master suite organization. By appointment only.">
-   
+  
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-   
+  
     <style>
         :root{
             --gold:#D4AF37;--soft-pink:#F8C8DC;--deep-pink:#E8A0BF;--navy:#1A2A44;--beige:#FDF9F6;
@@ -19,9 +19,9 @@
         body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
         h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy)}
         .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
-       
+      
         a{color:inherit;text-decoration:none}
-       
+      
         header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
         nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
         .logo{font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:2px}
@@ -32,19 +32,18 @@
         .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;font-size:1.1rem;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
         .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
         .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--navy)}
-
-        /* ONLY CHANGE: your luxury photo as background */
+        /* Hero with slideshow background - add your images: hero-bg1.jpg, hero-bg2.jpg, etc. */
         .hero{
             height:100vh;min-height:780px;
-            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), 
+            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)),
                         url('hero-bg.jpg') center/cover no-repeat fixed;
             display:flex;align-items:center;justify-content:center;
-            text-align:center;color:#fff;position:relative
+            text-align:center;color:#fff;position:relative;
+            transition: background-image 1s ease-in-out;
         }
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
         .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px}
         .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0;max-width:90%}
-
         section{padding:120px 5%;max-width:1400px;margin:auto}
         .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--navy)}
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
@@ -70,17 +69,31 @@
         .author{font-style:normal;font-weight:600;color:var(--navy);text-align:right}
         #ai-chat-float{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(232,160,191,.5);cursor:pointer;z-index:999}
         #ai-chat-float:hover{background:var(--gold);transform:scale(1.1)}
-
+        #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(212,175,55,.5);cursor:pointer;z-index:999}
+        #newsletter-float:hover{background:var(--deep-pink);transform:scale(1.1)}
+        #newsletter-popup{display:none;position:fixed;bottom:100px;left:25px;width:380px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
+        #newsletter-popup .header{background:var(--gold);color:#fff;padding:1rem;text-align:center;position:relative}
+        #newsletter-popup .header span{position:absolute;right:15px;top:10px;cursor:pointer;font-size:1.5rem}
+        #newsletter-popup form{padding:1.5rem}
+        #newsletter-popup input{width:100%;padding:0.8rem;margin-bottom:1rem;border:2px solid #eee;border-radius:8px}
+        #newsletter-popup button{width:100%;padding:0.9rem;background:var(--deep-pink);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+        footer{background:var(--navy);color:#fff;padding:3rem 5% 1rem;max-width:1400px;margin:auto;text-align:center}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+        .footer-content h4{font-family:'Oswald',sans-serif;font-size:1.3rem;margin-bottom:1rem;color:var(--gold)}
+        .footer-content ul{list-style:none}
+        .footer-content li{margin:0.5rem 0}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;margin-top:2rem;font-size:0.9rem;color:var(--light)}
+        .footer-bottom a{color:var(--soft-pink);margin:0 1rem}
         @media(max-width:768px){
             .menu-toggle{display:block}
             .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;gap:1.5rem;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-100%);transition:.4s}
             .nav-links.active{transform:translateY(0)}
             .hero h1{font-size:4.2rem}
+            #newsletter-popup{left:50%;transform:translateX(-50%);}
         }
     </style>
 </head>
 <body>
-
 <header>
     <nav>
         <div class="logo">Naples Organizer</div>
@@ -96,7 +109,6 @@
         <div class="menu-toggle" id="menuToggle">Menu</div>
     </nav>
 </header>
-
 <section id="home" class="hero">
     <div>
         <h1>Luxury Home Organization</h1>
@@ -107,7 +119,6 @@
         <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Schedule Private Consultation</a>
     </div>
 </section>
-
 <section id="about">
     <h2 class="section-title">Meet Your Organizer</h2>
     <div class="about-grid">
@@ -124,7 +135,6 @@
         </div>
     </div>
 </section>
-
 <section id="services" style="background:var(--beige);">
     <h2 class="section-title">Signature Services</h2>
     <div class="cards-grid">
@@ -142,7 +152,6 @@
         </div>
     </div>
 </section>
-
 <section id="memberships">
     <h2 class="section-title">Peace of Mind Memberships</h2>
     <p class="note">Memberships are exclusive to past clients desiring ongoing seasonal refresh, wardrobe swaps, and light maintenance.</p>
@@ -161,7 +170,6 @@
         </div>
     </div>
 </section>
-
 <section id="testimonials" style="background:var(--beige);">
     <h2 class="section-title">Client Love</h2>
     <div class="testimonial-grid">
@@ -179,7 +187,6 @@
         </div>
     </div>
 </section>
-
 <section id="contact">
     <h2 class="section-title">Get In Touch</h2>
     <p style="text-align:center;max-width:800px;margin:auto;color:#666;font-size:1.3rem;">
@@ -199,7 +206,24 @@
     </div>
 </section>
 
-<div id="ai-chat-float" onclick="document.getElementById('ai-chat-popup').style.display='block'">Chat</div>
+<!-- Newsletter Signup Popup (Inspired by Horderly's discount popup) -->
+<div id="newsletter-float" onclick="document.getElementById('newsletter-popup').style.display='block'" title="Subscribe for Tips & Offers">
+    <i class="fas fa-envelope"></i>
+</div>
+<div id="newsletter-popup">
+    <div class="header">
+        Get Exclusive Organizing Tips & Offers
+        <span onclick="document.getElementById('newsletter-popup').style.display='none'">&times;</span>
+    </div>
+    <form action="https://formspree.io/f/YOUR_NEWSLETTER_EMAIL_HERE" method="POST">
+        <p style="font-size:0.9rem;color:#666;padding:0 1.5rem 1rem;">Subscribe for faith-centered organization tips, updates, and exclusive deals on luxury services!</p>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+<!-- AI Chat Float (Existing) -->
+<div id="ai-chat-float" onclick="document.getElementById('ai-chat-popup').style.display='block'"><i class="fas fa-comments"></i></div>
 <div id="ai-chat-popup" style="display:none;position:fixed;bottom:100px;right:25px;width:380px;height:580px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden">
     <div style="background:var(--deep-pink);color:#fff;padding:1rem;text-align:center;position:relative">
         Rhina's Assistant <span style="position:absolute;right:15px;top:10px;cursor:pointer;font-size:1.5rem" onclick="this.parentElement.parentElement.style.display='none'">×</span>
@@ -207,12 +231,58 @@
     <iframe src="https://direct.lc.chat/15895184/" style="width:100%;height:calc(100% - 50px);border:none"></iframe>
 </div>
 
+<!-- Footer (Added with copyright, terms, privacy) -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <h4>Naples Organizer</h4>
+            <p>Bringing faith-centered luxury organization to Naples' finest homes. By appointment only.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#memberships">Memberships</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="/terms-of-use">Terms of Use</a></li>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Rhina Delgado | Naples Luxury Home Organizer. All rights reserved.</p>
+        <p><a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a></p>
+    </div>
+</footer>
+
 <script>
+    // Mobile menu toggle
     document.getElementById('menuToggle').onclick = () => document.getElementById('navLinks').classList.toggle('active');
+    
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
         e.preventDefault();
         document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     }));
+
+    // Hero background slideshow (add more images to the array as needed)
+    const hero = document.querySelector('.hero');
+    const bgImages = [
+        "url('hero-bg.jpg')",
+        "url('hero-bg2.jpg')", // Add your second image
+        "url('hero-bg3.jpg')"  // Add your third image
+    ];
+    let currentBg = 0;
+    setInterval(() => {
+        currentBg = (currentBg + 1) % bgImages.length;
+        hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), ${bgImages[currentBg]} center/cover no-repeat fixed`;
+    }, 5000); // Change every 5 seconds
 </script>
 </body>
 </html>
