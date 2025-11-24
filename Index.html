@@ -18,12 +18,13 @@
            2. --deep-pink and --soft-pink adjusted slightly to ensure good contrast.
            3. .card, .card-header, and .card-body updated for white background, light pink border/text.
            4. .logo style updated to use the new 'Alex Brush' font.
+           5. #services section updated for slideshow background and text contrast.
         */
         :root{
             --gold:#D4AF37;
             --soft-pink:#F8DDE8; /* Lighter Pink */
             --deep-pink:#E393B5; /* Main Pink */
-            --navy:#F0E0E6; /* Light Pink for Card Backgrounds (formerly Navy) */
+            --navy:#F0E0E6; /* Light Pink for Card Header Backgrounds (formerly Navy) */
             --beige:#FDF9F6;
             --white:#FFFFFF;
             --text:#333;
@@ -33,7 +34,7 @@
         }
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
-        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)} /* Changed from navy to text color for contrast */
+        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)} 
         .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
      
         a{color:inherit;text-decoration:none}
@@ -41,14 +42,13 @@
         header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
         nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
         
-        /* LOGO FONT UPDATE */
         .logo{
-            font-family:'Alex Brush', cursive; /* Applied the new script font */
-            font-size:2.8rem; /* Increased size for the script font */
-            font-weight:400; /* Adjusted weight for script font */
-            color:var(--deep-pink); /* Changed color to deep-pink for prominence */
+            font-family:'Alex Brush', cursive; 
+            font-size:2.8rem; 
+            font-weight:400; 
+            color:var(--deep-pink); 
             letter-spacing:1px;
-            text-transform: none; /* Remove uppercase for the script font */
+            text-transform: none; 
         }
         
         .nav-links{display:flex;gap:2.8rem;list-style:none;align-items:center}
@@ -57,8 +57,7 @@
         .nav-links a:hover::after{width:100%}
         .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;font-size:1.1rem;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
         .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
-        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)} /* Changed from navy to text */
-        /* Hero with slideshow background - add your images: hero-bg1.jpg, hero-bg2.jpg, etc. */
+        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)} 
         .hero{
             height:100vh;min-height:780px;
             background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)),
@@ -68,10 +67,10 @@
             transition: background-image 1s ease-in-out;
         }
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
-        .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px; color:#fff} /* Ensure h1 is white on dark background */
+        .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px; color:#fff} 
         .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0;max-width:90%}
-        section{padding:120px 5%;max-width:1400px;margin:auto}
-        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)} /* Changed from navy to text */
+        section{padding:120px 5%;max-width:1400px;margin:auto;position: relative;} /* Added relative position for absolute overlay */
+        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)} 
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
         .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
         .about-img img{width:340px;height:460px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3)}
@@ -79,38 +78,69 @@
         .about-text .btn-book{margin-top:3rem;display:inline-block}
         .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
         
-        /* CARD STYLE UPDATE */
+        /* SERVICES SECTION BACKGROUND SLIDESHOW & OVERLAY */
+        #services {
+            background-color: var(--beige); /* Fallback color */
+            background-size: cover;
+            background-position: center;
+            transition: background-image 1s ease-in-out;
+            min-height: 600px;
+        }
+        #services .section-title, #services .note, #services .cards-grid {
+            position: relative;
+            z-index: 10; /* Keep content above the overlay */
+        }
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.55); /* Dark overlay for text contrast */
+            z-index: 5;
+        }
+        #services .section-title {
+            color: #fff; /* White title on dark background */
+        }
+        #services .section-title::after {
+            background: var(--gold); /* Gold line for contrast */
+        }
+        #services .note {
+            color: var(--soft-pink); /* Light text for contrast */
+        }
+
+        /* CARD STYLE (Kept from previous update) */
         .card{
-            background:var(--white); /* White background */
+            background:var(--white); 
             color:var(--text); 
             border-radius:20px;
             overflow:hidden;
-            box-shadow:0 15px 40px rgba(0,0,0,.08); /* Lighter shadow */
+            box-shadow:0 15px 40px rgba(0,0,0,.08); 
             transition:.4s;
             height:100%;
-            border: 3px solid var(--card-border-pink); /* Pink edge */
+            border: 3px solid var(--card-border-pink); 
         }
-        /* Update for the popular card to keep the pink edge but remove the extra border logic */
         #memberships .card:nth-child(2) {
              transform:scale(1.05);
-             border: 5px solid var(--card-border-pink); /* Slightly thicker border for popular */
+             border: 5px solid var(--card-border-pink); 
         }
         
-        .card:hover{transform:translateY(-12px); box-shadow:0 20px 50px rgba(232,160,191,.3);} /* Pink hover shadow */
+        .card:hover{transform:translateY(-12px); box-shadow:0 20px 50px rgba(232,160,191,.3);} 
         
         .card-header{
             padding:2.5rem 2rem;
             text-align:center;
-            background:var(--navy); /* Light pink header (formerly Navy) */
-            color:var(--text); /* Dark text for contrast on light pink */
+            background:var(--navy); 
+            color:var(--text); 
         }
-        .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px; color:var(--text);} /* Dark text */
-        .card-header .price{font-size:3rem;font-weight:700;color:var(--deep-pink);margin:1rem 0} /* Price is deep pink */
+        .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px; color:var(--text);} 
+        .card-header .price{font-size:3rem;font-weight:700;color:var(--deep-pink);margin:1rem 0} 
         .card-header .popular{color:var(--deep-pink);font-size:1rem;font-weight:600}
         
         .card-body{
             padding:2rem;
-            background:var(--white); /* White body */
+            background:var(--white); 
             color:var(--text);
             min-height:220px
         }
@@ -123,7 +153,7 @@
         .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
         .testimonial{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.08);font-style:italic;font-size:1.15rem;line-height:1.8;border-left:6px solid var(--deep-pink)}
         .testimonial p{margin-bottom:1.5rem}
-        .author{font-style:normal;font-weight:600;color:var(--text);text-align:right} /* Changed from navy to text */
+        .author{font-style:normal;font-weight:600;color:var(--text);text-align:right} 
         #ai-chat-float{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(232,160,191,.5);cursor:pointer;z-index:999}
         #ai-chat-float:hover{background:var(--gold);transform:scale(1.1)}
         #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(212,175,55,.5);cursor:pointer;z-index:999}
@@ -134,7 +164,7 @@
         #newsletter-popup form{padding:1.5rem}
         #newsletter-popup input{width:100%;padding:0.8rem;margin-bottom:1rem;border:2px solid #eee;border-radius:8px}
         #newsletter-popup button{width:100%;padding:0.9rem;background:var(--deep-pink);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
-        footer{background:#444;color:#fff;padding:3rem 5% 1rem;max-width:1400px;margin:auto;text-align:center} /* Changed from navy to a darker grey for better contrast */
+        footer{background:#444;color:#fff;padding:3rem 5% 1rem;max-width:1400px;margin:auto;text-align:center} 
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
         .footer-content h4{font-family:'Oswald',sans-serif;font-size:1.3rem;margin-bottom:1rem;color:var(--gold)}
         .footer-content ul{list-style:none}
@@ -153,7 +183,8 @@
 <body>
 <header>
     <nav>
-        <div class="logo">Naples Organizer</div> <ul class="nav-links" id="navLinks">
+        <div class="logo">Naples Organizer</div> 
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
@@ -191,7 +222,7 @@
         </div>
     </div>
 </section>
-<section id="services" style="background:var(--beige);">
+<section id="services">
     <h2 class="section-title">Signature Services</h2>
     <div class="cards-grid">
         <div class="card">
@@ -319,18 +350,38 @@
         e.preventDefault();
         document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     }));
+
     // Hero background slideshow (add more images to the array as needed)
     const hero = document.querySelector('.hero');
-    const bgImages = [
+    const heroBgImages = [
         "url('hero-bg.jpg')",
         "url('hero-bg2.jpg')", // Add your second image
         "url('hero-bg3.jpg')" // Add your third image
     ];
-    let currentBg = 0;
+    let currentHeroBg = 0;
     setInterval(() => {
-        currentBg = (currentBg + 1) % bgImages.length;
-        hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), ${bgImages[currentBg]} center/cover no-repeat fixed`;
+        currentHeroBg = (currentHeroBg + 1) % heroBgImages.length;
+        hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), ${heroBgImages[currentHeroBg]} center/cover no-repeat fixed`;
     }, 5000); // Change every 5 seconds
+
+    // NEW: Services section background slideshow
+    const servicesSection = document.getElementById('services');
+    // **IMPORTANT:** Ensure these organized closet/kitchen images exist in your project folder
+    const serviceBgImages = [
+        "url('service-bg1.jpg') center/cover no-repeat fixed", 
+        "url('service-bg2.jpg') center/cover no-repeat fixed", 
+        "url('service-bg3.jpg') center/cover no-repeat fixed" 
+    ];
+    let currentServiceBg = 0;
+    
+    // Set initial background
+    servicesSection.style.backgroundImage = serviceBgImages[0];
+
+    // Slideshow interval
+    setInterval(() => {
+        currentServiceBg = (currentServiceBg + 1) % serviceBgImages.length;
+        servicesSection.style.backgroundImage = serviceBgImages[currentServiceBg];
+    }, 6000); // Change every 6 seconds
 </script>
 </body>
 </html>
