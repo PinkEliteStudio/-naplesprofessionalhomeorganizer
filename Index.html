@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naples Professional Home Organizer | Luxury Closet & Bedroom Organization</title>
-    <meta name="description" content="Luxury closet, walk-in wardrobe, and bedroom organization in Naples, Florida. Christian-based, rooted in 1 Corinthians 14:40.">
+    <meta name="description" content="Naples' premier faith-centered luxury closet, wardrobe, and master suite organization. By appointment only.">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
@@ -18,98 +18,68 @@
     </script>
 
     <style>
-        :root{--gold:#D4AF37;--soft-pink:#F8C8DC;--deep-pink:#E8A0BF;--navy:#1A2A44;--beige:#FFF5F8;--white:#FDFAF7;--light-gray:#F0E6EA;--text-dark:#2D2D2D;--text-light:#666;--accent-gradient:linear-gradient(135deg,var(--deep-pink),var(--soft-pink))}
+        :root{
+            --gold:#D4AF37;--soft-pink:#F8C8DC;--deep-pink:#E8A0BF;--navy:#1A2A44;--beige:#FDF9F6;
+            --white:#FFFFFF;--light-gray:#F5F0F2;--text-dark:#2D2D2D;--text-light:#666;
+            --accent-gradient:linear-gradient(135deg,var(--deep-pink),var(--soft-pink))
+        }
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text-dark);line-height:1.8;font-size:1.1rem;overflow-x:hidden}
-        h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;color:var(--navy);line-height:1.25;margin-bottom:1rem}
+        body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text-dark);line-height:1.8;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;color:var(--navy);line-height:1.2}
         a{text-decoration:none;color:inherit}
-        img{max-width:100%;height:auto;display:block}
-        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.97);backdrop-filter:blur(14px);z-index:1000;box-shadow:0 6px 30px rgba(0,0,0,.08)}
+        img{max-width:100%;display:block}
+        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);z-index:1000;box-shadow:0 6 rubber30px rgba(0,0,0,.08)}
         nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 6%;max-width:1700px;margin:auto}
-        .logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.6rem;color:var(--navy)}
-        .nav-links{display:flex;gap:2.5rem;list-style:none}
-        .nav-links a{font-weight:500;font-size:1.05rem;color:var(--navy);position:relative;padding:.5rem 0;transition:.35s}
-        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent-gradient);transition:.35s;border-radius:2px}
-        .nav-links a:hover::after{width:100%;color:var(--deep-pink)}
-        .btn-primary{background:var(--deep-pink);color:#fff;padding:1rem 2.4rem;border-radius:60px;font-weight:600;transition:.45s;box-shadow:0 8px 22px rgba(232,160,191,.38);display:inline-block;font-size:1.2rem}
-        .btn-primary:hover{background:var(--gold);transform:translateY(-5px);box-shadow:0 14px 32px rgba(212,175,55,.5)}
+        .logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.8rem;color:var(--navy);letter-spacing:1px}
+        .nav-links{display:flex;gap:2.8rem;list-style:none}
+        .nav-links a{font-weight:500;font-size:1.05rem;position:relative;padding:.5rem 0}
+        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent-gradient);transition:.4s;border-radius:2px}
+        .nav-links a:hover::after{width:100%}
+        .btn-primary{background:var(--deep-pink);color:#fff;padding:1rem 2.6rem;border-radius:60px;font-weight:600;transition:.4s;box-shadow:0 10px 30px rgba(232,160,191,.3);font-size:1.2rem}
+        .btn-primary:hover{background:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(212,175,55,.4)}
         .menu-toggle{display:none;cursor:pointer;font-size:1.8rem;color:var(--navy)}
-        @media(max-width:768px){.menu-toggle{display:block}.nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;align-items:center;padding:2rem 0;transform:translateY(-150%);transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.1)}.nav-links.active{transform:translateY(0)}nav{padding:1.5rem 4%}}
-
-        /* HERO – FIXED & GORGEOUS */
-        .hero{height:100vh;min-height:780px;background:linear-gradient(135deg,rgba(26,42,68,.88),rgba(232,160,191,.15)),url('https://images.unsplash.com/photo-1558618666-9142c2d5ff9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;background-attachment:fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative}
-        .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.12),transparent 70%)}
-        .hero-content{max-width:1200px;padding:3rem;position:relative;z-index:1}
-        .hero h1{font-size:3.8rem;margin-bottom:1.4rem;text-shadow:0 6px 20px rgba(0,0,0,.5);font-weight:700}
-        .hero .subtitle{font-size:1.65rem;margin-bottom:2.5rem;color:#f8f8f8}
-        .bible-verse{font-style:italic;font-size:1.55rem;color:var(--soft-pink);padding:1.8rem 3rem;border-left:6px solid var(--gold);background:rgba(26,42,68,.35);border-radius:0 16px 16px 0;display:inline-block;margin:3.5rem auto 0;box-shadow:0 10px 30px rgba(0,0,0,.2);max-width:90%}
-        .hero .btn-primary{font-size:1.35rem;padding:1.3rem 3.6rem;margin-top:3.5rem}
-
-        section{padding:130px 6%;max-width:1700px;margin:auto}
-        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--navy);font-weight:700}
-        .section-title::after{content:'';position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);width:120px;height:5px;background:var(--accent-gradient);border-radius:4px}
-
-        .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;max-width:1100px;margin:auto}
-        .about-image{max-width:360px;border-radius:50%;overflow:hidden;box-shadow:0 20px 50px rgba(232,160,191,.3);border:7px solid var(--soft-pink);margin:0 auto}
-        .about-image img{transition:transform .7s}
-        .about-image:hover img{transform:scale(1.08)}
-        .about-text p{margin-bottom:1.8rem;font-size:1.2rem;color:var(--text-light);line-height:1.9}
-        .about-text strong{color:var(--navy)}
-
-        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(380px,1fr));gap:3.5rem;margin-top:5rem}
-        .service-card{background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 18px 48px rgba(232,160,191,.15);transition:.6s;border:1px solid var(--light-gray);position:relative}
-        .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:var(--accent-gradient);opacity:0;transition:.6s}
-        .service-card:hover::before{opacity:1}
-        .service-card:hover{transform:translateY(-18px);box-shadow:0 35px 70px rgba(232,160,191,.28)}
-        .service-header{background:linear-gradient(135deg,var(--navy),#2c3e5a);color:#fff;padding:2.4rem;text-align:center}
-        .service-header h3{margin-bottom:.8rem;font-size:1.85rem}
-        .price{font-size:2.8rem;font-weight:700;color:var(--gold)}
-        .price span{font-size:1.1rem;font-weight:500}
-        .service-body{padding:2.2rem 2.8rem}
-        .service-body ul{list-style:none}
-        .service-body li{padding:.35rem 0 .35rem 1.8rem;position:relative;font-size:.95rem;color:var(--text-light);line-height:1.5}
-        .service-body li::before{content:'•';position:absolute;left:0;color:var(--deep-pink);font-weight:bold;font-size:1.3rem}
-        .note{font-size:.85rem;color:#888;margin-top:1.2rem;font-style:italic;padding:.9rem;background:var(--light-gray);border-radius:10px}
-
-        .membership-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:3rem;margin-top:5rem}
-        .membership-card{background:linear-gradient(135deg,#fdfaf7,#fff);border-radius:28px;padding:3rem;text-align:center;box-shadow:0 22px 50px rgba(232,160,191,.15);border:2px solid transparent;transition:.6s;position:relative;overflow:hidden}
-        .membership-card::after{content:'';position:absolute;inset:-2px;background:var(--accent-gradient);border-radius:30px;z-index:-1;opacity:0;transition:.6s}
-        .membership-card:hover::after{opacity:1}
-        .membership-card:hover{transform:translateY(-15px);box-shadow:0 32px 65px rgba(232,160,191,.22)}
-        .membership-card h3{font-size:1.9rem;margin-bottom:1rem}
-        .membership-price{font-size:3.4rem;font-weight:700;color:var(--deep-pink);margin:1rem 0}
-        .membership-card ul{list-style:none;text-align:left;margin:2.5rem 0}
-        .membership-card li{margin:.9rem 0;padding-left:2.4rem;position:relative;font-size:1.05rem}
-        .membership-card li::before{content:'✦';position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
-        .note-small{font-size:.85rem;color:#888;margin-top:1.2rem;font-style:italic}
-
-        .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:3rem;margin-top:5rem}
-        .testimonial-card{background:#fff;padding:2.8rem;border-radius:24px;box-shadow:0 15px 40px rgba(232,160,191,.15);border-left:6px solid var(--deep-pink);position:relative;font-style:italic;color:var(--text-light);line-height:1.8}
-        .testimonial-card::before{content:'“';position:absolute;top:-15px;left:20px;font-size:5rem;color:var(--soft-pink);opacity:.25}
-        .testimonial-card p{font-size:1.1rem;margin-bottom:1.5rem}
-        .testimonial-author{display:block;margin-top:1rem;font-style:normal;font-weight:600;color:var(--navy);font-size:1rem;text-align:right}
-
-        .blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:3rem;margin-top:5rem}
-        .blog-card{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 12px 35px rgba(232,160,191,.12);transition:.4s}
-        .blog-card:hover{transform:translateY(-12px);box-shadow:0 20px 45px rgba(232,160,191,.2)}
-        .blog-card h3{font-size:1.7rem;margin-bottom:1rem;color:var(--navy)}
-        .blog-card p{font-size:1rem;color:var(--text-light);line-height:1.6;margin-bottom:1.5rem}
-        .read-more{color:var(--deep-pink);font-weight:600;font-size:1.05rem}
-
-        footer{background:var(--navy);color:#fff;padding:5rem 6% 2rem}
-        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;max-width:1700px;margin:auto}
-        .social-links{display:flex;gap:1.2rem;margin-top:1.2rem;font-size:1.6rem}
-        .social-links a{color:#ddd;transition:.3s}
-        .social-links a:hover{color:var(--gold)}
-        .copyright{text-align:center;margin-top:4rem;font-size:.9rem;color:#aaa}
-
-        @media(max-width:992px){.about-grid{grid-template-columns:1fr;text-align:center}.about-image{margin-bottom:3rem}}
+        
+        /* HERO */
+        .hero{height:100vh;min-height:800px;background:linear-gradient(rgba(26,42,68,.80),rgba(26,42,68,.65)),url('https://images.unsplash.com/photo-1558618666-9142c2d5ff9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;background-attachment:fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative}
+        .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.2),transparent 70%)}
+        .hero-content{max-width:1100px;padding:2rem}
+        .hero h1{font-size:4.2rem;margin-bottom:1rem;font-weight:700;letter-spacing:1px}
+        .hero .subtitle{font-size:1.7rem;margin-bottom:2.5rem;font-weight:300;letter-spacing:0.5px}
+        .bible-verse{font-style:italic;font-size:1.6rem;color:var(--soft-pink);padding:2rem 3rem;border-left:6px solid var(--gold);background:rgba(26,42,68,.4);border-radius:0 20px 20px 0;display:inline-block;margin:3rem auto 0;max-width:90%;box-shadow:0 15px 40px rgba(0,0,0,.3)}
+        
+        section{padding:140px 6%;max-width:1700px;margin:auto}
+        .section-title{text-align:center;font-size:3rem;margin-bottom:5rem;position:relative;color:var(--navy)}
+        .section-title::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:140px;height:6px;background:var(--accent-gradient);border-radius:4px}
+        
+        /* Services – Luxury pricing */
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:3.5rem;margin-top:6rem}
+        .service-card{background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 20px 50px rgba(232,160,191,.15);transition:.6s;border:1px solid var(--light-gray);position:relative}
+        .service-card:hover{transform:translateY(-20px);box-shadow:0 40px 80px rgba(232,160,191,.25)}
+        .service-header{background:linear-gradient(135deg,var(--navy),#2c3e5a);color:#fff;padding:3rem 2rem;text-align:center}
+        .service-header h3{font-size:2rem;margin-bottom:.5rem}
+        .price-start{font-size:3rem;font-weight:700;color:var(--gold);margin:1rem 0}
+        .service-body{padding:3rem;text-align:center}
+        .service-body ul{list-style:none;text-align:left;max-width:320px;margin:2rem auto}
+        .service-body li{position:relative;padding-left:2rem;margin:1rem 0;font-size:1.05rem}
+        .service-body li::before{content:'✦';position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
+        
+        /* AI Chat Widget */
+        #ai-chat-float{position:fixed;bottom:25px;right:25px;width:66px;height:66px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(232,160,191,.5);cursor:pointer;z-index:9999;transition:.3s}
+        #ai-chat-float:hover{background:var(--gold);transform:scale(1.1)}
+        #ai-chat-float i{animation:pulse 2s infinite}
+        @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,160,191,.7)}70%{box-shadow:0 0 0 12px rgba(232,160,191,0)}100%{box-shadow:0 0 0 0 rgba(232,160,191,0)}}
+        
+        @media(max-width:992px){
+            .hero h1{font-size:3.4rem}
+            .about-grid{grid-template-columns:1fr;text-align:center}
+        }
         @media(max-width:768px){
+            .menu-toggle{display:block}
+            .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;transform:translateY(-150%);transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+            .nav-links.active{transform:translateY(0)}
+            nav{padding:1.5rem 4%}
             .hero h1{font-size:3rem}
-            .hero .subtitle{font-size:1.4rem}
-            .bible-verse{font-size:1.35rem;padding:1.4rem 2rem}
-            section{padding:90px 4%}
-            .section-title{font-size:2.4rem}
+            section{padding:100px 4%}
         }
     </style>
 </head>
@@ -121,236 +91,124 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#specializations">Services</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#memberships">Memberships</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Book Now</a>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Book Consultation</a>
         <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
     </nav>
 </header>
 
-<!-- HERO – PERFECTLY FIXED -->
 <section id="home" class="hero">
     <div class="hero-content">
-        <h1>Naples Professional Home Organizer</h1>
-        <p class="subtitle">Luxury Closet & Bedroom Organization in Naples, Florida</p>
-        
-        <div style="margin: 3.5rem 0;">
-            <p class="bible-verse">
-                “Let all things be done decently and in order.” — <strong>1 Corinthians 14:40</strong>
-            </p>
+        <h1>Luxury Home Organization<br><span style="font-size:1.6rem;font-weight:400;">Naples, Florida</span></h1>
+        <p class="subtitle">Boutique closet, wardrobe & master suite transformations for discerning residents</p>
+        <div class="bible-verse">
+            “Let all things be done decently and in order.” — 1 Corinthians 14:40
         </div>
-
-        <div style="text-align: center;">
-            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">
-                Schedule Free Consultation
-            </a>
+        <div style="margin-top:4rem;">
+            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Schedule Private Consultation</a>
         </div>
     </div>
 </section>
 
 <section id="about">
-    <h2 class="section-title">Meet Rhina</h2>
-    <div class="about-grid">
-        <div class="about-image">
-            <img src="rhina-delgado.jpg" alt="Rhina Delgado - Naples Professional Home Organizer" loading="lazy">
+    <h2 class="section-title">Meet Rhina Delgado</h2>
+    <div class="about-grid" style="display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:center;max-width:1200px;margin:auto;">
+        <div class="about-image" style="text-align:center;">
+            <img src="rhina-delgado.jpg" alt="Rhina Delgado" style="border-radius:50%;width:380px;height:380px;object-fit:cover;border:8px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3);">
         </div>
         <div class="about-text">
-            <p>Hi, I'm <strong>Rhina</strong>, founder of <strong>Naples Professional Home Organizer</strong> — a faith-centered luxury organization service for Naples' most discerning residents.</p>
-            <p>My mission is simple: create serene, functional spaces that enhance your lifestyle and reflect biblical order. As 1 Corinthians 14:40 reminds us, <em>"Let all things be done decently and in order."</em> This verse is the heartbeat of every closet, bedroom, and home I transform.</p>
-            <p>With over a decade of experience in high-end residential organization, I specialize in walk-in closets, luxury wardrobes, and master suites. Discretion, precision, and excellence define my work.</p>
-            <p>Whether you're transitioning seasons, downsizing, or craving daily peace in your space, I bring calm, clarity, and beauty to your home — one perfectly folded sweater at a time.</p>
-            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank" style="margin-top:2rem;">Book Free Consultation</a>
+            <p style="font-size:1.25rem;line-height:2;">With over a decade serving Naples’ most exclusive homes, <strong>Rhina Delgado</strong> brings serene order and understated elegance to every closet and master suite she touches.</p>
+            <p>Rooted in faith and precision, her work reflects the biblical principle of order — creating spaces that don’t just look beautiful, but feel peaceful.</p>
+            <p>By appointment and referral only.</p>
+            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank" style="margin-top:2rem;">Begin Your Transformation</a>
         </div>
     </div>
 </section>
 
-<section id="specializations" style="background:var(--beige);">
-    <h2 class="section-title">Luxury Organization Services</h2>
+<section id="services" style="background:var(--beige);">
+    <h2 class="section-title">Signature Organization Services</h2>
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-header"><h3>Basic Closet</h3><p>4ft x 5ft</p><div class="price">$50<span>/hour</span></div></div>
+            <div class="service-header"><h3>Signature Closet</h3><div class="price-start">From $1,800</div></div>
             <div class="service-body">
                 <ul>
-                    <li>Assess and measure the closet</li>
-                    <li>Discuss client preferences and needs</li>
-                    <li>Estimate costs at $50 per hour (5 hour minimum)</li>
-                    <li>Create a tailored organization plan</li>
-                    <li>Sort and categorize current items</li>
-                    <li>Prepare and light clean the closet space</li>
-                    <li>Shopping for organization storage containers (cost charged upfront)</li>
-                    <li>No structural changes</li>
-                    <li>Arrange and hang clothing and accessories</li>
-                    <li>Organize by color, type, or season</li>
-                    <li>Declutter: keep, donate, sell</li>
-                    <li>Ensure easy access</li>
-                    <li>Offer maintenance tips</li>
-                    <li>Final walkthrough</li>
-                    <li>Calculate total cost</li>
-                    <li>Present final bill</li>
+                    <li>Full declutter & curation</li>
+                    <li>Designer-level color & category flow</li>
+                    <li>Premium storage solutions</li>
+                    <li>Seasonal wardrobe integration</li>
                 </ul>
-                <p class="note">Deep cleaning & junk removal = extra cost. Full redo not in membership.</p>
+                <p style="margin-top:2rem;font-size:1.1rem;color:var(--deep-pink);font-weight:600;">Most Popular</p>
             </div>
         </div>
         <div class="service-card">
-            <div class="service-header"><h3>Deep Walk-In Closet</h3><p>7ft x 10ft</p><div class="price">$60<span>/hour</span></div></div>
+            <div class="service-header"><h3>Luxury Walk-In</h3><div class="price-start">From $2,800</div></div>
             <div class="service-body">
                 <ul>
-                    <li>Full assessment and measurement</li>
-                    <li>Personalized plan</li>
-                    <li>Estimate: $60/hr (5 hr min)</li>
-                    <li>Maximize space efficiency</li>
-                    <li>Declutter + organize</li>
-                    <li>Storage purchases charged upfront</li>
-                    <li>No structural changes</li>
-                    <li>Final satisfaction walkthrough</li>
+                    <li>Boutique-style layout design</li>
+                    <li>Hand-selected luxury containers</li>
+                    <li>Accessories & jewelry curation</li>
+                    <li>Lighting & aesthetic consultation</li>
                 </ul>
-                <p class="note">Deep cleaning & debris removal = extra. Full redo not in membership.</p>
             </div>
         </div>
         <div class="service-card">
-            <div class="service-header"><h3>Master Bedroom</h3><p>12ft x 18ft</p><div class="price">$70<span>/hour</span></div></div>
+            <div class="service-header"><h3>Master Suite Sanctuary</h3><div class="price-start">From $4,200</div></div>
             <div class="service-body">
                 <ul>
-                    <li>Evaluate 12x18 bedroom; deep cleaning is an extra cost paid directly to a cleaning company</li>
-                    <li>Engage in a discussion about the client's preferences and organizational needs</li>
-                    <li>Provide a pricing quote of $70 per hour for organizational services. 5 hour minimum</li>
-                    <li>Craft a personalized comprehensive closet organization plan</li>
-                    <li>Shopping for organization storage containers and additional fees will be charged to the client upfront</li>
-                    <li>Disposing of large debris might require a junk removal service (additional cost)</li>
-                    <li>No structural modifications will be made for storage additions</li>
-                    <li>Consider a monthly membership option with bi-monthly light organization sessions</li>
-                    <li>Full closet redo services are available but are subject to separate charges</li>
-                    <li>Referral for custom storage upgrades can be provided; cost is separate</li>
+                    <li>Complete bedroom + closet transformation</li>
+                    <li>Linens, shoes, handbags, jewelry</li>
+                    <li>Custom maintenance plan</li>
+                    <li>Optional quarterly refresh</li>
                 </ul>
-                <p class="note">Deep cleaning and large debris disposal may incur additional charges.<br>A monthly membership is available, offering bi-monthly light organization sessions.<br>Full closet redo not included in membership.</p>
             </div>
         </div>
     </div>
     <div style="text-align:center;margin-top:5rem;">
-        <a href="#memberships" class="btn-primary">Explore Memberships</a>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Reserve Your Consultation</a>
     </div>
 </section>
 
-<section id="memberships" style="background:var(--beige);">
-    <h2 class="section-title">Peace of Mind Memberships</h2>
-    <div class="membership-grid">
-        <div class="membership-card">
-            <h3>Essential</h3>
-            <div class="membership-price">$110</div>
-            <p><em>per month</em></p>
-            <ul><li>2 light sessions/month</li><li>Priority booking</li><li>Email tips</li></ul>
-            <p class="note-small">Full redo = separate</p>
-        </div>
-        <div class="membership-card" style="transform:scale(1.05);border:3px solid var(--deep-pink);">
-            <h3 style="color:var(--deep-pink);">Premium ★ Most Popular</h3>
-            <div class="membership-price">$120</div>
-            <p><em>per month</em></p>
-            <ul><li>2 light sessions</li><li>Seasonal wardrobe swap</li><li>Monthly guide</li><li>Priority support</li></ul>
-        </div>
-        <div class="membership-card">
-            <h3>Elite</h3>
-            <div class="membership-price">$130</div>
-            <p><em>per month</em></p>
-            <ul><li>2 light sessions</li><li>Quarterly deep review</li><li>Custom plan</li><li>VIP scheduling</li></ul>
-            <p class="note-small">Full peace of mind</p>
-        </div>
-    </div>
-    <div style="text-align:center;margin-top:4rem;">
-        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Join Today</a>
-    </div>
-</section>
+<!-- AI Chat Float Button -->
+<div id="ai-chat-float" onclick="openAIChat()">
+    <i class="fas fa-comments"></i>
+</div>
 
-<section id="testimonials" style="background:var(--white);">
-    <h2 class="section-title">Client Love</h2>
-    <div class="testimonials-grid">
-        <div class="testimonial-card">
-            <p>"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p>
-            <span class="testimonial-author">— Sarah M., Naples</span>
-        </div>
-        <div class="testimonial-card">
-            <p>"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p>
-            <span class="testimonial-author">— Dr. Lisa Chen, Physician</span>
-        </div>
-        <div class="testimonial-card">
-            <p>"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p>
-            <span class="testimonial-author">— James R., CEO</span>
-        </div>
+<!-- Simple AI Chat Popup (replace with Tidio, Crisp, or your own bot) -->
+<div id="ai-chat-popup" style="display:none;position:fixed;bottom:100px;right:25px;width:380px;height:560px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:9999;overflow:hidden;border:1px solid #eee;">
+    <div style="background:var(--deep-pink);color:#fff;padding:1.2rem;text-align:center;font-weight:600;position:relative;">
+        Rhina's AI Assistant
+        <span style="position:absolute;right:15px;top:15px;cursor:pointer;font-size:1.4rem;" onclick="document.getElementById('ai-chat-popup').style.display='none'">×</span>
     </div>
-</section>
-
-<section id="blog" style="background:var(--beige);">
-    <h2 class="section-title">Organization Insights</h2>
-    <div class="blog-grid">
-        <div class="blog-card">
-            <h3>Why Organization Matters More Than You Think</h3>
-            <p>A clutter-free home reduces stress, saves time, and reflects inner peace. Studies show organized people are 42% more productive...</p>
-            <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="blog-card">
-            <h3>Feeling Overwhelmed? Here’s Where to Start</h3>
-            <p>Begin with one drawer or one shelf. Set a 15-minute timer. Sort into keep, donate, trash. Momentum builds fast...</p>
-            <a href="#" class="read-more">Read More →</a>
-        </div>
-        <div class="blog-card">
-            <h3>One Room at a Time: The Sustainable Path</h3>
-            <p>Tackle your closet first, then bedroom, then pantry. Celebrate small wins. In 30 days, your entire home feels lighter...</p>
-            <a href="#" class="read-more">Read More →</a>
-        </div>
-    </div>
-</section>
-
-<section id="contact" style="background:var(--white);">
-    <h2 class="section-title">Get In Touch</h2>
-    <p style="text-align:center;max-width:800px;margin:auto;color:var(--text-light);font-size:1.2rem;">
-        Ready for calm, order, and beauty in your home?<br>Book your free consultation today.
-    </p>
-    <div style="text-align:center;margin-top:3rem;">
-        <a href="mailto:rhina@naplesprofessionalhomeorganizer.com" class="btn-primary">Email Me</a>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" style="margin-left:1rem;" target="_blank">Book Call</a>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-col">
-            <h4>Naples Professional Home Organizer</h4>
-            <p>Luxury organization rooted in faith, precision, and peace.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-pinterest"></i></a>
-            </div>
-        </div>
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul style="list-style:none;">
-                <li><a href="#about">About Rhina</a></li>
-                <li><a href="#specializations">Services</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Contact</h4>
-            <p><a href="mailto:rhina@naplesprofessionalhomeorganizer.com">rhina@naplesprofessionalhomeorganizer.com</a></p>
-            <p>Naples, Florida • By appointment only</p>
-        </div>
-    </div>
-    <div class="copyright">© 2025 Naples Professional Home Organizer. All rights reserved.</div>
-</footer>
+    <iframe src="https://direct.lc.chat/15895184/" style="width:100%;height:calc(100% - 60px);border:none;" allowfullscreen></iframe>
+</div>
 
 <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    }));
-    const toggle = document.getElementById('menuToggle'), nav = document.getElementById('navLinks');
-    if(toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    // Toggle mobile menu
+    document.getElementById('menuToggle').addEventListener('click', () => {
+        document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+        });
+    });
+
+    // AI Chat Toggle (replace iframe src with your own AI bot)
+    function openAIChat() {
+        document.getElementById('ai-chat-popup').style.display = 
+            document.getElementById('ai-chat-popup').style.display === 'block' ? 'none' : 'block';
+    }
 </script>
+
+<!-- Optional: Replace the iframe with any AI provider -->
+<!-- Free options: Tidio (free plan), LiveChat, Crisp, or embed Grok/ChatGPT via API -->
+
 </body>
 </html>
