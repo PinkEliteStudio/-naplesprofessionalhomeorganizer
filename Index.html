@@ -6,9 +6,8 @@
     <title>Rhina Delgado | Naples Luxury Home Organizer</title>
     <meta name="description" content="Naples premier faith-centered luxury closet & master suite organization. By appointment only.">
     
-    <!-- Elegant Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Elegant & Legible Cursive for your name -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sacramento&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     
     <style>
@@ -20,10 +19,9 @@
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
         h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--navy)}
-               .cursive-name{font-family:'Great Vibes',cursive;font-size:4.8rem;color:var(--deep-pink);letter-spacing:2px}
+        .cursive-name{font-family:'Sacramento',cursive;font-size:5.8rem;color:var(--deep-pink);letter-spacing:1px;line-height:1}
         a{color:inherit;text-decoration:none}
         
-        /* Header - Fixed & Clean */
         header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
         nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
         .logo{font-family:'Oswald',sans-serif;font-size:2rem;font-weight:700;color:var(--navy);letter-spacing:2px}
@@ -35,7 +33,6 @@
         .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
         .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--navy)}
 
-        /* Hero */
         .hero{height:100vh;min-height:780px;background:linear-gradient(rgba(26,42,68,.85),rgba(26,42,68,.7)),url('https://images.unsplash.com/photo-1558618666-9142c2d5ff9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;background-attachment:fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative}
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.15),transparent 70%)}
         .hero h1{font-size:4.8rem;margin-bottom:1rem}
@@ -46,17 +43,15 @@
         .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--navy)}
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
 
-        /* About */
         .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
         .about-img img{width:340px;height:460px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3)}
         .about-text p{font-size:1.2rem;margin:1.5rem 0;color:#444;line-height:1.9}
         .about-text .btn-book{margin-top:3rem;display:inline-block}
 
-        /* Cards - Fixed & Beautiful */
         .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
         .card{background:var(--navy);color:#fff;border-radius:20px;overflow:hidden;box-shadow:0 15px 40px rgba(26,42,68,.3);transition:.4s;height:100%}
-        .card:hover{transform:translateY(-12px);box-shadow:0 25px 60px rgba(26,42,68,.4)}
-        .card-header{padding:2.5rem 2rem;text-align:center;background:var(--navy)}
+        .card:hover{transform:translateY(-12px)}
+        .card-header{padding:2.5rem 2rem;text-align:center}
         .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px}
         .card-header .price{font-size:3rem;font-weight:700;color:var(--gold);margin:1rem 0}
         .card-header .popular{color:var(--deep-pink);font-size:1rem;font-weight:600}
@@ -64,26 +59,25 @@
         .card-body ul{list-style:none}
         .card-body li{position:relative;padding-left:1.8rem;margin:1rem 0;font-size:1.05rem}
         .card-body li::before{content:"✦";position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
-
         .note{text-align:center;margin:2rem auto 0;max-width:900px;font-style:italic;color:#777;font-size:1.1rem}
 
-        /* AI Chat */
+        .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
+        .testimonial{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.08);font-style:italic;font-size:1.15rem;line-height:1.8;border-left:6px solid var(--deep-pink)}
+        .testimonial p{margin-bottom:1.5rem}
+        .author{font-style:normal;font-weight:600;color:var(--navy);text-align:right}
+
         #ai-chat-float{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(232,160,191,.5);cursor:pointer;z-index:999}
         #ai-chat-float:hover{background:var(--gold);transform:scale(1.1)}
         #ai-chat-float i{animation:pulse 2s infinite}
         @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(232,160,191,.7)}70%{box-shadow:0 0 0 12px transparent}}
 
-        /* Responsive */
-        @media(max-width:992px){
-            .about-grid{grid-template-columns:1fr;text-align:center}
-            .about-img img{width:300px;height:400px}
-        }
+        @media(max-width:992px){.about-grid{grid-template-columns:1fr;text-align:center}}
         @media(max-width:768px){
             .menu-toggle{display:block}
             .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;gap:1.5rem;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-100%);transition:.4s}
             .nav-links.active{transform:translateY(0)}
             .hero h1{font-size:3.5rem}
-            section{padding:100px 5%}
+            .cursive-name{font-size:4.5rem}
         }
     </style>
 </head>
@@ -212,7 +206,43 @@
     </div>
 </section>
 
-<!-- AI Chat -->
+<section id="testimonials" style="background:var(--beige);">
+    <h2 class="section-title">Client Love</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            <p>"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p>
+            <span class="author">— Sarah M., Naples</span>
+        </div>
+        <div class="testimonial">
+            <p>"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p>
+            <span class="author">— Dr. Lisa Chen, Physician</span>
+        </div>
+        <div class="testimonial">
+            <p>"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p>
+            <span class="author">— James R., CEO</span>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;color:#666;font-size:1.3rem;">
+        Ready for calm, beauty, and order in your home?<br>Book your private consultation today.
+    </p>
+    <div style="max-width:700px;margin:3rem auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.08);">
+        <form action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
+            <input type="text" name="name" placeholder="Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
+            <input type="email" name="email" placeholder="Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
+            <input type="tel" name="phone" placeholder="Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
+            <textarea name="message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;"></textarea>
+            <button type="submit" class="btn-book" style="width:100%;padding:1.1rem;font-size:1.2rem;">Send Message</button>
+        </form>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book Directly</a>
+    </div>
+</section>
+
 <div id="ai-chat-float" onclick="document.getElementById('ai-chat-popup').style.display='block'">Chat</div>
 <div id="ai-chat-popup" style="display:none;position:fixed;bottom:100px;right:25px;width:380px;height:580px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden">
     <div style="background:var(--deep-pink);color:#fff;padding:1rem;text-align:center;position:relative">
