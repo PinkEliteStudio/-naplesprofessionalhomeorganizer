@@ -9,22 +9,15 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
     
     <style>
-        /* UPDATES: 
-           1. --navy changed to light pink (#F0E0E6) for the cards background.
-           2. --deep-pink and --soft-pink adjusted slightly to ensure good contrast.
-           3. .card, .card-header, and .card-body updated for white background, light pink border/text.
-           4. .logo style updated to use the new 'Alex Brush' font.
-           5. #services section updated for slideshow background and text contrast.
-        */
+        /* BASE STYLES & VARIABLES */
         :root{
             --gold:#D4AF37;
-            --soft-pink:#F8DDE8; /* Lighter Pink */
-            --deep-pink:#E393B5; /* Main Pink */
-            --navy:#F0E0E6; /* Light Pink for Card Header Backgrounds (formerly Navy) */
+            --soft-pink:#F8DDE8; 
+            --deep-pink:#E393B5; 
+            --navy:#F0E0E6; 
             --beige:#FDF9F6;
             --white:#FFFFFF;
             --text:#333;
@@ -36,21 +29,12 @@
         body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
         h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)} 
         .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
-     
         a{color:inherit;text-decoration:none}
      
+        /* HEADER & NAVIGATION */
         header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
         nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
-        
-        .logo{
-            font-family:'Alex Brush', cursive; 
-            font-size:2.8rem; 
-            font-weight:400; 
-            color:var(--deep-pink); 
-            letter-spacing:1px;
-            text-transform: none; 
-        }
-        
+        .logo{font-family:'Alex Brush', cursive; font-size:2.8rem; font-weight:400; color:var(--deep-pink); letter-spacing:1px;text-transform: none;}
         .nav-links{display:flex;gap:2.8rem;list-style:none;align-items:center}
         .nav-links a{font-weight:500;font-size:1.05rem;padding:0.5rem 0;position:relative}
         .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent);transition:.4s;border-radius:2px}
@@ -58,10 +42,11 @@
         .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;font-size:1.1rem;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
         .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
         .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)} 
+        
+        /* HERO SECTION */
         .hero{
             height:100vh;min-height:780px;
-            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)),
-                        url('hero-bg.jpg') center/cover no-repeat fixed;
+            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('hero-bg.jpg') center/cover no-repeat fixed;
             display:flex;align-items:center;justify-content:center;
             text-align:center;color:#fff;position:relative;
             transition: background-image 1s ease-in-out;
@@ -69,18 +54,24 @@
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
         .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px; color:#fff} 
         .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0;max-width:90%}
+
+        /* GENERAL SECTION STYLES */
         section{padding:120px 5%;max-width:1400px;margin:auto;position: relative;} 
         .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)} 
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
+        
+        /* ABOUT SECTION */
         .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
         .about-img img{width:340px;height:460px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3)}
         .about-text p{font-size:1.2rem;margin:1.5rem 0;color:#444;line-height:1.9}
         .about-text .btn-book{margin-top:3rem;display:inline-block}
+        
+        /* SERVICES & MEMBERSHIPS */
         .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
         
-        /* SERVICES SECTION BACKGROUND SLIDESHOW & OVERLAY */
+        /* SERVICES SLIDESHOW STYLES */
         #services {
-            background-color: var(--beige); /* Fallback color */
+            background-color: var(--beige); 
             background-size: cover;
             background-position: center;
             transition: background-image 1s ease-in-out;
@@ -88,7 +79,7 @@
         }
         #services .section-title, #services .note, #services .cards-grid {
             position: relative;
-            z-index: 10; /* Keep content above the overlay */
+            z-index: 10; 
         }
         #services::before {
             content: '';
@@ -97,66 +88,44 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.55); /* Dark overlay for text contrast */
+            background-color: rgba(0, 0, 0, 0.55); 
             z-index: 5;
         }
-        #services .section-title {
-            color: #fff; /* White title on dark background */
-        }
-        #services .section-title::after {
-            background: var(--gold); /* Gold line for contrast */
-        }
-        #services .note {
-            color: var(--soft-pink); /* Light text for contrast */
-        }
+        #services .section-title {color: #fff;}
+        #services .section-title::after {background: var(--gold);}
+        #services .note {color: var(--soft-pink);}
 
-        /* CARD STYLE (Kept from previous update) */
+        /* CARD STYLE */
         .card{
-            background:var(--white); 
-            color:var(--text); 
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0 15px 40px rgba(0,0,0,.08); 
-            transition:.4s;
-            height:100%;
-            border: 3px solid var(--card-border-pink); 
+            background:var(--white); color:var(--text); border-radius:20px;
+            overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,.08); 
+            transition:.4s; height:100%; border: 3px solid var(--card-border-pink); 
         }
         #memberships .card:nth-child(2) {
-             transform:scale(1.05);
-             border: 5px solid var(--card-border-pink); 
+             transform:scale(1.05); border: 5px solid var(--card-border-pink); 
         }
-        
         .card:hover{transform:translateY(-12px); box-shadow:0 20px 50px rgba(232,160,191,.3);} 
-        
-        .card-header{
-            padding:2.5rem 2rem;
-            text-align:center;
-            background:var(--navy); 
-            color:var(--text); 
-        }
+        .card-header{padding:2.5rem 2rem;text-align:center;background:var(--navy); color:var(--text);}
         .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px; color:var(--text);} 
         .card-header .price{font-size:3rem;font-weight:700;color:var(--deep-pink);margin:1rem 0} 
         .card-header .popular{color:var(--deep-pink);font-size:1rem;font-weight:600}
-        
-        .card-body{
-            padding:2rem;
-            background:var(--white); 
-            color:var(--text);
-            min-height:220px
-        }
-        
+        .card-body{padding:2rem;background:var(--white); color:var(--text);min-height:220px}
         .card-body ul{list-style:none}
         .card-body li{position:relative;padding-left:1.8rem;margin:1rem 0;font-size:1.05rem}
         .card-body li::before{content:"✦";position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
-        
         .note{text-align:center;margin:2rem auto 0;max-width:900px;font-style:italic;color:#777;font-size:1.1rem}
+        
+        /* TESTIMONIALS */
         .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
         .testimonial{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.08);font-style:italic;font-size:1.15rem;line-height:1.8;border-left:6px solid var(--deep-pink)}
         .testimonial p{margin-bottom:1.5rem}
         .author{font-style:normal;font-weight:600;color:var(--text);text-align:right} 
-        #ai-chat-float{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(232,160,191,.5);cursor:pointer;z-index:999}
+
+        /* FLOATING ELEMENTS & POPUPS */
+        #ai-chat-float, #newsletter-float{position:fixed;bottom:25px;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;z-index:999}
+        #ai-chat-float{right:25px;background:var(--deep-pink);color:#fff;}
         #ai-chat-float:hover{background:var(--gold);transform:scale(1.1)}
-        #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(212,175,55,.5);cursor:pointer;z-index:999}
+        #newsletter-float{left:25px;background:var(--gold);color:#fff;}
         #newsletter-float:hover{background:var(--deep-pink);transform:scale(1.1)}
         #newsletter-popup{display:none;position:fixed;bottom:100px;left:25px;width:380px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
         #newsletter-popup .header{background:var(--gold);color:#fff;padding:1rem;text-align:center;position:relative}
@@ -164,6 +133,9 @@
         #newsletter-popup form{padding:1.5rem}
         #newsletter-popup input{width:100%;padding:0.8rem;margin-bottom:1rem;border:2px solid #eee;border-radius:8px}
         #newsletter-popup button{width:100%;padding:0.9rem;background:var(--deep-pink);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+        #ai-chat-popup{display:none;position:fixed;bottom:100px;right:25px;width:380px;height:580px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
+
+        /* FOOTER */
         footer{background:#444;color:#fff;padding:3rem 5% 1rem;max-width:1400px;margin:auto;text-align:center} 
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
         .footer-content h4{font-family:'Oswald',sans-serif;font-size:1.3rem;margin-bottom:1rem;color:var(--gold)}
@@ -171,12 +143,63 @@
         .footer-content li{margin:0.5rem 0}
         .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;margin-top:2rem;font-size:0.9rem;color:var(--light)}
         .footer-bottom a{color:var(--soft-pink);margin:0 1rem}
+
+        /* ---------------------------------------------------------------------- */
+        /* MOBILE RESPONSIVENESS (Max Width: 1024px - Tablet/Smaller Desktop) */
+        /* ---------------------------------------------------------------------- */
+        @media(max-width:1024px){
+            .nav-links{gap:1.5rem;}
+            .btn-book{padding:0.8rem 1.5rem; font-size:1rem;}
+            .hero h1{font-size:4.5rem;}
+            .bible{font-size:1.4rem; padding:1.5rem 2rem;}
+            section{padding:80px 4%;}
+            .section-title{font-size:2.4rem;}
+            .about-grid{grid-template-columns:1fr 1.5fr; gap:3rem;}
+            .about-img img{width:300px; height:420px;}
+            .your-name{font-size:4.5rem;}
+            .about-text p{font-size:1.1rem;}
+            .cards-grid, .testimonial-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+            #memberships .card:nth-child(2) {transform:scale(1); border: 3px solid var(--card-border-pink);} /* De-emphasize center card */
+        }
+
+        /* ---------------------------------------------------------------------- */
+        /* SMALL MOBILE RESPONSIVENESS (Max Width: 768px - Phone) */
+        /* ---------------------------------------------------------------------- */
         @media(max-width:768px){
+            /* Mobile Nav Toggle */
             .menu-toggle{display:block}
             .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;gap:1.5rem;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-100%);transition:.4s}
-            .nav-links.active{transform:translateY(0)}
-            .hero h1{font-size:4.2rem}
-            #newsletter-popup{left:50%;transform:translateX(-50%);}
+            .nav-links.active{transform:translateY(0); top:70px;} /* Push menu down below header */
+            .btn-book{display:none;} /* Hide desktop booking button on mobile nav */
+            nav .btn-book {display:block;} /* Keep the main header button */
+
+            /* Hero adjustments */
+            .hero{min-height:550px;}
+            .hero h1{font-size:3rem;}
+            .bible{font-size:1.1rem; padding:1rem 1.5rem; border-left: 4px solid var(--gold);}
+
+            /* About adjustments */
+            .about-grid{grid-template-columns:1fr; text-align:center;}
+            .about-img{order:1; margin-bottom:2rem;}
+            .about-text{order:2;}
+            .about-img img{width:250px; height:350px;}
+            .your-name{font-size:3.5rem;}
+            .about-text .btn-book{margin-top:2rem;}
+
+            /* Sections & Grids */
+            section{padding:60px 20px;}
+            .section-title{font-size:2rem; margin-bottom:30px;}
+            .cards-grid, .testimonial-grid{grid-template-columns:1fr; gap:1.5rem;}
+            .card-header .price{font-size:2.5rem;}
+            .testimonial{font-size:1.05rem;}
+            
+            /* Footer */
+            .footer-content{grid-template-columns:1fr;}
+
+            /* Popups */
+            #newsletter-popup, #ai-chat-popup{width:90%; bottom:90px;}
+            #newsletter-popup{left:50%; transform:translateX(-50%);}
+            #ai-chat-popup{right:50%; transform:translateX(50%); height:450px;}
         }
     </style>
 </head>
@@ -191,9 +214,10 @@
             <li><a href="#memberships">Memberships</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank" style="display:block;">Book Now</a></li>
         </ul>
         <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book Now</a>
-        <div class="menu-toggle" id="menuToggle">Menu</div>
+        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
     </nav>
 </header>
 <section id="home" class="hero">
@@ -214,7 +238,7 @@
         </div>
         <div class="about-text">
             <h3 class="your-name">Rhina Delgado</h3>
-            <p>Bringing unparalleled expertise to Naples’ most exclusive residences,I cultivate calm, clarity,and timeless elegance in every closet and master suite.</p>
+            <p>Bringing **unparalleled expertise** to Naples’ most exclusive residences, I cultivate calm, clarity, and timeless elegance in every closet and master suite.</p>
             <p>My faith-centered approach reflects the belief that true order creates peace — in your home and in your heart.</p>
             <p>By appointment and referral only.</p>
             <br>
@@ -348,6 +372,8 @@
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
         e.preventDefault();
+        // Hide menu after clicking a link on mobile
+        document.getElementById('navLinks').classList.remove('active');
         document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
     }));
 
@@ -355,18 +381,17 @@
     const hero = document.querySelector('.hero');
     const heroBgImages = [
         "url('hero-bg.jpg')",
-        "url('hero-bg2.jpg')", // Add your second image
-        "url('hero-bg3.jpg')" // Add your third image
+        "url('hero-bg2.jpg')", 
+        "url('hero-bg3.jpg')" 
     ];
     let currentHeroBg = 0;
     setInterval(() => {
         currentHeroBg = (currentHeroBg + 1) % heroBgImages.length;
         hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), ${heroBgImages[currentHeroBg]} center/cover no-repeat fixed`;
-    }, 5000); // Change every 5 seconds
+    }, 5000); 
 
-    // NEW: Services section background slideshow
+    // Services section background slideshow
     const servicesSection = document.getElementById('services');
-    // Using the uploaded files for the slideshow: closet.jpg, closet 2.jpg, and duplicating closet 2.jpg for a third slide
     const serviceBgImages = [
         "url('closet.jpg') center/cover no-repeat fixed", 
         "url('closet 2.jpg') center/cover no-repeat fixed", 
@@ -374,14 +399,12 @@
     ];
     let currentServiceBg = 0;
     
-    // Set initial background
     servicesSection.style.backgroundImage = serviceBgImages[0];
 
-    // Slideshow interval
     setInterval(() => {
         currentServiceBg = (currentServiceBg + 1) % serviceBgImages.length;
         servicesSection.style.backgroundImage = serviceBgImages[currentServiceBg];
-    }, 6000); // Change every 6 seconds
+    }, 6000); 
 </script>
 </body>
 </html>
