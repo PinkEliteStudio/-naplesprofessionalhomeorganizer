@@ -1,239 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naples Professional Home Organizer | Rhina Delgado</title>
-    <meta name="description" content="Naples' premier faith-centered luxury closet, wardrobe, and master suite organization. By appointment only.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naples Professional Home Organizer | Rhina Delgado</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Poppins, sans-serif;
+      color:#333;
+      background: #000;
+    }
+    .hero {
+      position:relative;
+      height:100vh;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
+                  url('https://i.imgur.com/8iK7m2j.jpg') center/cover no-repeat fixed;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+    }
+    .navbar {
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      z-index:1000;
+      padding:15px 0;
+    }
+    .navbar ul {
+      list-style:none;
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      font-size:18px;
+      font-weight:500;
+    }
+    .navbar a {
+      color:#fff;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    .navbar a:hover { color:#d4a373; }
     
-    <!-- Fonts: Oswald + Cinzel Decorative (closest to Britannic Bold) -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9N0QJK2E05"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9N0QJK2E05');
-    </script>
-
-    <style>
-        :root{
-            --gold:#D4AF37;--soft-pink:#F8C8DC;--deep-pink:#E8A0BF;--navy:#1A2A44;--beige:#FDF9F6;
-            --white:#FFFFFF;--light-gray:#F5F0F2;--text-dark:#2D2D2D;--text-light:#666;
-            --accent-gradient:linear-gradient(135deg,var(--deep-pink),var(--soft-pink))
-        }
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text-dark);line-height:1.8;overflow-x:hidden}
-        h1,h2,h3,h4,h5,h6{font-family:'Oswald',sans-serif;color:var(--navy);font-weight:600;letter-spacing:1px;text-transform:uppercase}
-        .britannic-name{font-family:'Cinzel Decorative',cursive !important;font-weight:900;font-size:3.2rem;color:var(--deep-pink);letter-spacing:2px}
-        a{text-decoration:none;color:inherit}
-        img{max-width:100%;display:block}
-        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);z-index:1000;box-shadow:0 6px 30px rgba(0,0,0,.08)}
-        nav{display:flex:flex;justify-content:space-between;align-items:center;padding:1.5rem 6%;max-width:1700px;margin:auto}
-        .logo{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.9rem;color:var(--navy);letter-spacing:2px}
-        .nav-links{display:flex;gap:2.8rem;list-style:none}
-        .nav-links a{font-weight:500;font-size:1.05rem;position:relative;padding:.5rem 0}
-        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent-gradient);transition:.4s;border-radius:2px}
-        .nav-links a:hover::after{width:100%}
-        .btn-primary{background:var(--deep-pink);color:#fff;padding:1rem 2.8rem;border-radius:60px;font-weight:600;transition:.4s;box-shadow:0 10px 30px rgba(232,160,191,.3);font-size:1.2rem}
-        .btn-primary:hover{background:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(212,175,55,.4)}
-        .menu-toggle{display:none;cursor:pointer;font-size:1.8rem;color:var(--navy)}
-
-        /* HERO */
-        .hero{height:100vh;min-height:820px;background:linear-gradient(rgba(26,42,68,.82),rgba(26,42,68,.68)),url('https://images.unsplash.com/photo-1558618666-9142c2d5ff9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2400&q=80') center/cover no-repeat;background-attachment:fixed;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative}
-        .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.2),transparent 70%)}
-        .hero h1{font-size:4.5rem;margin-bottom:1rem}
-        .hero .subtitle{font-size:1.8rem;margin-bottom:2.5rem;font-weight:300}
-        .bible-verse{font-style:italic;font-size:1.65rem;color:var(--soft-pink);padding:2.2rem 3.5rem;border-left:6px solid var(--gold);background:rgba(26,42,68,.45);border-radius:0 22px 22px 0;display:inline-block;margin:3.5rem auto 0;max-width:90%;box-shadow:0 15px 40px rgba(0,0,0,.3)}
-
-        section{padding:140px 6%;max-width:1700px;margin:auto}
-        .section-title{text-align:center;font-size:3.2rem;margin-bottom:5rem;position:relative;color:var(--navy);letter-spacing:2px}
-        .section-title::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:160px;height:6px;background:var(--accent-gradient);border-radius:4px}
-
-        /* About – Oval Photo */
-        .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:center;max-width:1300px;margin:auto}
-        .about-image{text-align:center}
-        .about-image img{width:360px;height:480px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 25px 60px rgba(232,160,191,.35)}
-        .about-text p{font-size:1.25rem;line-height:2;margin-bottom:1.5rem}
-        .about-text .btn-primary{margin-top:3.5rem;display:inline-block} /* Button moved lower */
-
-        /* Services */
-        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:3.5rem;margin-top:6rem}
-        .service-card{background:#fff;border-radius:32px;overflow:hidden;box-shadow:0 22px 55px rgba(232,160,191,.18);transition:.6s}
-        .service-card:hover{transform:translateY(-20px);box-shadow:0 45px 90px rgba(232,160,191,.28)}
-        .service-header{background:linear-gradient(135deg,var(--navy),#2c3e5a);color:#fff;padding:3.2rem 2rem;text-align:center}
-        .price-start{font-size:3.2rem;font-weight:700;color:var(--gold)}
-
-        /* Memberships */
-        .membership-note{text-align:center;max-width:900px;margin:2rem auto 4rem;font-size:1.1rem;color:var(--text-light);font-style:italic}
-
-        /* AI Chat */
-        #ai-chat-float{position:fixed;bottom:25px;right:25px;width:68px;height:68px;background:var(--deep-pink);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;box-shadow:0 12px 35px rgba(232,160,191,.5);cursor:pointer;z-index:9999;transition:.3s}
-        #ai-chat-float:hover{background:var(--gold);transform:scale(1.12)}
-        #ai-chat-float i{animation:pulse 2s infinite}
-        @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(232,160,191,.7)}70%{box-shadow:0 0 0 14px rgba(232,160,191,0)}100%{box-shadow:0 0 0 0 rgba(232,160,191,0)}}
-
-        /* Responsive */
-        @media(max-width:992px){
-            .about-grid{grid-template-columns:1fr;text-align:center}
-            .about-image img{width:320px;height:420px}
-        }
-        @media(max-width:768px){
-            .menu-toggle{display:block}
-            .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;transform:translateY(-150%);transition:.4s;box-shadow:0 10px 30px rgba(0,0,0,.1)}
-            .nav-links.active{transform:translateY(0)}
-            .hero h1{font-size:3.4rem}
-            section{padding:100px 4%}
-        }
-    </style>
+    .hero-content {
+      max-width:900px;
+      padding:0 20px;
+    }
+    .cursive-name {
+      font-family: 'Playfair Display', serif;
+      font-size:5.5rem;
+      font-weight:400;
+      letter-spacing:3px;
+      color:#fff;
+      margin-bottom:20px;
+      text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+    }
+    .tagline {
+      font-family:'Cormorant Garamond', serif;
+      font-size:1.8rem;
+      margin-bottom:30px;
+      font-weight:300;
+    }
+    .btn-book {
+      background:#d4a373;
+      color:#fff;
+      padding:14px 40px;
+      border-radius:50px;
+      font-size:1.3rem;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(0,0,0,0.3);
+      transition:0.3s;
+    }
+    .btn-book:hover {
+      background:#c08b5a;
+      transform:translateY(-3px);
+    }
+    .oval-photo {
+      width:280px;
+      height:280px;
+      border-radius:50%;
+      object-fit:cover;
+      border:8px solid rgba(255,255,255,0.3);
+      margin:40px auto;
+      display:block;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    }
+    .services {
+      padding:100px 5%;
+      background:#faf8f5;
+      text-align:center;
+    }
+    .services h2 {
+      font-family:'Playfair Display', serif;
+      font-size:3rem;
+      margin-bottom:60px;
+      color:#333;
+    }
+    .cards {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+      max-width:1400px;
+      margin:0 auto;
+    }
+    .card {
+      background:#0f172a;
+      color:#d4af37;
+      padding:40px 25px;
+      border-radius:20px;
+      width:320px;
+      transition:0.3s;
+    }
+    .card:hover { transform:translateY(-10px); }
+    .card h3 {
+      font-family:'Playfair Display', serif;
+      font-size:1.8rem;
+      margin-bottom:20px;
+    }
+    .price {
+      font-size:2.8rem;
+      font-weight:600;
+      margin:15px 0;
+    }
+    @media (max-width:768px) {
+      .cursive-name { font-size:4rem; }
+      .tagline { font-size:1.4rem; }
+      .navbar ul { flex-direction:column; gap:15px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <div class="logo">Naples Organizer</div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#memberships">Memberships</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Book Now</a>
-        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
-    </nav>
-</header>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Memberships</a></li>
+      <li><a href="#">Testimonials</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
 
-<section id="home" class="hero">
+  <section class="hero">
     <div class="hero-content">
-        <h1>Luxury Home Organization<br>Naples, Florida</h1>
-        <p class="subtitle">Exquisite closet, wardrobe & master suite transformations</p>
-        <div class="bible-verse">
-            “Let all things be done decently and in order.” — 1 Corinthians 14:40
-        </div>
-        <div style="margin-top:4.5rem;">
-            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Schedule Private Consultation</a>
-        </div>
+      <h1 class="cursive-name">Rhina Delgado</h1>
+      <p class="tagline">Exquisite closet, wardrobe & master-suite transformations in Naples, Florida</p>
+      <img src="YOUR OVAL PHOTO LINK HERE" alt="Rhina Delgado" class="oval-photo">
+      <br><br>
+      <a href="https://calendly.com/yourlink" class="btn-book">Book Now</a>
+      <p style="margin-top:50px; font-size:1.1rem; opacity:0.9;">
+        “Let all things be done decently and in order.” — 1 Corinthians 14:40
+      </p>
     </div>
-</section>
+  </section>
 
-<section id="about">
-    <h2 class="section-title">Meet Your Organizer</h2>
-    <div class="about-grid">
-        <div class="about-image">
-            <img src="rhina-delgado.jpg" alt="Rhina Delgado - Naples Luxury Organizer">
-        </div>
-        <div class="about-text">
-            <h3 class="britannic-name">Rhina Delgado</h3>
-            <p>With over a decade of experience serving Naples’ most exclusive residences, I bring calm, clarity, and timeless elegance to every closet and master suite.</p>
-            <p>My faith-centered approach is rooted in the belief that order reflects peace — both in your home and in your heart.</p>
-            <p>By appointment and referral only.</p>
-            <br><br>
-            <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Begin Your Transformation</a>
-        </div>
+  <section class="services">
+    <h2>Signature Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>SIGNATURE CLOSET</h3>
+        <div class="price">From $1,800</div>
+        <p>Full curation & declutter<br>Designer color flow<br>Luxury storage solutions<br>Seasonal integration</p>
+      </div>
+      <div class="card">
+        <h3>LUXURY WALK-IN</h3>
+        <div class="price">From $2,800</div>
+        <p>Boutique layout design<br>Hand-selected accessories<br>Jewelry & handbag curation<br>Aesthetic consultation</p>
+      </div>
+      <div class="card">
+        <h3>MASTER SUITE SANCTUARY</h3>
+        <div class="price">From $4,200</div>
+        <p>Full bedroom + closet transformation<br>Linens & shoe organization<br>Custom seasonal plan<br>Ongoing support option</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="services" style="background:var(--beige);">
-    <h2 class="section-title">Signature Services</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-header"><h3>Signature Closet</h3><div class="price-start">From $1,800</div></div>
-            <div class="service-body"><ul><li>Full curation & declutter</li><li>Designer color flow</li><li>Luxury storage solutions</li><li>Seasonal integration</li></ul></div>
-        </div>
-        <div class="service-card">
-            <div class="service-header"><h3>Luxury Walk-In</h3><div class="price-start">From $2,800</div></div>
-            <div class="service-body"><ul><li>Boutique layout designight</li><li>Hand-selected accessories</li><li>Jewelry & handbag curation</li><li>Aesthetic consultation</li></ul></div>
-        </div>
-        <div class="service-card">
-            <div class="service-header"><h3>Master Suite Sanctuary</h3><div class="price-start">From $4,200</div></div>
-            <div class="service-body"><ul><li>Full bedroom + closet transformation</li><li>Linens & shoe organization</li><li>Custom seasonal plan</li><li>Ongoing support option</li></ul></div>
-        </div>
-    </div>
-</section>
-
-<section id="memberships">
-    <h2 class="section-title">Peace of Mind Memberships</h2>
-    <p class="membership-note">Memberships are exclusive to past clients who desire ongoing seasonal refresh, wardrobe swaps, and light maintenance touch-ups.</p>
-    <div class="services-grid">
-        <div class="service-card">
-            <div class="service-header"><h3>Essential</h3><div class="price-start">$110/month</div></div>
-            <div class="service-body"><ul><li>2 light sessions per month</li><li>Priority scheduling</li><li>Email organization tips</li></ul></div>
-        </div>
-        <div class="service-card" style="transform:scale(1.05);border:3px solid var(--deep-pink);">
-            <div class="service-header"><h3 style="color:var(--deep-pink);">Premium Most Popular</h3><div class="price-start">$120/month</div></div>
-            <div class="service-body"><ul><li>2 light sessions</li><li>Seasonal wardrobe swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
-        </div>
-        <div class="service-card">
-            <div class="service-header"><h3>Elite</h3><div class="price-start">$130/month</div></div>
-            <div class="service-body"><ul><li>2 light sessions</li><li>Quarterly deep review</li><li>Custom maintenance plan</li><li>VIP access</li></ul></div>
-        </div>
-    </div>
-</section>
-
-<section id="testimonials" style="background:var(--beige);">
-    <h2 class="section-title">Client Love</h2>
-    <div class="services-grid">
-        <div class="service-card" style="padding:3rem;text-align:center;font-style:italic;background:#fff;">
-            <p style="font-size:1.3rem;margin-bottom:2rem;">"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p>
-            <strong>— Sarah M., Naples</strong>
-        </div>
-        <div class="service-card" style="padding:3rem;text-align:center;font-style:italic;background:#fff;">
-            <p style="font-size:1.3rem;margin-bottom:2rem;">"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p>
-            <strong>— Dr. Lisa Chen, Physician</strong>
-        </div>
-        <div class="service-card" style="padding:3rem;text-align:center;font-style:italic;background:#fff;">
-            <p style="font-size:1.3rem;margin-bottom:2rem;">"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p>
-            <strong>— James R., CEO</strong>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <h2 class="section-title">Let’s Create Your Sanctuary</h2>
-    <p style="text-align:center;max-width:800px;margin:auto auto 4rem;color:var(--text-light);font-size:1.3rem;">
-        Ready for calm, beauty, and order in your home?<br>Book your private consultation today.
-    </p>
-    <div style="max-width:700px;margin:auto;background:#fff;padding:3rem;border-radius:30px;box-shadow:0 20px 50px rgba(0,0,0,.1);">
-        <form action="https://formspree.io/f/your-email-here" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <input type="tel" name="phone" placeholder="Your Phone" style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <textarea name="message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:2rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;"></textarea>
-            <button type="submit" class="btn-primary" style="width:100%;padding:1.3rem;font-size:1.3rem;">Send Message</button>
-        </form>
-    </div>
-    <div style="text-align:center;margin-top:3rem;">
-        <a href="https://calendly.com/pinkelitestudio" class="btn-primary" target="_blank">Or Book a Call Directly</a>
-    </div>
-</section>
-
-<!-- AI Chat Button -->
-<div id="ai-chat-float" onclick="openAIChat()">
-    <i class="fas fa-comments"></i>
-</div>
-<div id="ai-chat-popup" style="display:none;position:fixed;bottom:100px;right:25px;width:380px;height:580px;background:#fff;border-radius:22px;box-shadow:0 25px 70px rgba(0,0,0,.25);z-index:9999;overflow:hidden;border:1px solid #eee;">
-    <div style="background:var(--deep-pink);color:#fff;padding:1.3rem;text-align:center;font-weight:600;position:relative;">
-        Rhina’s Assistant
-        <span style="position:absolute;right:15px;top:15px;cursor:pointer;font-size:1.6rem;" onclick="document.getElementById('ai-chat-popup').style.display='none'">×</span>
-    </div>
-    <iframe src="https://direct.lc.chat/15895184/" style="width:100%;height:calc(100% - 60px);border:none;" allowfullscreen></iframe>
-</div>
-
-<script>
-    document.getElementById('menuToggle').onclick = () => document.getElementById('navLinks').classList.toggle('active');
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    }));
-    function openAIChat() {
-        document.getElementById('ai-chat-popup').style.display = 
-            document.getElementById('ai-chat-popup').style.display === 'block' ? 'none' : 'block';
-    }
-</script>
 </body>
 </html>
