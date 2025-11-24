@@ -169,9 +169,11 @@
             /* Mobile Nav Toggle */
             .menu-toggle{display:block}
             .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;gap:1.5rem;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-100%);transition:.4s}
-            .nav-links.active{transform:translateY(0); top:70px;} /* Push menu down below header */
-            .btn-book{display:none;} /* Hide desktop booking button on mobile nav */
-            nav .btn-book {display:block;} /* Keep the main header button */
+            .nav-links.active{transform:translateY(0); top:80px;} /* Push menu down below header */
+            
+            /* Hide the desktop nav's book now, but keep the main header one */
+            .nav-links .btn-book { display: none !important; } /* Important to override the inline style */
+
 
             /* Hero adjustments */
             .hero{min-height:550px;}
@@ -214,8 +216,7 @@
             <li><a href="#memberships">Memberships</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank" style="display:block;">Book Now</a></li>
-        </ul>
+            </ul>
         <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book Now</a>
         <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
     </nav>
