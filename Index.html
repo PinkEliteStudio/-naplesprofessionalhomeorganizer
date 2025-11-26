@@ -1,402 +1,276 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhina Delgado | Naples Luxury Home Organizer</title>
-    <meta name="description" content="Naples premier faith-centered luxury closet & master suite organization. By appointment only.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhina Delgado | Naples Luxury Home Organizer</title>
+    <meta name="description" content="Naples premier faith-centered luxury closet & master suite organization. By appointment only.">
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-    
-    <style>
-        /* BASE STYLES & VARIABLES */
-        :root{
-            --gold:#D4AF37;
-            --soft-pink:#F8DDE8; 
-            --deep-pink:#E393B5; 
-            --navy:#F0E0E6; 
-            --beige:#FDF9F6;
-            --white:#FFFFFF;
-            --text:#333;
-            --light:#666;
-            --accent:linear-gradient(135deg,var(--deep-pink),var(--soft-pink));
-            --card-border-pink: var(--deep-pink);
-        }
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
-        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)} 
-        .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
-        a{color:inherit;text-decoration:none}
-     
-        /* HEADER & NAVIGATION */
-        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
-        nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
-        .logo{font-family:'Alex Brush', cursive; font-size:2.8rem; font-weight:400; color:var(--deep-pink); letter-spacing:1px;text-transform: none;}
-        .nav-links{display:flex;gap:2.8rem;list-style:none;align-items:center}
-        .nav-links a{font-weight:500;font-size:1.05rem;padding:0.5rem 0;position:relative}
-        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--accent);transition:.4s;border-radius:2px}
-        .nav-links a:hover::after{width:100%}
-        .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;font-size:1.1rem;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
-        .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
-        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)} 
-        
-        /* HERO SECTION */
-        .hero{
-            height:100vh;min-height:780px;
-            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('hero-bg.jpg') center/cover no-repeat fixed;
-            display:flex;align-items:center;justify-content:center;
-            text-align:center;color:#fff;position:relative;
-            transition: background-image 1s ease-in-out;
-        }
-        .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
-        .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px; color:#fff} 
-        .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0;max-width:90%}
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        /* GENERAL SECTION STYLES */
-        section{padding:120px 5%;max-width:1400px;margin:auto;position: relative;} 
-        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)} 
-        .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--accent);border-radius:3px}
-        
-        /* ABOUT SECTION */
-        .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
-        .about-img img{width:340px;height:460px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3)}
-        .about-text p{font-size:1.2rem;margin:1.5rem 0;color:#444;line-height:1.9}
-        .about-text .btn-book{margin-top:3rem;display:inline-block}
-        
-        /* SERVICES & MEMBERSHIPS */
-        .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
-        
-        /* SERVICES SLIDESHOW STYLES */
-        #services {
-            background-color: var(--beige); 
-            background-size: cover;
-            background-position: center;
-            transition: background-image 1s ease-in-out;
-            min-height: 600px;
-        }
-        #services .section-title, #services .note, #services .cards-grid {
-            position: relative;
-            z-index: 10; 
-        }
-        #services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.55); 
-            z-index: 5;
-        }
-        #services .section-title {color: #fff;}
-        #services .section-title::after {background: var(--gold);}
-        #services .note {color: var(--soft-pink);}
+    <style>
+        :root{
+            --gold:#D4AF37;
+            --soft-pink:#F8DDE8;
+            --deep-pink:#E393B5;
+            --navy:#1A2A44;
+            --beige:#FDF9F6;
+            --white:#FFFFFF;
+            --text:#333;
+            --light:#666;
+            --accent:linear-gradient(135deg,var(--deep-pink),var(--soft-pink));
+            --card-border-pink: var(--deep-pink);
+        }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
+        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)}
+        .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
+        a{color:inherit;text-decoration:none}
 
-        /* CARD STYLE */
-        .card{
-            background:var(--white); color:var(--text); border-radius:20px;
-            overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,.08); 
-            transition:.4s; height:100%; border: 3px solid var(--card-border-pink); 
-        }
-        #memberships .card:nth-child(2) {
-             transform:scale(1.05); border: 5px solid var(--card-border-pink); 
-        }
-        .card:hover{transform:translateY(-12px); box-shadow:0 20px 50px rgba(232,160,191,.3);} 
-        .card-header{padding:2.5rem 2rem;text-align:center;background:var(--navy); color:var(--text);}
-        .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px; color:var(--text);} 
-        .card-header .price{font-size:3rem;font-weight:700;color:var(--deep-pink);margin:1rem 0} 
-        .card-header .popular{color:var(--deep-pink);font-size:1rem;font-weight:600}
-        .card-body{padding:2rem;background:var(--white); color:var(--text);min-height:220px}
-        .card-body ul{list-style:none}
-        .card-body li{position:relative;padding-left:1.8rem;margin:1rem 0;font-size:1.05rem}
-        .card-body li::before{content:"✦";position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
-        .note{text-align:center;margin:2rem auto 0;max-width:900px;font-style:italic;color:#777;font-size:1.1rem}
-        
-        /* TESTIMONIALS */
-        .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
-        .testimonial{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.08);font-style:italic;font-size:1.15rem;line-height:1.8;border-left:6px solid var(--deep-pink)}
-        .testimonial p{margin-bottom:1.5rem}
-        .author{font-style:normal;font-weight:600;color:var(--text);text-align:right} 
+        /* Header */
+        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
+        nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
+        .logo{font-family:'Alex Brush', cursive;font-size:2.8rem;color:var(--deep-pink);text-transform:none}
+        .nav-links{display:flex;gap:2.8rem;list-style:none;align-items:center}
+        .nav-links a{font-weight:500;font-size:1.05rem;padding:0.5rem 0;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--deep-pink);transition:.4s}
+        .nav-links a:hover::after{width:100%}
+        .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
+        .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
+        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)}
 
-        /* FLOATING ELEMENTS & POPUPS */
-        #ai-chat-float, #newsletter-float{position:fixed;bottom:25px;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;z-index:999}
-        /* ONLY KEEP NEWSLETTER STYLES */
-        #newsletter-float{left:25px;background:var(--gold);color:#fff;}
-        #newsletter-float:hover{background:var(--deep-pink);transform:scale(1.1)}
-        #newsletter-popup{display:none;position:fixed;bottom:100px;left:25px;width:380px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
-        #newsletter-popup .header{background:var(--gold);color:#fff;padding:1rem;text-align:center;position:relative}
-        #newsletter-popup .header span{position:absolute;right:15px;top:10px;cursor:pointer;font-size:1.5rem}
-        #newsletter-popup form{padding:1.5rem}
-        #newsletter-popup input{width:100%;padding:0.8rem;margin-bottom:1rem;border:2px solid #eee;border-radius:8px}
-        #newsletter-popup button{width:100%;padding:0.9rem;background:var(--deep-pink);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer}
-        /* REMOVED #ai-chat-popup CSS */
+        /* Hero */
+        .hero{
+            height:100vh;min-height:780px;
+            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('images/hero-bg.jpg') center/cover no-repeat fixed;
+            display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;
+        }
+        .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
+        .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px}
+        .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0}
 
-        /* FOOTER */
-        footer{background:#444;color:#fff;padding:3rem 5% 1rem;max-width:1400px;margin:auto;text-align:center} 
-        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
-        .footer-content h4{font-family:'Oswald',sans-serif;font-size:1.3rem;margin-bottom:1rem;color:var(--gold)}
-        .footer-content ul{list-style:none}
-        .footer-content li{margin:0.5rem 0}
-        .footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;margin-top:2rem;font-size:0.9rem;color:var(--light)}
-        .footer-bottom a{color:var(--soft-pink);margin:0 1rem}
+        /* Sections */
+        section{padding:120px 5%;max-width:1400px;margin:auto;position:relative}
+        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)}
+        .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--deep-pink);border-radius:3px}
 
-        /* ---------------------------------------------------------------------- */
-        /* MOBILE RESPONSIVENESS (Max Width: 1024px - Tablet/Smaller Desktop) */
-        /* ---------------------------------------------------------------------- */
-        @media(max-width:1024px){
-            .nav-links{gap:1.5rem;}
-            .btn-book{padding:0.8rem 1.5rem; font-size:1rem;}
-            .hero h1{font-size:4.5rem;}
-            .bible{font-size:1.4rem; padding:1.5rem 2rem;}
-            section{padding:80px 4%;}
-            .section-title{font-size:2.4rem;}
-            .about-grid{grid-template-columns:1fr 1.5fr; gap:3rem;}
-            .about-img img{width:300px; height:420px;}
-            .your-name{font-size:4.5rem;}
-            .about-text p{font-size:1.1rem;}
-            .cards-grid, .testimonial-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
-            #memberships .card:nth-child(2) {transform:scale(1); border: 3px solid var(--card-border-pink);} /* De-emphasize center card */
-        }
+        /* About */
+        .about-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;margin-top:3rem}
+        .about-img img{width:340px;height:460px;object-fit:cover;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;border:10px solid var(--soft-pink);box-shadow:0 20px 50px rgba(232,160,191,.3)}
 
-        /* ---------------------------------------------------------------------- */
-        /* SMALL MOBILE RESPONSIVENESS (Max Width: 768px - Phone) */
-        /* ---------------------------------------------------------------------- */
-        @media(max-width:768px){
-            /* Mobile Nav Toggle */
-            .menu-toggle{display:block}
-            .nav-links{position:fixed;top:100%;left:0;width:100%;background:var(--white);flex-direction:column;padding:2rem 0;gap:1.5rem;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-100%);transition:.4s}
-            .nav-links.active{transform:translateY(0); top:80px;} /* Push menu down below header */
-            
-            /* Hide the desktop nav's book now, but keep the main header one */
-            .nav-links .btn-book { display: none !important; } /* Important to override the inline style */
+        /* Cards */
+        .cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
+        .card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.08);transition:.4s;border:3px solid var(--deep-pink)}
+        .card:hover{transform:translateY(-12px);box-shadow:0 20px 50px rgba(232,160,191,.3)}
+        .card-header{padding:2.5rem 2rem;text-align:center;background:var(--beige)}
+        .card-header h3{font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:2px}
+        .card-header .price{font-size:3rem;font-weight:700;color:var(--deep-pink)}
+        .card-header .popular{color:var(--deep-pink);font-size:1rem;font-weight:600}
+        .card-body{padding:2rem;min-height:220px}
+        .card-body li{position:relative;padding-left:1.8rem;margin:1rem 0}
+        .card-body li::before{content:"✦";position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
+        #memberships .card:nth-child(2){transform:scale(1.05);border:5px solid var(--deep-pink)}
 
+        /* Services Background Slideshow */
+        #services{background:var(--beige);background:url('images/closet.jpg') center/cover no-repeat fixed;position:relative}
+        #services::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
+        #services > *{position:relative;z-index:10}
+        #services .section-title{color:#fff}
+        #services .section-title::after{background:var(--gold)}
 
-            /* Hero adjustments */
-            .hero{min-height:550px;}
-            .hero h1{font-size:3rem;}
-            .bible{font-size:1.1rem; padding:1rem 1.5rem; border-left: 4px solid var(--gold);}
+        /* Testimonials */
+        .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem;margin-top:4rem}
+        .testimonial{background:#fff;padding:2.5rem;border-radius:20px;box-shadow:0 15px 40px rgba(0,0,0,.08);font-style:italic;border-left:6px solid var(--deep-pink)}
 
-            /* About adjustments */
-            .about-grid{grid-template-columns:1fr; text-align:center;}
-            .about-img{order:1; margin-bottom:2rem;}
-            .about-text{order:2;}
-            .about-img img{width:250px; height:350px;}
-            .your-name{font-size:3.5rem;}
-            .about-text .btn-book{margin-top:2rem;}
+        /* Footer */
+        footer{background:#444;color:#fff;padding:3rem 5% 1rem;text-align:center}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
+        .footer-content h4{color:var(--gold)}
 
-            /* Sections & Grids */
-            section{padding:60px 20px;}
-            .section-title{font-size:2rem; margin-bottom:30px;}
-            .cards-grid, .testimonial-grid{grid-template-columns:1fr; gap:1.5rem;}
-            .card-header .price{font-size:2.5rem;}
-            .testimonial{font-size:1.05rem;}
-            
-            /* Footer */
-            .footer-content{grid-template-columns:1fr;}
+        /* Floating Chat & Newsletter */
+        #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;z-index:999}
+        #newsletter-float:hover{background:var(--deep-pink);transform:scale(1.1)}
+        #newsletter-popup{display:none;position:fixed;bottom:100px;left:25px;width:380px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
+        #newsletter-popup .header{background:var(--gold);color:#fff;padding:1rem;text-align:center;position:relative}
+        #newsletter-popup .header span{position:absolute;right:15px;top:10px;cursor:pointer;font-size:1.5rem}
 
-            /* Popups */
-            #newsletter-popup{width:90%; bottom:90px;}
-            #newsletter-popup{left:50%; transform:translateX(-50%);}
-            /* REMOVED #ai-chat-popup media query styles */
-        }
-    </style>
+        /* Mobile */
+        @media(max-width:768px){
+            .menu-toggle{display:block}
+            .nav-links{position:fixed;top:80px;left:0;width:100%;background:#fff;flex-direction:column;padding:2rem 0;gap:1.5rem;box-shadow:0 10px 30px rgba(0,0,0,.1);transform:translateY(-150%);transition:.4s}
+            .nav-links.active{transform:translateY(0)}
+            .nav-links .btn-book{display:none}
+            .hero h1{font-size:3rem}
+            .about-grid{grid-template-columns:1fr;text-align:center}
+            .about-img img{width:250px;height:350px}
+            .your-name{font-size:3.5rem}
+            section{padding:60px 20px}
+            #newsletter-popup{width:90%;left:50%;transform:translateX(-50%)}
+        }
+    </style>
 </head>
 <body>
+
 <header>
-    <nav>
-        <div class="logo">Naples Organizer</div> 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#memberships">Memberships</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-            </ul>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book Now</a>
-        <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
-    </nav>
+    <nav>
+        <div class="logo">Naples Organizer</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#memberships">Memberships</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book Now</a>
+        <div class="menu-toggle" id="menuToggle">Menu</div>
+    </nav>
 </header>
+
 <section id="home" class="hero">
-    <div>
-        <h1>Luxury Home Organization</h1>
-        <div class="bible">
-            “Let all things be done decently and in order.” — 1 Corinthians 14:40
-        </div>
-        <br><br>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Schedule Private Consultation</a>
-    </div>
+    <div>
+        <h1>Luxury Home Organization</h1>
+        <div class="bible">“Let all things be done decently and in order.” — 1 Corinthians 14:40</div>
+        <br><br>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Schedule Private Consultation</a>
+    </div>
 </section>
+
 <section id="about">
-    <h2 class="section-title">Meet Your Organizer</h2>
-    <div class="about-grid">
-        <div class="about-img" style="text-align:center">
-            <img src="rhina-delgado.jpg" alt="Rhina Delgado">
-        </div>
-        <div class="about-text">
-            <h3 class="your-name">Rhina Delgado</h3>
-            <p>Bringing **unparalleled expertise** to Naples’ most exclusive residences, I cultivate calm, clarity, and timeless elegance in every closet and master suite.</p>
-            <p>My faith-centered approach reflects the belief that true order creates peace — in your home and in your heart.</p>
-            <p>By appointment and referral only.</p>
-            <br>
-            <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Begin Your Transformation</a>
-        </div>
-    </div>
+    <h2 class="section-title">Meet Your Organizer</h2>
+    <div class="about-grid">
+        <div class="about-img" style="text-align:center">
+            <img src="images/rhina-delgado.jpg" alt="Rhina Delgado">
+        </div>
+        <div class="about-text">
+            <h3 class="your-name">Rhina Delgado</h3>
+            <p>Bringing <strong>unparalleled expertise</strong> to Naples’ most exclusive residences, I cultivate calm, clarity, and timeless elegance in every closet and master suite.</p>
+            <p>My faith-centered approach reflects the belief that true order creates peace — in your home and in your heart.</p>
+            <p>By appointment and referral only.</p>
+            <br>
+            <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Begin Your Transformation</a>
+        </div>
+    </div>
 </section>
+
 <section id="services">
-    <h2 class="section-title">Signature Services</h2>
-    <div class="cards-grid">
-        <div class="card">
-            <div class="card-header"><h3>Signature Closet</h3><div class="price">From $1,800</div></div>
-            <div class="card-body"><ul><li>Full curation & declutter</li><li>Designer color flow</li><li>Luxury storage solutions</li><li>Seasonal wardrobe integration</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h3>Luxury Walk-In</h3><div class="price">From $2,800</div></div>
-            <div class="card-body"><ul><li>Boutique layout design</li><li>Hand-selected accessories</li><li>Jewelry & handbag curation</li><li>Aesthetic consultation</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h3>Master Suite Sanctuary</h3><div class="price">From $4,200</div></div>
-            <div class="card-body"><ul><li>Full bedroom + closet transformation</li><li>Linens & shoe organization</li><li>Custom seasonal plan</li><li>Ongoing support option</li></ul></div>
-        </div>
-    </div>
+    <h2 class="section-title">Signature Services</h2>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-header"><h3>Signature Closet</h3><div class="price">From $1,800</div></div>
+            <div class="card-body"><ul><li>Full curation & declutter</li><li>Designer color flow</li><li>Luxury storage solutions</li><li>Seasonal wardrobe integration</li></ul></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h3>Luxury Walk-In</h3><div class="price">From $2,800</div></div>
+            <div class="card-body"><ul><li>Boutique layout design</li><li>Hand-selected accessories</li><li>Jewelry & handbag curation</li><li>Aesthetic consultation</li></ul></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h3>Master Suite Sanctuary</h3><div class="price">From $4,200</div></div>
+            <div class="card-body"><ul><li>Full bedroom + closet transformation</li><li>Linens & shoe organization</li><li>Custom seasonal plan</li><li>Ongoing support option</li></ul></div>
+        </div>
+    </div>
 </section>
+
 <section id="memberships">
-    <h2 class="section-title">Peace of Mind Memberships</h2>
-    <p class="note">Memberships are exclusive to past clients desiring ongoing seasonal refresh, wardrobe swaps, and light maintenance.</p>
-    <div class="cards-grid">
-        <div class="card">
-            <div class="card-header"><h3>Essential</h3><div class="price">$110/month</div></div>
-            <div class="card-body"><ul><li>2 light sessions per month</li><li>Priority scheduling</li><li>Email organization tips</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h3>Premium <span class="popular">Most Popular</span></h3><div class="price">$120/month</div></div>
-            <div class="card-body"><ul><li>2 light sessions</li><li>Seasonal wardrobe swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-header"><h3>Elite</h3><div class="price">$130/month</div></div>
-            <div class="card-body"><ul><li>2 light sessions</li><li>Quarterly deep review</li><li>Custom maintenance plan</li><li>VIP access</li></ul></div>
-        </div>
-    </div>
+    <h2 class="section-title">Peace of Mind Memberships</h2>
+    <p style="text-align:center;max-width:900px;margin:2rem auto;font-style:italic;color:#777">Exclusive to past clients desiring ongoing seasonal refresh & maintenance.</p>
+    <div class="cards-grid">
+        <div class="card">
+            <div class="card-header"><h3>Essential</h3><div class="price">$110/month</div></div>
+            <div class="card-body"><ul><li>2 light sessions per month</li><li>Priority scheduling</li><li>Email organization tips</li></ul></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h3>Premium <span class="popular">Most Popular</span></h3><div class="price">$120/month</div></div>
+            <div class="card-body"><ul><li>2 light sessions + seasonal swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
+        </div>
+        <div class="card">
+            <div class="card-header"><h3>Elite</h3><div class="price">$130/month</div></div>
+            <div class="card-body"><ul><li>Quarterly deep review</li><li>Custom maintenance plan</li><li>VIP access</li></ul></div>
+        </div>
+    </div>
 </section>
-<section id="testimonials" style="background:var(--beige);">
-    <h2 class="section-title">Client Love</h2>
-    <div class="testimonial-grid">
-        <div class="testimonial">
-            <p>"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p>
-            <span class="author">— Sarah M., Naples</span>
-        </div>
-        <div class="testimonial">
-            <p>"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p>
-            <span class="author">— Dr. Lisa Chen, Physician</span>
-        </div>
-        <div class="testimonial">
-            <p>"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p>
-            <span class="author">— James R., CEO</span>
-        </div>
-    </div>
+
+<section id="testimonials" style="background:var(--beige)">
+    <h2 class="section-title">Client Love</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial"><p>"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p><span class="author">— Sarah M., Naples</span></div>
+        <div class="testimonial"><p>"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p><span class="author">— Dr. Lisa Chen</span></div>
+        <div class="testimonial"><p>"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p><span class="author">— James R., CEO</span></div>
+    </div>
 </section>
+
 <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
-    <p style="text-align:center;max-width:800px;margin:auto;color:#666;font-size:1.3rem;">
-        Ready for calm, beauty, and order in your home?<br>Book your private consultation today.
-    </p>
-    <div style="max-width:700px;margin:3rem auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.08);">
-        <form action="https://formspree.io/f/YOUR_EMAIL_HERE" method="POST">
-            <input type="text" name="name" placeholder="Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <input type="email" name="email" placeholder="Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <input type="tel" name="phone" placeholder="Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;">
-            <textarea name="message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px;font-size:1.1rem;"></textarea>
-            <button type="submit" class="btn-book" style="width:100%;padding:1.1rem;font-size:1.2rem;">Send Message</button>
-        </form>
-    </div>
-    <div style="text-align:center;margin-top:2rem;">
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book Directly</a>
-    </div>
+    <h2 class="section-title">Get In Touch</h2>
+    <p style="text-align:center;max-width:800px;margin:auto;font-size:1.3rem;color:#666">Ready for calm, beauty, and order in your home?<br>Book your private consultation today.</p>
+    <div style="max-width:700px;margin:3rem auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.08)">
+        <form action="https://formspree.io/f/mbljwjqn" method="POST">
+            <input type="text" name="name" placeholder="Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
+            <input type="email" name="email" placeholder="Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
+            <input type="tel" name="phone" placeholder="Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
+            <textarea name: "message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
+            <button type="submit" class="btn-book" style="width:100%;padding:1.1rem">Send Message</button>
+        </form>
+    </div>
+    <div style="text-align:center;margin-top:2rem">
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book Directly</a>
+    </div>
 </section>
-<div id="newsletter-float" onclick="document.getElementById('newsletter-popup').style.display='block'" title="Subscribe for Tips & Offers">
-    <i class="fas fa-envelope"></i>
-</div>
+
+<div id="newsletter-float" onclick="document.getElementById('newsletter-popup').style.display='block'">Envelope</div>
 <div id="newsletter-popup">
-    <div class="header">
-        Get Exclusive Organizing Tips & Offers
-        <span onclick="document.getElementById('newsletter-popup').style.display='none'">&times;</span>
-    </div>
-    <form action="https://formspree.io/f/YOUR_NEWSLETTER_EMAIL_HERE" method="POST">
-        <p style="font-size:0.9rem;color:#666;padding:0 1.5rem 1rem;">Subscribe for faith-centered organization tips, updates, and exclusive deals on luxury services!</p>
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
+    <div class="header">Exclusive Tips & Offers <span onclick="this.parentNode.parentNode.style.display='none'">X</span></div>
+    <form action="https://formspree.io/f/mbljwjqn" method="POST">
+        <p style="padding:0 1.5rem 1rem;font-size:0.9rem;color:#666">Get faith-centered organizing tips and luxury service updates!</p>
+        <input type="email" name="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
 </div>
+
 <footer>
-    <div class="footer-content">
-        <div>
-            <h4>Naples Organizer</h4>
-            <p>Bringing faith-centered luxury organization to Naples' finest homes. By appointment only.</p>
-        </div>
-        <div>
-            <h4>Quick Links</h4>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Legal</h4>
-            <ul>
-                <li><a href="/terms-of-use">Terms of Use</a></li>
-                <li><a href="/privacy-policy">Privacy Policy</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Rhina Delgado | Naples Luxury Home Organizer. All rights reserved.</p>
-        <p><a href="/terms-of-use">Terms of Use</a> | <a href="/privacy-policy">Privacy Policy</a></p>
-    </div>
+    <div class="footer-content">
+        <div><h4>Naples Organizer</h4><p>Bringing faith-centered luxury organization to Naples' finest homes.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="#services">Services</a></li><li><a href="#memberships">Memberships</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div><h4>Connect</h4><p>By appointment only</p></div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2025 Rhina Delgado • Naples Luxury Home Organizer. All rights reserved.</p>
+    </div>
 </footer>
+
+<!-- HubSpot Chat -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242889484.js"></script>
 
 <script>
-    // Mobile menu toggle
-    document.getElementById('menuToggle').onclick = () => document.getElementById('navLinks').classList.toggle('active');
-   
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-        e.preventDefault();
-        // Hide menu after clicking a link on mobile
-        document.getElementById('navLinks').classList.remove('active');
-        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    }));
+    // Mobile menu
+    document.getElementById('menuToggle').onclick = () => document.getElementById('navLinks').classList.toggle('active');
 
-    // Hero background slideshow (add more images to the array as needed)
-    const hero = document.querySelector('.hero');
-    const heroBgImages = [
-        "url('hero-bg.jpg')",
-        "url('hero-bg2.jpg')", 
-        "url('hero-bg3.jpg')" 
-    ];
-    let currentHeroBg = 0;
-    setInterval(() => {
-        currentHeroBg = (currentHeroBg + 1) % heroBgImages.length;
-        hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), ${heroBgImages[currentHeroBg]} center/cover no-repeat fixed`;
-    }, 5000); 
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            document.getElementById('navLinks').classList.remove('active');
+            document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+        });
+    });
 
-    // Services section background slideshow
-    const servicesSection = document.getElementById('services');
-    const serviceBgImages = [
-        "url('closet.jpg') center/cover no-repeat fixed", 
-        "url('closet 2.jpg') center/cover no-repeat fixed", 
-        "url('closet 2.jpg') center/cover no-repeat fixed" 
-    ];
-    let currentServiceBg = 0;
-    
-    servicesSection.style.backgroundImage = serviceBgImages[0];
+    // Hero slideshow
+    const heroImages = ['images/hero-bg.jpg', 'images/hero-bg2.jpg', 'images/hero-bg3.jpg'];
+    let i = 0;
+    setInterval(() => {
+        i = (i + 1) % heroImages.length;
+        document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('${heroImages[i]}')`;
+    }, 6000);
 
-    setInterval(() => {
-        currentServiceBg = (currentServiceBg + 1) % serviceBgImages.length;
-        servicesSection.style.backgroundImage = serviceBgImages[currentServiceBg];
-    }, 6000);
+    // Services slideshow
+    const serviceImages = ['images/closet.jpg', 'images/closet2.jpg', 'images/closet3.jpg'];
+    let j = 0;
+    setInterval(() => {
+        j = (j + 1) % serviceImages.length;
+        document.getElementById('services').style.backgroundImage = `url('${serviceImages[j]}')`;
+    }, 6000);
+</script>
+
+</body>
+</html>
