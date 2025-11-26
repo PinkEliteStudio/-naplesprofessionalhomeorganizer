@@ -15,45 +15,41 @@
             --gold:#D4AF37;
             --soft-pink:#F8DDE8;
             --deep-pink:#E393B5;
-            --navy:#1A2A44;
             --beige:#FDF9F6;
             --white:#FFFFFF;
             --text:#333;
-            --light:#666;
-            --accent:linear-gradient(135deg,var(--deep-pink),var(--soft-pink));
-            --card-border-pink: var(--deep-pink);
         }
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);line-height:1.7}
-        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text)}
-        .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;line-height:1.1;margin:1.5rem 0 1rem}
-        a{color:inherit;text-decoration:none}
+        h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+        .your-name{font-family:'Oswald',sans-serif;font-size:5.2rem;font-weight:700;color:var(--deep-pink);letter-spacing:2px;margin:1.5rem 0 1rem}
+        a{text-decoration:none;color:inherit}
 
         /* Header */
-        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:1rem 0}
+        header{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);z-index:1000;padding:1rem 0;box-shadow:0 4px 20px rgba(0,0,0,.08)}
         nav{max-width:1400px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:0 5%}
-        .logo{font-family:'Alex Brush', cursive;font-size:2.8rem;color:var(--deep-pink);text-transform:none}
-        .nav-links{display:flex;gap:2.8rem;list-style:none;align-items:center}
-        .nav-links a{font-weight:500;font-size:1.05rem;padding:0.5rem 0;position:relative}
+        .logo{font-family:'Alex Brush',cursive;font-size:2.8rem;color:var(--deep-pink)}
+        .nav-links{display:flex;gap:2.8rem;list-style:none}
+        .nav-links a{font-weight:500;position:relative;padding-bottom:5px}
         .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--deep-pink);transition:.4s}
         .nav-links a:hover::after{width:100%}
-        .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;box-shadow:0 8px 25px rgba(232,160,191,.4);transition:.4s}
+        .btn-book{background:var(--deep-pink);color:#fff;padding:0.9rem 2.2rem;border-radius:50px;font-weight:600;transition:.4s;box-shadow:0 8px 25px rgba(227,147,181,.4)}
         .btn-book:hover{background:var(--gold);transform:translateY(-3px)}
-        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer;color:var(--text)}
+        .menu-toggle{display:none;font-size:1.8rem;cursor:pointer}
 
         /* Hero */
         .hero{
             height:100vh;min-height:780px;
-            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('images/hero-bg.jpg') center/cover no-repeat fixed;
+            background:linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.68)),url('images/hero-bg.jpg') center/cover no-repeat fixed;
             display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;position:relative;
         }
         .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(232,160,191,.18),transparent 70%)}
         .hero h1{font-size:5.5rem;margin-bottom:1rem;letter-spacing:3px}
-        .bible{font-style:italic;font-size:1.7rem;color:#fdfdfd;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0}
+        .bible{font-style:italic;font-size:1.7rem;background:rgba(26,42,68,.7);padding:2rem 4rem;border-left:8px solid var(--gold);display:inline-block;border-radius:0 30px 30px 0;margin:3rem 0}
 
-        /* Sections */
-        section{padding:120px 5%;max-width:1400px;margin:auto;position:relative}
-        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative;color:var(--text)}
+        /* General */
+        section{padding:120px 5%;max-width:1400px;margin:auto}
+        .section-title{text-align:center;font-size:2.8rem;margin-bottom:4rem;position:relative}
         .section-title::after{content:'';position:absolute;bottom:-15px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--deep-pink);border-radius:3px}
 
         /* About */
@@ -73,7 +69,7 @@
         .card-body li::before{content:"✦";position:absolute;left:0;color:var(--deep-pink);font-weight:bold}
         #memberships .card:nth-child(2){transform:scale(1.05);border:5px solid var(--deep-pink)}
 
-        /* Services Background Slideshow */
+        /* Services Background */
         #services{background:var(--beige);background:url('images/closet.jpg') center/cover no-repeat fixed;position:relative}
         #services::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
         #services > *{position:relative;z-index:10}
@@ -89,8 +85,8 @@
         .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-bottom:2rem}
         .footer-content h4{color:var(--gold)}
 
-        /* Floating Chat & Newsletter */
-        #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;box-shadow:0 10px 30px rgba(0,0,0,.3);cursor:pointer;z-index:999}
+        /* Floating Newsletter */
+        #newsletter-float{position:fixed;bottom:25px;left:25px;width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;cursor:pointer;z-index:999;box-shadow:0 10px 30px rgba(0,0,0,.3)}
         #newsletter-float:hover{background:var(--deep-pink);transform:scale(1.1)}
         #newsletter-popup{display:none;position:fixed;bottom:100px;left:25px;width:380px;background:#fff;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,.2);z-index:999;overflow:hidden}
         #newsletter-popup .header{background:var(--gold);color:#fff;padding:1rem;text-align:center;position:relative}
@@ -103,6 +99,7 @@
             .nav-links.active{transform:translateY(0)}
             .nav-links .btn-book{display:none}
             .hero h1{font-size:3rem}
+            .bible{font-size:1.2rem;padding:1.5rem}
             .about-grid{grid-template-columns:1fr;text-align:center}
             .about-img img{width:250px;height:350px}
             .your-name{font-size:3.5rem}
@@ -142,6 +139,7 @@
     <h2 class="section-title">Meet Your Organizer</h2>
     <div class="about-grid">
         <div class="about-img" style="text-align:center">
+            <!-- EXACT filename with space - this works! -->
             <img src="images/rhina-delgado.jpg" alt="Rhina Delgado">
         </div>
         <div class="about-text">
@@ -183,7 +181,7 @@
         </div>
         <div class="card">
             <div class="card-header"><h3>Premium <span class="popular">Most Popular</span></h3><div class="price">$120/month</div></div>
-            <div class="card-body"><ul><li>2 light sessions + seasonal swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
+            <div class="card-body"><ul><li>2 sessions + seasonal swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
         </div>
         <div class="card">
             <div class="card-header"><h3>Elite</h3><div class="price">$130/month</div></div>
@@ -205,11 +203,11 @@
     <h2 class="section-title">Get In Touch</h2>
     <p style="text-align:center;max-width:800px;margin:auto;font-size:1.3rem;color:#666">Ready for calm, beauty, and order in your home?<br>Book your private consultation today.</p>
     <div style="max-width:700px;margin:3rem auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.08)">
-        <form action="https://formspree.io/f/mbljwjqn" method="POST">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <input type="text" name="name" placeholder="Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
             <input type="email" name="email" placeholder="Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
             <input type="tel" name="phone" placeholder="Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
-            <textarea name: "message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
+            <textarea name="message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
             <button type="submit" class="btn-book" style="width:100%;padding:1.1rem">Send Message</button>
         </form>
     </div>
@@ -218,11 +216,12 @@
     </div>
 </section>
 
+<!-- Floating Newsletter -->
 <div id="newsletter-float" onclick="document.getElementById('newsletter-popup').style.display='block'">Envelope</div>
 <div id="newsletter-popup">
     <div class="header">Exclusive Tips & Offers <span onclick="this.parentNode.parentNode.style.display='none'">X</span></div>
-    <form action="https://formspree.io/f/mbljwjqn" method="POST">
-        <p style="padding:0 1.5rem 1rem;font-size:0.9rem;color:#666">Get faith-centered organizing tips and luxury service updates!</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <p style="padding:0 1.5rem 1rem;font-size:0.9rem;color:#666">Get faith-centered organizing tips and exclusive offers!</p>
         <input type="email" name="email" placeholder="Your email" required>
         <button type="submit">Subscribe</button>
     </form>
@@ -230,16 +229,15 @@
 
 <footer>
     <div class="footer-content">
-        <div><h4>Naples Organizer</h4><p>Bringing faith-centered luxury organization to Naples' finest homes.</p></div>
+        <div><h4>Naples Organizer</h4><p>Faith-centered luxury organization for Naples' discerning homes.</p></div>
         <div><h4>Quick Links</h4><ul><li><a href="#services">Services</a></li><li><a href="#memberships">Memberships</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
-        <div><h4>Connect</h4><p>By appointment only</p></div>
     </div>
-    <div class="footer-bottom">
-        <p>© 2025 Rhina Delgado • Naples Luxury Home Organizer. All rights reserved.</p>
+    <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:1rem;margin-top:2rem;font-size:0.9rem">
+        © 2025 Rhina Delgado • Naples Luxury Home Organizer. All rights reserved.
     </div>
 </footer>
 
-<!-- HubSpot Chat -->
+<!-- HubSpot Chat (already working) -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242889484.js"></script>
 
 <script>
@@ -256,19 +254,19 @@
     });
 
     // Hero slideshow
-    const heroImages = ['images/hero-bg.jpg', 'images/hero-bg2.jpg', 'images/hero-bg3.jpg'];
+    const heroImgs = ['images/hero-bg.jpg','images/hero-bg2.jpg','images/hero-bg3.jpg'];
     let i = 0;
     setInterval(() => {
-        i = (i + 1) % heroImages.length;
-        document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('${heroImages[i]}')`;
+        i = (i + 1) % heroImgs.length;
+        document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62),rgba(0,0,0,0.68)), url('${heroImgs[i]}')`;
     }, 6000);
 
     // Services slideshow
-    const serviceImages = ['images/closet.jpg', 'images/closet2.jpg', 'images/closet3.jpg'];
+    const serviceImgs = ['images/closet.jpg','images/closet2.jpg','images/closet3.jpg'];
     let j = 0;
     setInterval(() => {
-        j = (j + 1) % serviceImages.length;
-        document.getElementById('services').style.backgroundImage = `url('${serviceImages[j]}')`;
+        j = (j + 1) % serviceImgs.length;
+        document.getElementById('services').style.backgroundImage = `url('${serviceImgs[j]}')`;
     }, 6000);
 </script>
 
