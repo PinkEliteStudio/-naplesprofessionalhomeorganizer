@@ -53,16 +53,15 @@
 
         /* HERO SECTION (HEIGHT REDUCED FOR LESS GAP) */
         .hero {
-            height: 85vh; /* Reduced from 100vh to 85vh */
-            min-height: 550px; /* Reduced min-height slightly */
-            /* Using the light grey-blue overlay */
+            height: 85vh; /* Tighter height */
+            min-height: 550px;
             background: linear-gradient(rgba(169, 189, 203, 0.45), rgba(169, 189, 203, 0.55)), url('hero-bg.jpg') center/cover no-repeat fixed;
             display: flex; align-items: center; justify-content: center; text-align: center;
             position: relative;
-            padding: 100px 5%; /* Adjusted padding */
+            padding: 100px 5%;
         }
         .hero h1 {
-            font-size: 3.2rem; max-width: 900px; margin-bottom: 0.8rem; /* Reduced margin */
+            font-size: 3.2rem; max-width: 900px; margin-bottom: 0.8rem;
             line-height: 1.2; color: var(--navy);
         }
         .bible {
@@ -72,11 +71,11 @@
             border-left: 6px solid var(--gold);
             display: inline-block;
             border-radius: 10px;
-            margin: 1.2rem 0 2rem 0; /* Tighter margin around quote */
+            margin: 1.2rem 0 2rem 0;
             color: var(--navy);
         }
 
-        /* SECTION STYLES (Padding Reduced for Cohesion) */
+        /* SECTION STYLES */
         section { padding: 80px 5%; max-width: 1400px; margin: auto; }
         .section-title {
             text-align: center;
@@ -101,9 +100,26 @@
         .optin-form input { width: 100%; padding: 0.8rem; margin-bottom: 0.6rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
         .optin-grid i { font-size: 4rem; color: var(--rose-pink); margin-bottom: 0.5rem; }
 
-        /* JOURNEY SECTION & ABOUT */
+        /* JOURNEY SECTION (BOXES RESTORED) */
+        .journey-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem; margin-top: 1.5rem;
+        }
+        .journey-card {
+            background: white; /* Define background for box look */
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Soft shadow for depth */
+            border-top: 4px solid var(--rose-pink); /* Accent color */
+            transition: .4s;
+        }
+        .journey-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .journey-card i { font-size: 2.5rem; color: var(--rose-pink); margin-bottom: 0.8rem; }
         .journey-section-button { text-align:center; margin-top:2rem; }
-        #about { padding-top: 60px; } /* Reduced top padding to pull it up */
+
+        /* ABOUT SECTION (NAME FIX) */
+        #about { padding-top: 60px; }
         .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-top: 2rem; }
         .about-img img {
             width: 300px; height: 400px; object-fit: cover;
@@ -117,7 +133,7 @@
         }
 
         /* YOUTUBE EMBED */
-        #youtube { padding-top: 60px; } /* Reduced top padding to fix gap */
+        #youtube { padding-top: 60px; }
         .youtube-embed { margin: 1.5rem 0; text-align: center; }
         .youtube-embed iframe {
             width: 100%; max-width: 700px; height: 400px;
@@ -125,44 +141,63 @@
             border: 1px solid var(--light-blush);
         }
 
-        /* SERVICES */
+        /* SERVICES & MEMBERSHIPS (BOXES RESTORED) */
         .cards-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem; margin-top: 2.5rem;
         }
+        .card {
+            background: white; /* Define background for box look */
+            border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: .4s;
+            border: 2px solid var(--light-blush);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.15); } /* Enhanced hover */
+        .card-header { padding: 1.5rem 1.5rem; text-align: center; background: var(--light-blush); }
+        .card-header h3 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+        .card-header .price { font-size: 2.2rem; font-weight: 700; color: var(--rose-pink); }
+        .card-body { padding: 1.2rem; }
+        .card-body li {
+            position: relative; padding-left: 1.5rem;
+            margin: 0.6rem 0; font-size: 0.95rem;
+            list-style: none; /* Removed default bullet */
+        }
+        .card-body li::before {
+            content: "✨";
+            position: absolute; left: 0;
+            color: var(--rose-pink);
+            font-weight: normal;
+        }
+        #memberships .card:nth-child(2) {
+            transform: scale(1.02);
+            border: 3px solid var(--rose-pink);
+        }
+        #memberships .card:nth-child(2):hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        #memberships .card:nth-child(2) .card-header .price { color: var(--navy); }
 
-        /* TESTIMONIALS (NEW BOXED STYLING) */
+        /* TESTIMONIALS (KEPT BOXED STYLING) */
         #testimonials { background: var(--light-blush); }
         .testimonial-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem; /* Increased gap slightly for separation */
+            gap: 2rem;
             margin-top: 2rem;
         }
         .testimonial {
-            background: var(--white); /* White background for definition */
+            background: var(--white);
             padding: 1.5rem;
             border-radius: 15px;
             font-style: italic;
             line-height: 1.8;
-            border-left: 6px solid var(--rose-pink); /* Prominent left border */
-            /* Stronger box shadow for a 'box' look */
-            box-shadow: 0 5px 20px rgba(216, 167, 184, 0.2); /* Soft shadow based on pink */
+            border-left: 6px solid var(--rose-pink);
+            box-shadow: 0 5px 20px rgba(216, 167, 184, 0.2);
             transition: transform 0.3s;
         }
-        .testimonial:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(216, 167, 184, 0.3);
-        }
-        .testimonial strong {
-            display: block;
-            margin-top: 0.8rem;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--navy);
-        }
-        .testimonial p {
-            margin-bottom: 0;
-        }
+        .testimonial:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(216, 167, 184, 0.3); }
+        .testimonial strong { display: block; margin-top: 0.8rem; font-style: normal; font-weight: 600; color: var(--navy); }
+        .testimonial p { margin-bottom: 0; }
 
         /* CONTACT SECTION */
         .contact-content-box { max-width:600px; margin:0 auto;background:#fff;padding:2rem;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.08) }
@@ -184,15 +219,14 @@
             h2 { font-size: 1.8rem; }
             .logo { font-size: 1.8rem; }
             .nav-links {
-                /* Mobile navigation hidden by default */
                 display: none; flex-direction: column; position: absolute;
                 top: 65px; left: 0; right: 0;
                 background: var(--white); box-shadow: 0 5px 10px rgba(0,0,0,0.1);
                 padding: 1rem 0; border-top: 1px solid var(--light-blush);
             }
-            .nav-links.active { display: flex; } /* Show when active */
+            .nav-links.active { display: flex; }
             .nav-links li { padding: 0.5rem 20px; text-align: left; }
-            .btn-book { display: none; } /* Hide booking button on small mobile nav */
+            .btn-book { display: none; }
             .menu-toggle { display: block; font-size: 1.5rem; cursor: pointer; color: var(--navy); }
 
             .hero { height: auto; min-height: 450px; padding-top: 100px; padding-bottom: 50px; }
@@ -205,11 +239,10 @@
             .about-img img { width: 250px; height: 320px; }
             .your-name { font-size: 2.5rem; }
             .youtube-embed iframe { height: 250px; }
-            .testimonial-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+            .testimonial-grid, .journey-grid, .cards-grid { grid-template-columns: 1fr; gap: 1.5rem; }
             .footer-content { grid-template-columns: 1fr; text-align: left; }
             .footer-content h4 { margin-top: 1rem; }
         }
-        /* Show menu toggle only on mobile */
         .menu-toggle { display: none; }
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
@@ -301,14 +334,12 @@
     </div>
 </section>
 <section id="about">
-    <h2 class="section-title">Meet Rhina Delgado</h2>
-    <div class="about-grid">
+    <h2 class="section-title">Meet Rhina</h2> <div class="about-grid">
         <div class="about-img" style="text-align:center">
             <img src="rhina-delgado.jpg" alt="Rhina Delgado">
         </div>
         <div class="about-text">
-            <h3 class="your-name">Rhina Delgado</h3> 
-            <p>Guiding high-achieving Christian women from chaos to calling with faith-centered order. Calm minds, beautiful homes, purposeful businesses.</p>
+            <h3 class="your-name">Rhina Delgado</h3> <p>Guiding high-achieving Christian women from chaos to calling with faith-centered order. Calm minds, beautiful homes, purposeful businesses.</p>
             <p>True transformation starts in the heart—where God's peace meets willing action.</p>
             <p>Digital courses + Naples luxury by referral.</p>
             <br>
