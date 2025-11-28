@@ -9,296 +9,252 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         :root {
-            --gold: #D4AF37;
-            --soft-pink: #F8DDE8;
-            --deep-pink: #E393B5;
-            --navy: #1A2A44;
+            /* NEW PEACEFUL PALETTE */
+            --gold: #D4AF37; /* Retained gold for contrast */
+            --light-blue: #F0F8FF; /* Very light, soft blue for backgrounds/footer */
+            --primary-blue: #708C98; /* New primary accent: muted steel blue/teal */
+            --soft-blush: #E6C8D1; /* New soft pink for subtle accents */
+            --navy: #1A2A44; /* Retained for dark text/accents */
             --beige: #FDF9F6;
             --white: #FFFFFF;
             --text: #333;
         }
+        /* GLOBAL RESET & TYPOGRAPHY ADJUSTMENTS (Smaller Fonts) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.7; }
-        h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; } /* Adjusted line height */
+        h1 { font-size: 3.2rem; } /* Reduced from 5.5rem */
+        h2 { font-size: 2.2rem; margin-bottom: 2rem; } /* Reduced from 2.8rem */
+        h3 { font-size: 1.4rem; } /* Adjusted h3 size */
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        p { font-size: 1.05rem; margin-bottom: 1rem; }
         a { text-decoration: none; color: inherit; }
+
+        /* HEADER & NAVIGATION */
         header {
-            position: fixed;
-            top: 0; width: 100%;
+            position: fixed; top: 0; width: 100%;
             background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(8px);
             z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 0.8rem 0; /* Reduced padding */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Lighter shadow */
         }
-        nav {
-            max-width: 1400px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 5%;
-        }
+        nav { max-width: 1400px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
         .logo {
             font-family: 'Alex Brush', cursive;
-            font-size: 2.8rem;
-            color: var(--deep-pink);
+            font-size: 2.2rem; /* Reduced logo size */
+            color: var(--primary-blue); /* New color */
         }
-        .nav-links {
-            display: flex;
-            gap: 2.8rem;
-            list-style: none;
-        }
-        .nav-links a {
-            font-weight: 500;
-            position: relative;
-            padding-bottom: 5px;
-        }
+        .nav-links { display: flex; gap: 1.8rem; list-style: none; } /* Reduced gap */
+        .nav-links a { font-weight: 500; position: relative; padding-bottom: 5px; font-size: 0.95rem; }
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            width: 0; height: 3px;
-            background: var(--deep-pink);
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 0; height: 2px; /* Thinner line */
+            background: var(--primary-blue); /* New color */
             transition: .4s;
         }
         .nav-links a:hover::after { width: 100%; }
+
+        /* BUTTONS */
         .btn-book, .btn-optin {
-            background: var(--deep-pink);
+            background: var(--primary-blue); /* New primary button color */
             color: white;
-            padding: 0.9rem 2.2rem;
+            padding: 0.8rem 2rem; /* Slightly reduced padding */
             border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 8px 25px rgba(227,147,181,0.4);
+            box-shadow: 0 6px 20px rgba(112,140,152,0.3); /* Lighter shadow with new color */
             transition: .4s;
             display: inline-block;
             text-align: center;
         }
         .btn-book:hover, .btn-optin:hover {
-            background: var(--gold);
-            transform: translateY(-3px);
+            background: var(--navy);
+            transform: translateY(-2px); /* Less aggressive hover */
         }
-        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
+
+        /* HERO SECTION */
         .hero {
-            height: 100vh;
-            min-height: 780px;
-            background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('hero-bg.jpg') center/cover no-repeat fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
+            height: 100vh; min-height: 680px; /* Reduced min-height */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') center/cover no-repeat fixed; /* Adjusted overlay opacity */
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white; position: relative;
         }
         .hero h1 {
-            font-size: 5.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 3px;
+            font-size: 3.2rem; /* REDUCED FONT SIZE */
+            max-width: 900px; /* Added max-width for better flow */
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
         .bible {
             font-style: italic;
-            font-size: 1.7rem;
-            background: rgba(26,42,68,0.7);
-            padding: 2rem 4rem;
-            border-left: 8px solid var(--gold);
+            font-size: 1.2rem; /* Reduced font size */
+            background: rgba(255,255,255,0.2); /* Lighter background */
+            padding: 1.5rem 3rem; /* Reduced padding */
+            border-left: 6px solid var(--gold); /* Thinner border */
             display: inline-block;
-            border-radius: 0 30px 30px 0;
-            margin: 3rem 0;
+            border-radius: 10px; /* Smoother border */
+            margin: 2rem 0;
+            color: var(--white);
         }
-        section {
-            padding: 120px 5%;
-            max-width: 1400px;
-            margin: auto;
-        }
+
+        /* SECTION STYLES */
+        section { padding: 100px 5%; /* Reduced padding */ max-width: 1400px; margin: auto; }
         .section-title {
             text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 4rem;
+            font-size: 2.2rem; /* REDUCED FONT SIZE */
+            margin-bottom: 3rem; /* Reduced margin */
             position: relative;
         }
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -15px; left: 50%;
+            bottom: -10px; left: 50%;
             transform: translateX(-50%);
-            width: 100px; height: 5px;
-            background: var(--deep-pink);
+            width: 80px; height: 3px; /* Thinner/shorter line */
+            background: var(--primary-blue); /* New color */
             border-radius: 3px;
         }
-        .optin-section {
-            background: var(--beige);
-            padding: 80px 5%;
-            text-align: center;
-        }
+
+        /* OPTIN SECTION (Free Challenge) */
+        .optin-section { background: var(--light-blue); padding: 70px 5%; text-align: center; } /* New light blue background */
         .optin-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            max-width: 1000px;
-            margin: auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; /* Reduced gap */
+            align-items: center; max-width: 900px; margin: auto;
         }
         .optin-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            background: white; padding: 2rem; border-radius: 15px; /* Smoother radius */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Lighter shadow */
         }
         .optin-form input {
-            width: 100%;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border: 2px solid #eee;
-            border-radius: 12px;
+            width: 100%; padding: 0.9rem; /* Reduced padding */ margin-bottom: 0.8rem;
+            border: 1px solid #ddd; /* Thinner, lighter border */ border-radius: 8px; /* Smoother radius */
             font-size: 1rem;
         }
+
+        /* JOURNEY SECTION */
         .journey-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Adjusted minmax for better flow */
+            gap: 1.5rem; /* Reduced gap */ margin-top: 2rem;
         }
         .journey-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-top: 5px solid var(--deep-pink);
+            background: white; padding: 1.8rem; /* Reduced padding */ border-radius: 15px;
+            text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05); /* Lighter shadow */
+            border-top: 4px solid var(--soft-blush); /* New accent color */
             transition: .4s;
         }
-        .journey-card:hover { transform: translateY(-5px); }
-        .journey-card i { font-size: 3rem; color: var(--deep-pink); margin-bottom: 1rem; }
+        .journey-card:hover { transform: translateY(-3px); }
+        .journey-card i { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 0.8rem; } /* New icon color/size */
+
+        /* ABOUT SECTION */
         .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 5rem;
-            align-items: center;
-            margin-top: 3rem;
+            display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; /* Reduced gap */
+            align-items: center; margin-top: 2rem;
         }
         .about-img img {
-            width: 340px;
-            height: 460px;
+            width: 300px; /* Reduced image size */
+            height: 400px; /* Reduced image size */
             object-fit: cover;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            border: 10px solid var(--soft-pink);
-            box-shadow: 0 20px 50px rgba(232,160,191,0.3);
+            border: 8px solid var(--soft-blush); /* New border color/size */
+            box-shadow: 0 10px 30px rgba(230,200,209,0.3);
         }
         .your-name {
-            font-size: 5.2rem;
-            color: var(--deep-pink);
-            margin: 1.5rem 0 1rem;
+            font-size: 3.5rem; /* REDUCED FONT SIZE */
+            font-family: 'Alex Brush', cursive; /* Use the script font here for a nice touch */
+            color: var(--primary-blue); /* New color */
+            margin: 0.5rem 0 0.8rem;
         }
+
+        /* SERVICES & MEMBERSHIPS CARDS */
         .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for cards */
+            gap: 2rem; /* Reduced gap */ margin-top: 3rem;
         }
         .card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: .4s;
-            border: 3px solid var(--deep-pink);
+            border: 2px solid var(--soft-blush); /* Lighter border */
         }
-        .card:hover { transform: translateY(-12px); }
+        .card:hover { transform: translateY(-5px); }
         .card-header {
-            padding: 2.5rem 2rem;
-            text-align: center;
-            background: var(--beige);
+            padding: 2rem 1.5rem; /* Reduced padding */ text-align: center;
+            background: var(--light-blue); /* New light blue background */
         }
-        .card-header h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-        .card-header .price { font-size: 3rem; font-weight: 700; color: var(--deep-pink); }
-        .card-body { padding: 2rem; }
+        .card-header h3 { font-size: 1.3rem; margin-bottom: 0.3rem; }
+        .card-header .price { font-size: 2.5rem; font-weight: 700; color: var(--primary-blue); } /* New color */
+        .card-body { padding: 1.5rem; }
         .card-body li {
-            position: relative;
-            padding-left: 1.8rem;
-            margin: 1rem 0;
+            position: relative; padding-left: 1.5rem; /* Reduced padding */
+            margin: 0.8rem 0; /* Reduced margin */
+            font-size: 0.95rem;
         }
         .card-body li::before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: var(--deep-pink);
-            font-weight: bold;
+            content: "✨"; /* Changed from ✦ to a light emoji for peaceful feel */
+            position: absolute; left: 0;
+            color: var(--primary-blue);
+            font-weight: normal;
         }
         #memberships .card:nth-child(2) {
-            transform: scale(1.05);
-            border: 5px solid var(--deep-pink);
+            transform: scale(1.02); /* Less aggressive scaling */
+            border: 3px solid var(--primary-blue); /* Primary color border */
         }
-        #services {
-            background: url('closet.jpg') center/cover no-repeat fixed;
-            position: relative;
-        }
-        #services::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.55);
-            z-index: 1;
-        }
+
+        /* SERVICES BACKGROUND */
+        #services { background: url('closet.jpg') center/cover no-repeat fixed; position: relative; }
+        #services::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; } /* Lighter overlay */
         #services > * { position: relative; z-index: 2; }
         #services .section-title { color: white; }
-        #services .section-title::after { background: var(--gold); }
-        .youtube-embed {
-            text-align: center;
-            margin: 3rem 0;
-        }
+        #services .section-title::after { background: var(--gold); } /* Retained gold contrast */
+
+        /* YOUTUBE EMBED */
         .youtube-embed iframe {
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            width: 100%; max-width: 700px; /* Reduced max-width */ height: 400px; /* Reduced height */
+            border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
+        .youtube-embed p a { color: var(--primary-blue); }
+
+        /* TESTIMONIALS */
         .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem; margin-top: 3rem;
         }
         .testimonial {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            background: white; padding: 2rem; border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             font-style: italic;
-            border-left: 6px solid var(--deep-pink);
+            border-left: 4px solid var(--primary-blue); /* New border color */
         }
+
+        /* FOOTER (Dark Grey Change) */
         footer {
-            background: #444;
-            color: white;
-            padding: 4rem 5% 2rem;
+            background: var(--light-blue); /* Changed from #444 dark grey to peaceful light blue */
+            color: var(--navy); /* Text changed to dark navy for contrast on light background */
+            padding: 3rem 5% 1.5rem; /* Reduced padding */
             text-align: center;
+            border-top: 1px solid #eee;
         }
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem; margin-bottom: 1.5rem;
         }
-        .footer-content h4 { color: var(--gold); }
+        .footer-content h4 { color: var(--primary-blue); font-weight: 500; }
+        .footer-content a { color: var(--navy); }
+
+        /* CONTACT FORM ADJUSTMENTS (Added consistency) */
+        #contact input, #contact textarea {
+            border: 1px solid #ddd !important; /* Lighter border for inputs */
+            border-radius: 8px !important;
+        }
+
+        /* MEDIA QUERIES */
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            .nav-links {
-                position: fixed;
-                top: 80px; left: 0; width: 100%;
-                background: white;
-                flex-direction: column;
-                padding: 2rem 0;
-                gap: 2rem;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                transform: translateY(-150%);
-                transition: .4s;
-            }
-            .nav-links.active { transform: translateY(0); }
-            .hero h1 { font-size: 3.2rem; }
-            .about-grid, .optin-grid { grid-template-columns: 1fr; text-align: center; }
-            .about-img img { width: 260px; height: 360px; }
-            .youtube-embed iframe { height: 250px; }
-            section { padding: 80px 20px; }
-            .optin-section { padding: 40px 20px; }
+            .nav-links { top: 70px; } /* Adjust for smaller header padding */
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid, .optin-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .youtube-embed iframe { height: 200px; }
+            section { padding: 60px 20px; }
+            .your-name { font-size: 2.8rem; }
+            .logo { font-size: 2rem; }
+            .btn-book { padding: 0.6rem 1.5rem; }
         }
     </style>
 </head>
@@ -329,19 +285,17 @@
 </section>
 <section id="optin" class="optin-section">
     <h2 class="section-title">Start with Peace: Free 7-Day Faith-Centered Declutter Challenge</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.3rem; color:#555">
+    <p style="text-align:center; max-width:800px; margin:0 auto 2.5rem; font-size:1.1rem; color:#555">
         Discover how God's favor fuels lasting action. Daily emails: Mood reset, home hacks, business clarity. No overwhelm—just enduring order.
     </p>
     <div class="optin-grid">
         <div>
-            <i class="fas fa-heart" style="font-size:5rem; color:var(--deep-pink);"></i>
+            <i class="fas fa-hand-holding-heart" style="font-size:4rem; color:var(--primary-blue);"></i>
             <h3>For High-Achieving Women Ready for Purpose</h3>
             <p>From chaos to calling—faith-first. Join 1,000+ transforming their lives.</p>
         </div>
         <div class="optin-form">
-            <!-- HubSpot Embed: Replace with your full HubSpot form code here for seamless integration -->
-            <form action="https://api.hsforms.com/submissions/v3/integration/submit/YOUR_HUBSPOT_PORTAL_ID/YOUR_FORM_ID" method="POST"> <!-- Swap to your HubSpot form URL -->
-                <input type="email" name="email" placeholder="Your Email" required>
+            <form action="https://api.hsforms.com/submissions/v3/integration/submit/YOUR_HUBSPOT_PORTAL_ID/YOUR_FORM_ID" method="POST"> <input type="email" name="email" placeholder="Your Email" required>
                 <input type="text" name="firstname" placeholder="First Name">
                 <button type="submit" class="btn-optin">Get Instant Access</button>
             </form>
@@ -350,7 +304,7 @@
 </section>
 <section id="journey">
     <h2 class="section-title">The Order & Calling Journey™</h2>
-    <p style="text-align:center; max-width:900px; margin:2rem auto; font-style:italic; color:#777">
+    <p style="text-align:center; max-width:900px; margin:1rem auto 2rem; font-style:italic; color:#777">
         A faith-anchored path from inner peace to legacy impact. Inspired by enduring grace.
     </p>
     <div class="journey-grid">
@@ -385,7 +339,7 @@
             <p>Turn skills into controlled, scalable income.</p>
         </div>
     </div>
-    <div style="text-align:center; margin-top:3rem">
+    <div style="text-align:center; margin-top:2.5rem">
         <a href="#optin" class="btn-book">Begin the Journey Free</a>
     </div>
 </section>
@@ -407,12 +361,11 @@
 </section>
 <section id="youtube">
     <h2 class="section-title">Clarity in Action: Watch on YouTube</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.3rem; color:#555">
+    <p style="text-align:center; max-width:800px; margin:0 auto 2.5rem; font-size:1.1rem; color:#555">
         Daily faith-fueled tips for order and purpose. Subscribe for more.
     </p>
     <div class="youtube-embed">
-        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUJq6ut86V6nt3AiUJk_6l4g&layout=playlist" title="Clarity in Order Playlist" frameborder="0" allowfullscreen></iframe> <!-- Update with specific video ID or playlist -->
-        <p style="margin-top:1rem"><a href="https://www.youtube.com/@ClarityInOrder" target="_blank" style="color:var(--deep-pink);">Subscribe on YouTube</a></p>
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUJq6ut86V6nt3AiUJk_6l4g&layout=playlist" title="Clarity in Order Playlist" frameborder="0" allowfullscreen></iframe> <p style="margin-top:1rem"><a href="https://www.youtube.com/@ClarityInOrder" target="_blank">Subscribe on YouTube</a></p>
     </div>
 </section>
 <section id="services">
@@ -434,14 +387,14 @@
 </section>
 <section id="memberships">
     <h2 class="section-title">Peace of Mind Memberships</h2>
-    <p style="text-align:center;max-width:900px;margin:2rem auto;font-style:italic;color:#777">For enduring support—digital tips + optional in-home refresh.</p>
+    <p style="text-align:center;max-width:900px;margin:1rem auto 2rem;font-style:italic;color:#777">For enduring support—digital tips + optional in-home refresh.</p>
     <div class="cards-grid">
         <div class="card">
             <div class="card-header"><h3>Essential</h3><div class="price">$110/month</div></div>
             <div class="card-body"><ul><li>2 light sessions per month</li><li>Priority scheduling</li><li>Email organization tips</li></ul></div>
         </div>
         <div class="card">
-            <div class="card-header"><h3>Premium <span style="color:var(--deep-pink);font-size:1rem">Most Popular</span></h3><div class="price">$120/month</div></div>
+            <div class="card-header"><h3>Premium <span style="color:var(--primary-blue);font-size:0.9rem">Most Popular</span></h3><div class="price">$120/month</div></div>
             <div class="card-body"><ul><li>2 sessions + seasonal swap</li><li>Monthly style guide</li><li>Priority support</li></ul></div>
         </div>
         <div class="card">
@@ -450,7 +403,7 @@
         </div>
     </div>
 </section>
-<section id="testimonials" style="background:var(--beige)">
+<section id="testimonials" style="background:var(--light-blue)">
     <h2 class="section-title">Client Love</h2>
     <div class="testimonial-grid">
         <div class="testimonial"><p>"Rhina's approach brought peace to my home and purpose to my days. The faith foundation changed everything."</p><strong>— Sarah M., Naples</strong></div>
@@ -460,16 +413,16 @@
 </section>
 <section id="contact">
     <h2 class="section-title">Ready for Your Transformation?</h2>
-    <p style="text-align:center;max-width:800px;margin:0 auto 3rem;font-size:1.3rem;color:#555">
+    <p style="text-align:center;max-width:800px;margin:0 auto 2.5rem;font-size:1.1rem;color:#555">
         Digital or done-for-you—start with faith-filled order today.
     </p>
-    <div style="max-width:700px;margin:0 auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.08)">
+    <div style="max-width:600px;margin:0 auto;background:#fff;padding:2.5rem;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.08)">
         <form action="https://formspree.io/f/mbljwjqn" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
-            <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
-            <input type="tel" name="phone" placeholder="Your Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
-            <textarea name="message" rows="5" placeholder="Your vision for order..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
-            <button type="submit" class="btn-book" style="width:100%;padding:1.1rem">Send Message</button>
+            <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:1rem;margin-bottom:0.8rem">
+            <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:1rem;margin-bottom:0.8rem">
+            <input type="tel" name="phone" placeholder="Your Phone (Optional)" style="width:100%;padding:1rem;margin-bottom:0.8rem">
+            <textarea name="message" rows="4" placeholder="Your vision for order..." required style="width:100%;padding:1rem;margin-bottom:1.2rem"></textarea>
+            <button type="submit" class="btn-book" style="width:100%;padding:1rem">Send Message</button>
         </form>
     </div>
     <div style="text-align:center;margin-top:2rem">
@@ -478,7 +431,7 @@
 </section>
 <footer>
     <div class="footer-content">
-        <div><h4>Clarity in Order</h4><p>Faith-centered transformation for mind, home, and calling.</p></div>
+        <div><h4>Clarity in Order</h4><p style="font-size:0.95rem">Faith-centered transformation for mind, home, and calling.</p></div>
         <div><h4>Quick Links</h4>
             <ul style="list-style:none;padding:0">
                 <li><a href="#journey">Journey</a></li>
@@ -488,7 +441,7 @@
             </ul>
         </div>
     </div>
-    <p style="margin-top:2rem;font-size:0.9rem">© 2025 Rhina Delgado • Clarity in Order. All rights reserved.</p>
+    <p style="margin-top:2rem;font-size:0.85rem">© 2025 Rhina Delgado • Clarity in Order. All rights reserved.</p>
 </footer>
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242889484.js"></script>
 <script>
@@ -500,14 +453,14 @@
             document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
         });
     });
-    // Hero slideshow
+    // Hero slideshow (Assuming images are in the same directory)
     const heroImgs = ['hero-bg.jpg', 'hero-bg2.jpg', 'hero-bg3.jpg'];
     let i = 0;
     setInterval(() => {
         i = (i + 1) % heroImgs.length;
-        document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('${heroImgs[i]}')`;
+        document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${heroImgs[i]}')`;
     }, 6000);
-    // Services slideshow
+    // Services slideshow (Assuming images are in the same directory)
     const serviceImgs = ['closet.jpg', 'closet2.jpg', 'closet3.jpg'];
     let j = 0;
     setInterval(() => {
