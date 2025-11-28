@@ -10,11 +10,11 @@
     <style>
         :root {
             /* REINSTATED PINK, BUT SOFTER & LIGHTER */
-            --gold: #D4AF37; /* Retained gold for contrast */
-            --rose-pink: #D8A7B8; /* Muted, softer pink/rose - new primary accent */
+            --gold: #D4AF37;
+            --rose-pink: #D8A7B8; /* Muted, softer pink/rose - primary accent */
             --light-blush: #FDEEF2; /* Very light, soft pink for backgrounds/footer */
-            --light-blue: #E6F3F9; /* Used sparingly for subtle contrast */
-            --navy: #1A2A44; /* Dark text/accents for readability */
+            --light-blue: #E6F3F9;
+            --navy: #1A2A44;
             --beige: #FDF9F6;
             --white: #FFFFFF;
             --text: #333;
@@ -24,10 +24,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; }
         h1 { font-size: 3.2rem; }
-        h2 { font-size: 2.2rem; margin-bottom: 2rem; }
+        h2 { font-size: 2.2rem; margin-bottom: 1.5rem; } /* Reduced margin */
         h3 { font-size: 1.4rem; }
         h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
-        p { font-size: 1.05rem; margin-bottom: 1rem; }
+        p { font-size: 1.05rem; margin-bottom: 0.8rem; } /* Reduced paragraph margin */
         a { text-decoration: none; color: inherit; }
 
         /* HEADER & NAVIGATION */
@@ -40,229 +40,173 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         nav { max-width: 1400px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
-        .logo {
-            font-family: 'Alex Brush', cursive; /* Kept Alex Brush for the logo as it looks good there */
-            font-size: 2.2rem;
-            color: var(--rose-pink); /* Updated color for the logo */
-        }
+        .logo { font-family: 'Alex Brush', cursive; font-size: 2.2rem; color: var(--rose-pink); }
         .nav-links { display: flex; gap: 1.8rem; list-style: none; }
         .nav-links a { font-weight: 500; position: relative; padding-bottom: 5px; font-size: 0.95rem; }
-        .nav-links a::after {
-            content: ''; position: absolute; bottom: 0; left: 0;
-            width: 0; height: 2px;
-            background: var(--rose-pink); /* Updated accent color */
-            transition: .4s;
-        }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rose-pink); transition: .4s; }
         .nav-links a:hover::after { width: 100%; }
 
         /* BUTTONS */
         .btn-book, .btn-optin {
-            background: var(--rose-pink); /* Main button color - now rose pink */
+            background: var(--rose-pink);
             color: white;
             padding: 0.8rem 2rem;
             border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 6px 20px rgba(216,167,184,0.3); /* Shadow with new pink color */
+            box-shadow: 0 6px 20px rgba(216,167,184,0.3);
             transition: .4s;
             display: inline-block;
             text-align: center;
         }
         .btn-book:hover, .btn-optin:hover {
-            background: var(--navy); /* Hover to dark navy for contrast */
+            background: var(--navy);
             transform: translateY(-2px);
         }
 
-        /* HERO SECTION (Grey Background Change) */
+        /* HERO SECTION (SPACING REDUCED HERE) */
         .hero {
-            height: 100vh; min-height: 680px;
-            /* Lighter overlay for the background image, replacing dark grey */
+            height: 100vh; min-height: 600px; /* Reduced min-height slightly */
             background: linear-gradient(rgba(169, 189, 203, 0.45), rgba(169, 189, 203, 0.55)), url('hero-bg.jpg') center/cover no-repeat fixed;
-            display: flex; align-items: center; justify-content: center; text-align: center; color: var(--navy); /* Text changed to navy for clarity on lighter background */
+            display: flex; align-items: center; justify-content: center; text-align: center; color: var(--navy);
             position: relative;
+            padding-top: 80px; /* Add padding top to account for fixed header */
         }
         .hero h1 {
             font-size: 3.2rem;
             max-width: 900px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem; /* Reduced margin */
             line-height: 1.2;
-            color: var(--navy); /* Ensure heading is dark for readability */
+            color: var(--navy);
         }
         .bible {
             font-style: italic;
             font-size: 1.2rem;
-            background: rgba(255,255,255,0.7); /* Much lighter background for the quote */
-            padding: 1.5rem 3rem;
+            background: rgba(255,255,255,0.7);
+            padding: 1rem 2.5rem; /* Reduced padding */
             border-left: 6px solid var(--gold);
             display: inline-block;
             border-radius: 10px;
-            margin: 2rem 0;
-            color: var(--navy); /* Quote text is now navy for contrast */
+            margin: 1.5rem 0; /* Reduced margin */
+            color: var(--navy);
         }
+        /* Removed extra <br><br> from HTML structure for cohesion */
 
-        /* SECTION STYLES */
-        section { padding: 100px 5%; max-width: 1400px; margin: auto; }
+        /* SECTION STYLES (Padding Reduced) */
+        section { padding: 80px 5%; /* Reduced section vertical padding */ max-width: 1400px; margin: auto; }
         .section-title {
             text-align: center;
             font-size: 2.2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem; /* Reduced margin */
             position: relative;
         }
         .section-title::after {
             content: '';
-            position: absolute;
-            bottom: -10px; left: 50%;
+            position: absolute; bottom: -10px; left: 50%;
             transform: translateX(-50%);
             width: 80px; height: 3px;
-            background: var(--rose-pink); /* Updated accent color */
+            background: var(--rose-pink);
             border-radius: 3px;
         }
 
         /* OPTIN SECTION (Free Challenge) */
-        .optin-section { background: var(--light-blush); padding: 70px 5%; text-align: center; } /* Light blush background */
+        .optin-section { background: var(--light-blush); padding: 60px 5%; text-align: center; } /* Reduced padding */
+        .optin-section p { margin-bottom: 2rem; font-size: 1.1rem; } /* Reduced margin on central P */
         .optin-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; /* Reduced gap */
             align-items: center; max-width: 900px; margin: auto;
         }
         .optin-form {
-            background: white; padding: 2rem; border-radius: 15px;
+            background: white; padding: 1.5rem; border-radius: 15px; /* Reduced padding */
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         .optin-form input {
-            width: 100%; padding: 0.9rem; margin-bottom: 0.8rem;
+            width: 100%; padding: 0.8rem; margin-bottom: 0.6rem; /* Reduced input padding/margin */
             border: 1px solid #ddd; border-radius: 8px;
             font-size: 1rem;
         }
-        .optin-grid i { font-size: 4rem; color: var(--rose-pink); margin-bottom: 0.8rem; } /* Icon color updated */
+        .optin-grid i { font-size: 4rem; color: var(--rose-pink); margin-bottom: 0.5rem; } /* Reduced margin */
 
         /* JOURNEY SECTION */
         .journey-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem; margin-top: 2rem;
+            gap: 1.5rem; margin-top: 1.5rem; /* Reduced margin */
         }
         .journey-card {
-            background: white; padding: 1.8rem; border-radius: 15px;
+            background: white; padding: 1.5rem; border-radius: 15px; /* Reduced padding */
             text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--rose-pink); /* Updated accent color */
+            border-top: 4px solid var(--rose-pink);
             transition: .4s;
         }
-        .journey-card:hover { transform: translateY(-3px); }
-        .journey-card i { font-size: 2.5rem; color: var(--rose-pink); margin-bottom: 0.8rem; } /* Icon color updated */
+        /* IMPORTANT FIX: Button container margin reduced, making "Meet Rhina" tighter */
+        .journey-section-button { text-align:center; margin-top:2rem; } 
 
-        /* ABOUT SECTION (Rhina Delgado Font Fix) */
+        /* ABOUT SECTION (Now Tighter to Journey) */
+        #about { padding-top: 60px; } /* Reduced top padding to pull it up */
         .about-grid {
             display: grid; grid-template-columns: 1fr 2fr; gap: 3rem;
             align-items: center; margin-top: 2rem;
         }
         .about-img img {
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
+            width: 300px; height: 400px; object-fit: cover;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            border: 8px solid var(--light-blush); /* Softer border color */
+            border: 8px solid var(--light-blush);
             box-shadow: 0 10px 30px rgba(230,200,209,0.3);
         }
         .your-name {
-            font-size: 3.5rem;
-            font-family: 'Oswald', sans-serif; /* CHANGED FONT TO OSWALD - NOT CURSIVE */
-            font-weight: 500; /* Adjusted weight for balance */
-            color: var(--rose-pink); /* Updated color */
-            margin: 0.5rem 0 0.8rem;
+            font-size: 3.5rem; font-family: 'Oswald', sans-serif; font-weight: 500;
+            color: var(--rose-pink); margin: 0.5rem 0 0.8rem;
         }
 
-        /* SERVICES & MEMBERSHIPS CARDS */
-        .cards-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem; margin-top: 3rem;
-        }
-        .card {
-            background: white; border-radius: 15px; overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: .4s;
-            border: 2px solid var(--light-blush); /* Lighter, soft border */
-        }
-        .card:hover { transform: translateY(-5px); }
-        .card-header {
-            padding: 2rem 1.5rem; text-align: center;
-            background: var(--light-blush); /* Soft blush background */
-        }
-        .card-header h3 { font-size: 1.3rem; margin-bottom: 0.3rem; }
-        .card-header .price { font-size: 2.5rem; font-weight: 700; color: var(--rose-pink); } /* Updated color */
-        .card-body { padding: 1.5rem; }
-        .card-body li {
-            position: relative; padding-left: 1.5rem;
-            margin: 0.8rem 0;
-            font-size: 0.95rem;
-        }
-        .card-body li::before {
-            content: "✨";
-            position: absolute; left: 0;
-            color: var(--rose-pink); /* Updated color */
-            font-weight: normal;
-        }
-        #memberships .card:nth-child(2) {
-            transform: scale(1.02);
-            border: 3px solid var(--rose-pink); /* Primary accent color border */
-        }
-        #memberships .card:nth-child(2) .card-header .price { color: var(--navy); } /* Make price darker for contrast on popular card */
-
-        /* SERVICES BACKGROUND */
-        #services { background: url('closet.jpg') center/cover no-repeat fixed; position: relative; }
-        #services::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.45); z-index: 1; }
-        #services > * { position: relative; z-index: 2; }
-        #services .section-title { color: white; }
-        #services .section-title::after { background: var(--gold); }
-
-        /* YOUTUBE EMBED */
+        /* YOUTUBE EMBED (Gap fixed by reducing section padding) */
+        #youtube { padding-top: 80px; } /* Top padding reduced */
+        .youtube-embed { margin: 1.5rem 0; } /* Reduced margin */
         .youtube-embed iframe {
             width: 100%; max-width: 700px; height: 400px;
             border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
-        .youtube-embed p a { color: var(--rose-pink); } /* Updated link color */
+        .youtube-embed p a { color: var(--rose-pink); }
+
+        /* SERVICES & MEMBERSHIPS CARDS */
+        .cards-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem; /* Reduced card gap */ margin-top: 2.5rem; /* Reduced margin */
+        }
+        .card {
+            background: white; border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 2px solid var(--light-blush);
+        }
+        .card-header { padding: 1.5rem 1.5rem; background: var(--light-blush); } /* Reduced padding */
+        .card-header .price { font-size: 2.2rem; } /* Reduced price font size slightly */
+        .card-body { padding: 1.2rem; } /* Reduced padding */
+        .card-body li { margin: 0.6rem 0; font-size: 0.95rem; } /* Reduced list item margin */
+        .card-body li::before { content: "✨"; color: var(--rose-pink); }
 
         /* TESTIMONIALS */
-        .testimonial-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem; margin-top: 3rem;
-        }
-        .testimonial {
-            background: white; padding: 2rem; border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            font-style: italic;
-            border-left: 4px solid var(--rose-pink); /* Updated border color */
-        }
-        #testimonials { background: var(--light-blush); } /* Light blush background */
+        .testimonial-grid { gap: 1.5rem; margin-top: 2rem; } /* Reduced gap and margin */
+        .testimonial { padding: 1.8rem; border-left: 4px solid var(--rose-pink); } /* Reduced padding */
 
-        /* FOOTER (Lighter Background) */
+        /* CONTACT SECTION */
+        .contact-content-box { max-width:600px; margin:0 auto;background:#fff;padding:2rem;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.08) } /* Added class and reduced padding */
+        .contact-button-container { text-align:center;margin-top:1.5rem } /* Reduced margin */
+        .contact-text-p { margin:0 auto 2rem; font-size:1.1rem; color:#555 } /* Reduced margin */
+
+
+        /* FOOTER */
         footer {
-            background: var(--light-blush); /* Changed to light blush for peace */
-            color: var(--navy); /* Text changed to dark navy for contrast on light background */
-            padding: 3rem 5% 1.5rem;
+            background: var(--light-blush);
+            color: var(--navy);
+            padding: 2.5rem 5% 1.2rem; /* Reduced padding */
             text-align: center;
             border-top: 1px solid #eee;
-        }
-        .footer-content {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem; margin-bottom: 1.5rem;
-        }
-        .footer-content h4 { color: var(--rose-pink); font-weight: 500; } /* Updated color */
-        .footer-content a { color: var(--navy); }
-
-        /* CONTACT FORM ADJUSTMENTS */
-        #contact input, #contact textarea {
-            border: 1px solid #ddd !important;
-            border-radius: 8px !important;
         }
 
         /* MEDIA QUERIES */
         @media (max-width: 768px) {
-            .nav-links { top: 70px; }
             .hero h1 { font-size: 2.5rem; }
-            .about-grid, .optin-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .youtube-embed iframe { height: 200px; }
-            section { padding: 60px 20px; }
-            .your-name { font-size: 2.8rem; }
-            .logo { font-size: 2rem; }
-            .btn-book { padding: 0.6rem 1.5rem; }
+            section { padding: 50px 20px; } /* Reduced mobile section padding */
+            .optin-section { padding: 40px 20px; } /* Reduced mobile optin padding */
+            .about-grid, .optin-grid { gap: 1.5rem; } /* Reduced mobile grid gap */
         }
     </style>
 </head>
@@ -287,18 +231,17 @@
     <div>
         <h1>Declutter Your Mind. Reclaim Biblical Peace. Unlock Your Calling.</h1>
         <div class="bible">“Let all things be done decently and in order.” — 1 Corinthians 14:40</div>
-        <br><br>
         <a href="#optin" class="btn-book">Join Free 7-Day Challenge</a>
     </div>
 </section>
 <section id="optin" class="optin-section">
     <h2 class="section-title">Start with Peace: Free 7-Day Faith-Centered Declutter Challenge</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 2.5rem; font-size:1.1rem; color:#555">
+    <p style="text-align:center; max-width:800px; margin:0 auto 2rem;" class="contact-text-p">
         Discover how God's favor fuels lasting action. Daily emails: Mood reset, home hacks, business clarity. No overwhelm—just enduring order.
     </p>
     <div class="optin-grid">
         <div>
-            <i class="fas fa-hand-holding-heart" style="font-size:4rem; color:var(--rose-pink);"></i>
+            <i class="fas fa-hand-holding-heart" style="color:var(--rose-pink);"></i>
             <h3>For High-Achieving Women Ready for Purpose</h3>
             <p>From chaos to calling—faith-first. Join 1,000+ transforming their lives.</p>
         </div>
@@ -312,7 +255,7 @@
 </section>
 <section id="journey">
     <h2 class="section-title">The Order & Calling Journey™</h2>
-    <p style="text-align:center; max-width:900px; margin:1rem auto 2rem; font-style:italic; color:#777">
+    <p style="text-align:center; max-width:900px; margin:1rem auto 1.5rem; font-style:italic; color:#777">
         A faith-anchored path from inner peace to legacy impact. Inspired by enduring grace.
     </p>
     <div class="journey-grid">
@@ -347,12 +290,12 @@
             <p>Turn skills into controlled, scalable income.</p>
         </div>
     </div>
-    <div style="text-align:center; margin-top:2.5rem">
+    <div class="journey-section-button">
         <a href="#optin" class="btn-book">Begin the Journey Free</a>
     </div>
 </section>
 <section id="about">
-    <h2 class="section-title">Meet</h2>
+    <h2 class="section-title">Meet Rhina Delgado</h2>
     <div class="about-grid">
         <div class="about-img" style="text-align:center">
             <img src="rhina-delgado.jpg" alt="Rhina Delgado">
@@ -369,11 +312,12 @@
 </section>
 <section id="youtube">
     <h2 class="section-title">Clarity in Action: Watch on YouTube</h2>
-    <p style="text-align:center; max-width:800px; margin:0 auto 2.5rem; font-size:1.1rem; color:#555">
+    <p style="text-align:center; max-width:800px; margin:0 auto 2rem;" class="contact-text-p">
         Daily faith-fueled tips for order and purpose. Subscribe for more.
     </p>
     <div class="youtube-embed">
-        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUJq6ut86V6nt3AiUJk_6l4g&layout=playlist" title="Clarity in Order Playlist" frameborder="0" allowfullscreen></iframe> <p style="margin-top:1rem"><a href="https://www.youtube.com/@ClarityInOrder" target="_blank">Subscribe on YouTube</a></p>
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUJq6ut86V6nt3AiUJk_6l4g&layout=playlist" title="Clarity in Order Playlist" frameborder="0" allowfullscreen></iframe>
+        <p style="margin-top:1rem"><a href="https://www.youtube.com/@ClarityInOrder" target="_blank">Subscribe on YouTube</a></p>
     </div>
 </section>
 <section id="services">
@@ -395,7 +339,7 @@
 </section>
 <section id="memberships">
     <h2 class="section-title">Peace of Mind Memberships</h2>
-    <p style="text-align:center;max-width:900px;margin:1rem auto 2rem;font-style:italic;color:#777">For enduring support—digital tips + optional in-home refresh.</p>
+    <p style="text-align:center;max-width:900px;margin:1rem auto 1.5rem;font-style:italic;color:#777">For enduring support—digital tips + optional in-home refresh.</p>
     <div class="cards-grid">
         <div class="card">
             <div class="card-header"><h3>Essential</h3><div class="price">$110/month</div></div>
@@ -421,10 +365,10 @@
 </section>
 <section id="contact">
     <h2 class="section-title">Ready for Your Transformation?</h2>
-    <p style="text-align:center;max-width:800px;margin:0 auto 2.5rem;font-size:1.1rem;color:#555">
+    <p style="text-align:center;max-width:800px; margin:0 auto 2rem;" class="contact-text-p">
         Digital or done-for-you—start with faith-filled order today.
     </p>
-    <div style="max-width:600px;margin:0 auto;background:#fff;padding:2.5rem;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,0.08)">
+    <div class="contact-content-box">
         <form action="https://formspree.io/f/mbljwjqn" method="POST">
             <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:1rem;margin-bottom:0.8rem">
             <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:1rem;margin-bottom:0.8rem">
@@ -433,7 +377,7 @@
             <button type="submit" class="btn-book" style="width:100%;padding:1rem">Send Message</button>
         </form>
     </div>
-    <div style="text-align:center;margin-top:2rem">
+    <div class="contact-button-container">
         <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book VIP Consultation</a>
     </div>
 </section>
