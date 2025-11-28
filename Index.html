@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rhina Delgado | Naples Luxury Home Organizer</title>
-    <meta name="description" content="Naples premier faith-centered luxury closet & master suite organization. By appointment only.">
-
+    <title>Clarity in Order | Faith-Centered Life Transformation with Rhina Delgado</title>
+    <meta name="description" content="Declutter your mind, home, and calling. Faith-based order for enduring peace and purpose. Free 7-Day Challenge + luxury services in Naples.">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
     <style>
         :root {
             --gold: #D4AF37;
@@ -23,7 +21,6 @@
         body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.7; }
         h1, h2, h3 { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
         a { text-decoration: none; color: inherit; }
-
         header {
             position: fixed;
             top: 0; width: 100%;
@@ -65,7 +62,7 @@
             transition: .4s;
         }
         .nav-links a:hover::after { width: 100%; }
-        .btn-book {
+        .btn-book, .btn-optin {
             background: var(--deep-pink);
             color: white;
             padding: 0.9rem 2.2rem;
@@ -73,13 +70,14 @@
             font-weight: 600;
             box-shadow: 0 8px 25px rgba(227,147,181,0.4);
             transition: .4s;
+            display: inline-block;
+            text-align: center;
         }
-        .btn-book:hover {
+        .btn-book:hover, .btn-optin:hover {
             background: var(--gold);
             transform: translateY(-3px);
         }
         .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
-
         .hero {
             height: 100vh;
             min-height: 780px;
@@ -106,7 +104,6 @@
             border-radius: 0 30px 30px 0;
             margin: 3rem 0;
         }
-
         section {
             padding: 120px 5%;
             max-width: 1400px;
@@ -127,7 +124,50 @@
             background: var(--deep-pink);
             border-radius: 3px;
         }
-
+        .optin-section {
+            background: var(--beige);
+            padding: 80px 5%;
+            text-align: center;
+        }
+        .optin-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .optin-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+        .optin-form input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            font-size: 1rem;
+        }
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .journey-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--deep-pink);
+            transition: .4s;
+        }
+        .journey-card:hover { transform: translateY(-5px); }
+        .journey-card i { font-size: 3rem; color: var(--deep-pink); margin-bottom: 1rem; }
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -148,7 +188,6 @@
             color: var(--deep-pink);
             margin: 1.5rem 0 1rem;
         }
-
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -188,9 +227,7 @@
             transform: scale(1.05);
             border: 5px solid var(--deep-pink);
         }
-
         #services {
-            background: var(--beige);
             background: url('closet.jpg') center/cover no-repeat fixed;
             position: relative;
         }
@@ -204,7 +241,17 @@
         #services > * { position: relative; z-index: 2; }
         #services .section-title { color: white; }
         #services .section-title::after { background: var(--gold); }
-
+        .youtube-embed {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .youtube-embed iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -219,7 +266,6 @@
             font-style: italic;
             border-left: 6px solid var(--deep-pink);
         }
-
         footer {
             background: #444;
             color: white;
@@ -233,7 +279,6 @@
             margin-bottom: 2rem;
         }
         .footer-content h4 { color: var(--gold); }
-
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             .nav-links {
@@ -249,58 +294,129 @@
             }
             .nav-links.active { transform: translateY(0); }
             .hero h1 { font-size: 3.2rem; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-grid, .optin-grid { grid-template-columns: 1fr; text-align: center; }
             .about-img img { width: 260px; height: 360px; }
+            .youtube-embed iframe { height: 250px; }
             section { padding: 80px 20px; }
+            .optin-section { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
-
 <header>
     <nav>
-        <div class="logo">Naples Organizer</div>
+        <div class="logo">Clarity in Order</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
+            <li><a href="#optin">Free Challenge</a></li>
+            <li><a href="#journey">Journey</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#memberships">Memberships</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#services">VIP Services</a></li>
+            <li><a href="#youtube">Watch Now</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book Now</a>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Book VIP Day</a>
         <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
 </header>
-
 <section id="home" class="hero">
     <div>
-        <h1>Luxury Home Organization</h1>
+        <h1>Declutter Your Mind. Reclaim Biblical Peace. Unlock Your Calling.</h1>
         <div class="bible">“Let all things be done decently and in order.” — 1 Corinthians 14:40</div>
         <br><br>
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Schedule Private Consultation</a>
+        <a href="#optin" class="btn-book">Join Free 7-Day Challenge</a>
     </div>
 </section>
-
+<section id="optin" class="optin-section">
+    <h2 class="section-title">Start with Peace: Free 7-Day Faith-Centered Declutter Challenge</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.3rem; color:#555">
+        Discover how God's favor fuels lasting action. Daily emails: Mood reset, home hacks, business clarity. No overwhelm—just enduring order.
+    </p>
+    <div class="optin-grid">
+        <div>
+            <i class="fas fa-heart" style="font-size:5rem; color:var(--deep-pink);"></i>
+            <h3>For High-Achieving Women Ready for Purpose</h3>
+            <p>From chaos to calling—faith-first. Join 1,000+ transforming their lives.</p>
+        </div>
+        <div class="optin-form">
+            <!-- HubSpot Embed: Replace with your full HubSpot form code here for seamless integration -->
+            <form action="https://api.hsforms.com/submissions/v3/integration/submit/YOUR_HUBSPOT_PORTAL_ID/YOUR_FORM_ID" method="POST"> <!-- Swap to your HubSpot form URL -->
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="firstname" placeholder="First Name">
+                <button type="submit" class="btn-optin">Get Instant Access</button>
+            </form>
+        </div>
+    </div>
+</section>
+<section id="journey">
+    <h2 class="section-title">The Order & Calling Journey™</h2>
+    <p style="text-align:center; max-width:900px; margin:2rem auto; font-style:italic; color:#777">
+        A faith-anchored path from inner peace to legacy impact. Inspired by enduring grace.
+    </p>
+    <div class="journey-grid">
+        <div class="journey-card">
+            <i class="fas fa-brain"></i>
+            <h3>1. Mind & Mood</h3>
+            <p>Biblical peace resets overwhelm (Phil 4:7).</p>
+        </div>
+        <div class="journey-card">
+            <i class="fas fa-home"></i>
+            <h3>2. Home Order</h3>
+            <p>Declutter spaces for clarity and action.</p>
+        </div>
+        <div class="journey-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>3. Business Flow</h3>
+            <p>Organize for purpose-driven income.</p>
+        </div>
+        <div class="journey-card">
+            <i class="fas fa-crown"></i>
+            <h3>4. Calling Legacy</h3>
+            <p>Endure with God's favor—scale eternally.</p>
+        </div>
+        <div class="journey-card">
+            <i class="fas fa-users"></i>
+            <h3>5. Community Sustain</h3>
+            <p>Faith sisters + ongoing support.</p>
+        </div>
+        <div class="journey-card">
+            <i class="fas fa-rocket"></i>
+            <h3>6. Monetize Purpose</h3>
+            <p>Turn skills into controlled, scalable income.</p>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem">
+        <a href="#optin" class="btn-book">Begin the Journey Free</a>
+    </div>
+</section>
 <section id="about">
-    <h2 class="section-title">Meet Your Organizer</h2>
+    <h2 class="section-title">Meet Rhina Delgado</h2>
     <div class="about-grid">
         <div class="about-img" style="text-align:center">
             <img src="rhina-delgado.jpg" alt="Rhina Delgado">
         </div>
         <div class="about-text">
             <h3 class="your-name">Rhina Delgado</h3>
-            <p>Bringing <strong>unparalleled expertise</strong> to Naples’ most exclusive residences, I cultivate calm, clarity, and timeless elegance in every closet and master suite.</p>
-            <p>My faith-centered approach reflects the belief that true order creates peace — in your home and in your heart.</p>
-            <p>By appointment and referral only.</p>
+            <p>Guiding high-achieving Christian women from chaos to calling with faith-centered order. Calm minds, beautiful homes, purposeful businesses.</p>
+            <p>True transformation starts in the heart—where God's peace meets willing action.</p>
+            <p>Digital courses + Naples luxury by referral.</p>
             <br>
-            <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Begin Your Transformation</a>
+            <a href="#optin" class="btn-book">Join the Challenge</a>
         </div>
     </div>
 </section>
-
+<section id="youtube">
+    <h2 class="section-title">Clarity in Action: Watch on YouTube</h2>
+    <p style="text-align:center; max-width:800px; margin:0 auto 3rem; font-size:1.3rem; color:#555">
+        Daily faith-fueled tips for order and purpose. Subscribe for more.
+    </p>
+    <div class="youtube-embed">
+        <iframe src="https://www.youtube.com/embed?listType=playlist&list=UUJq6ut86V6nt3AiUJk_6l4g&layout=playlist" title="Clarity in Order Playlist" frameborder="0" allowfullscreen></iframe> <!-- Update with specific video ID or playlist -->
+        <p style="margin-top:1rem"><a href="https://www.youtube.com/@ClarityInOrder" target="_blank" style="color:var(--deep-pink);">Subscribe on YouTube</a></p>
+    </div>
+</section>
 <section id="services">
-    <h2 class="section-title">Signature Services</h2>
+    <h2 class="section-title">VIP Done-For-You Services (Naples Exclusive)</h2>
     <div class="cards-grid">
         <div class="card">
             <div class="card-header"><h3>Signature Closet</h3><div class="price">From $1,800</div></div>
@@ -316,10 +432,9 @@
         </div>
     </div>
 </section>
-
 <section id="memberships">
     <h2 class="section-title">Peace of Mind Memberships</h2>
-    <p style="text-align:center;max-width:900px;margin:2rem auto;font-style:italic;color:#777">Exclusive to past clients desiring ongoing seasonal refresh & maintenance.</p>
+    <p style="text-align:center;max-width:900px;margin:2rem auto;font-style:italic;color:#777">For enduring support—digital tips + optional in-home refresh.</p>
     <div class="cards-grid">
         <div class="card">
             <div class="card-header"><h3>Essential</h3><div class="price">$110/month</div></div>
@@ -335,55 +450,49 @@
         </div>
     </div>
 </section>
-
 <section id="testimonials" style="background:var(--beige)">
     <h2 class="section-title">Client Love</h2>
     <div class="testimonial-grid">
-        <div class="testimonial"><p>"Rhina transformed my chaotic walk-in into a boutique dream. I finally feel peace every morning."</p><strong>— Sarah M., Naples</strong></div>
-        <div class="testimonial"><p>"Worth every penny. My master suite is now my sanctuary. Highly recommend the membership!"</p><strong>— Dr. Lisa Chen</strong></div>
-        <div class="testimonial"><p>"Discreet, professional, and faith-centered. Rhina gets it — luxury organization with heart."</p><strong>— James R., CEO</strong></div>
+        <div class="testimonial"><p>"Rhina's approach brought peace to my home and purpose to my days. The faith foundation changed everything."</p><strong>— Sarah M., Naples</strong></div>
+        <div class="testimonial"><p>"From overwhelmed mom to ordered entrepreneur. Her challenge was the spark I needed."</p><strong>— Dr. Lisa Chen</strong></div>
+        <div class="testimonial"><p>"Luxury with heart and scripture. My business flows now—true calling unlocked."</p><strong>— James R., CEO</strong></div>
     </div>
 </section>
-
 <section id="contact">
-    <h2 class="section-title">Get In Touch</h2>
+    <h2 class="section-title">Ready for Your Transformation?</h2>
     <p style="text-align:center;max-width:800px;margin:0 auto 3rem;font-size:1.3rem;color:#555">
-        Ready for calm, beauty, and order in your home?<br>Book your private consultation today.
+        Digital or done-for-you—start with faith-filled order today.
     </p>
     <div style="max-width:700px;margin:0 auto;background:#fff;padding:3rem;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.08)">
         <form action="https://formspree.io/f/mbljwjqn" method="POST">
             <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
             <input type="email" name="email" placeholder="Your Email" required style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
             <input type="tel" name="phone" placeholder="Your Phone" style="width:100%;padding:1rem;margin-bottom:1rem;border:2px solid #eee;border-radius:12px">
-            <textarea name="message" rows="5" placeholder="Tell me about your space..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
+            <textarea name="message" rows="5" placeholder="Your vision for order..." required style="width:100%;padding:1rem;margin-bottom:1.5rem;border:2px solid #eee;border-radius:12px"></textarea>
             <button type="submit" class="btn-book" style="width:100%;padding:1.1rem">Send Message</button>
         </form>
     </div>
     <div style="text-align:center;margin-top:2rem">
-        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book Directly</a>
+        <a href="https://calendly.com/pinkelitestudio" class="btn-book" target="_blank">Or Book VIP Consultation</a>
     </div>
 </section>
-
 <footer>
     <div class="footer-content">
-        <div><h4>Naples Organizer</h4><p>Faith-centered luxury organization for Naples' finest homes.</p></div>
+        <div><h4>Clarity in Order</h4><p>Faith-centered transformation for mind, home, and calling.</p></div>
         <div><h4>Quick Links</h4>
             <ul style="list-style:none;padding:0">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#memberships">Memberships</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#services">VIP Services</a></li>
+                <li><a href="#optin">Free Challenge</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
-    <p style="margin-top:2rem;font-size:0.9rem">© 2025 Rhina Delgado • Naples Luxury Home Organizer. All rights reserved.</p>
+    <p style="margin-top:2rem;font-size:0.9rem">© 2025 Rhina Delgado • Clarity in Order. All rights reserved.</p>
 </footer>
-
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/242889484.js"></script>
-
 <script>
     document.getElementById('menuToggle').onclick = () => document.getElementById('navLinks').classList.toggle('active');
-
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
@@ -391,7 +500,6 @@
             document.querySelector(a.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
         });
     });
-
     // Hero slideshow
     const heroImgs = ['hero-bg.jpg', 'hero-bg2.jpg', 'hero-bg3.jpg'];
     let i = 0;
@@ -399,15 +507,13 @@
         i = (i + 1) % heroImgs.length;
         document.querySelector('.hero').style.backgroundImage = `linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.68)), url('${heroImgs[i]}')`;
     }, 6000);
-
     // Services slideshow
     const serviceImgs = ['closet.jpg', 'closet2.jpg', 'closet3.jpg'];
     let j = 0;
     setInterval(() => {
         j = (j + 1) % serviceImgs.length;
-        document.getElementById('services').style.backgroundImage = `url('${serviceImgs[j]}')`;
+        document.getElementById('services').style.backgroundImage = `url('${serviceImgs[j]}') center/cover no-repeat fixed`;
     }, 6000);
 </script>
-
 </body>
 </html>
