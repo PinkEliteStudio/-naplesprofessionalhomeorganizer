@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith-Based Home Organizing Naples | Clarity in Order 2025</title>
     <meta name="description" content="Declutter your mind, home, and calling with biblical peace. Free 3-Day Challenge PDF + luxury services for Christian women in Naples, FL.">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Alex+Brush&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com">
     <style>
         :root {
             --gold: #D4AF37;
@@ -19,7 +19,6 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; }
-        /* Font size adjustments for standard web practice */
         h1 { font-size: 2.8rem; line-height: 1.1; }
         h2 { font-size: 2rem; margin-bottom: 1.5rem; }
         h3 { font-size: 1.2rem; }
@@ -36,15 +35,15 @@
         }
         nav { max-width: 1400px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
         .logo { font-family: 'Alex Brush', cursive; font-size: 2.2rem; color: var(--rose-pink); }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; } /* Reduced gap slightly */
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; }
         .nav-links a { font-weight: 500; position: relative; padding-bottom: 5px; font-size: 0.9rem; }
         .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rose-pink); transition: .4s; }
         .nav-links a:hover::after { width: 100%; }
         .btn-book, .btn-optin {
-            background: var(--rose-pink); color: white; padding: 0.7rem 1.8rem; border-radius: 50px; /* Slightly smaller padding */
+            background: var(--rose-pink); color: white; padding: 0.7rem 1.8rem; border-radius: 50px;
             font-weight: 600; box-shadow: 0 6px 20px rgba(216,167,184,0.3); transition: .4s;
             display: inline-block; text-align: center;
-            font-size: 0.9rem; /* Standardizing button font size */
+            font-size: 0.9rem;
         }
         .btn-book:hover, .btn-optin:hover { background: var(--navy); transform: translateY(-2px); }
         .hero {
@@ -62,7 +61,7 @@
         .hero-video { margin: 1rem 0; max-width: 100%; }
         .hero-video iframe { width: 100%; max-width: 560px; height: 315px; border-radius: 15px; }
         .bible {
-            font-style: italic; font-size: 1.1rem; /* Slightly smaller font size */
+            font-style: italic; font-size: 1.1rem;
             background: rgba(255,255,255,0.7);
             padding: 1rem 2rem;
             border-left: 6px solid var(--gold);
@@ -86,12 +85,12 @@
         .optin-section { background: var(--light-blush); padding: 60px 5%; text-align: center; }
         .optin-section p { margin-bottom: 1.5rem; }
         .optin-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; /* Reduced gap slightly */
+            display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
             align-items: center; max-width: 900px; margin: auto;
         }
         .optin-form { background: white; padding: 1.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         .optin-form input { width: 100%; padding: 0.8rem; margin-bottom: 0.6rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
-        .optin-grid i { font-size: 3.5rem; color: var(--rose-pink); margin-bottom: 0.5rem; } /* Slightly smaller icon */
+        .optin-grid i { font-size: 3.5rem; color: var(--rose-pink); margin-bottom: 0.5rem; }
         .journey-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.5rem; margin-top: 1.5rem;
@@ -106,7 +105,7 @@
             transition: .4s;
         }
         .journey-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .journey-card i { font-size: 2rem; color: var(--rose-pink); margin-bottom: 0.8rem; } /* Slightly smaller icon */
+        .journey-card i { font-size: 2rem; color: var(--rose-pink); margin-bottom: 0.8rem; }
         .journey-section-button { text-align:center; margin-top:2rem; }
         #about { padding-top: 60px; }
         .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-top: 2rem; }
@@ -117,7 +116,7 @@
             box-shadow: 0 10px 30px rgba(230,200,209,0.3);
         }
         .your-name {
-            font-size: 3rem; font-family: 'Oswald', sans-serif; font-weight: 500; /* Slightly smaller font size */
+            font-size: 3rem; font-family: 'Oswald', sans-serif; font-weight: 500;
             color: var(--rose-pink); margin: 0.5rem 0 0.8rem;
         }
         #youtube { padding-top: 60px; }
@@ -141,12 +140,8 @@
         .card:hover { transform: translateY(-5px); box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
         .card-header { padding: 1.5rem 1.5rem; text-align: center; background: var(--light-blush); }
         .card-header h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
-        .card-header .price { font-size: 2rem; font-weight: 700; color: var(--rose-pink); } /* Slightly smaller price font */
+        .card-header .price { font-size: 2rem; font-weight: 700; color: var(--rose-pink); }
         .card-body { padding: 1.2rem; }
-        .card-body li {
-            position: relative; padding-left: 1.5rem;
-            margin: 0
-        }
         .card-body li {
             position: relative; padding-left: 1.5rem;
             margin-bottom: 0.6rem;
@@ -194,11 +189,12 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#journey">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <!-- NEW PDF Link in Nav -->
+                <!-- Updated External Blog Link -->
+                <li><a href="https://your-external-blog-link.com" target="_blank">Blog</a></li>
+                <!-- PDF Link -->
                 <li><a href="Challenge_Folder.pdf" target="_blank" style="color: var(--rose-pink);">Free Challenge</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="calendly.com" target="_blank" class="btn-book">Book Now</a></li>
+                <li><a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Book Now</a></li>
             </ul>
         </nav>
     </header>
@@ -209,7 +205,6 @@
                 <h1>Clarity in Order: Faith-Fueled Home Organizing in Naples, FL</h1>
                 <p>Declutter your mind, home, and calling with biblical principles.</p>
                 <div class="bible">"Let all things be done decently and in order. —1 Cor 14:40"</div>
-                <!-- NEW PDF Link Button in Hero -->
                 <a href="Challenge_Folder.pdf" target="_blank" class="btn-optin">Download Free 3-Day Challenge PDF</a>
             </div>
         </section>
@@ -218,21 +213,23 @@
             <div class="optin-grid">
                 <div>
                     <h2>Ready to organize your calling?</h2>
+                    <!-- Condensed and clearer copy -->
                     <p>Get instant access to my **Free 3-Day Biblical Declutter Challenge** PDF and monthly biblical organizing tips sent to your inbox.</p>
                     <a href="Challenge_Folder.pdf" target="_blank" class="btn-optin" style="width: 100%;">Download Now (It's Free!)</a>
                 </div>
                 <div class="optin-form">
-                    <h3>Join 1K+ Sisters*</h3>
-                    <p>*Placeholder for a real email signup form using a service like Mailchimp or ConvertKit.</p>
+                    <!-- Updated copy to reflect a new business -->
+                    <h3>Join the Community Waitlist</h3>
+                    <p>Be the first to get updates on the upcoming community and exclusive resources.</p>
                     <input type="text" placeholder="Your Name">
                     <input type="email" placeholder="Email Address">
-                    <button type="submit" class="btn-optin" style="width: 100%;">Join the waitlist</button>
+                    <button type="submit" class="btn-optin" style="width: 100%;">Join Now</button>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <h2 class="section-title">About Rhina Delgado</h2>
+            <h2 class="section-title">About Me</h2> <!-- Changed title -->
             <div class="about-grid">
                 <div class="about-img">
                     <img src="rhina-delgado.jpg" alt="Rhina Delgado, Professional Organizer Naples FL">
@@ -241,7 +238,7 @@
                     <div class="your-name">Rhina Delgado</div>
                     <p>I help busy Christian women in Naples, FL turn household chaos into God-given calling. My organizing services blend practical, luxury decluttering hacks with faith-fueled principles rooted in scripture.</p>
                     <p>We work together to create systems that last, giving you peace of mind and the physical space to focus on what truly matters: your family, your faith, and your purpose.</p>
-                    <a href="calendly.com" target="_blank" class="btn-book">Schedule a Clarity Call</a>
+                    <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Schedule a Clarity Call</a>
                 </div>
             </div>
         </section>
@@ -277,7 +274,7 @@
             <h2 class="section-title">Watch My YouTube Channel</h2>
             <p style="text-align: center;">Tips, testimonies, and faith-fueled organizing inspiration.</p>
             <div class="youtube-embed">
-                <!-- Replace with your actual YouTube embed code -->
+                <!-- Updated YouTube embed URL -->
                 <iframe src="www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
@@ -301,7 +298,7 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a href="calendly.com" target="_blank" class="btn-book">Book Session</a>
+                        <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Book Session</a>
                     </div>
                 </div>
                 <!-- Card 2 -->
@@ -335,26 +332,18 @@
                         </ul>
                     </div>
                     <div class="card-footer">
-                        <a href="calendly.com" target="_blank" class="btn-book">Consult Needed</a>
+                        <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Consult Needed</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section -->
+        <!-- Blog Section Link (Content removed, linked externally) -->
         <section id="blog">
-            <h2 class="section-title">Latest Blog Posts</h2>
-            <div class="blog-list">
-                <article class="blog-post">
-                    <h3><a href="#">The Pros 31 Woman & Organizing</a></h3>
-                    <p class="blog-meta"><i class="far fa-calendar-alt"></i> Dec 1, 2025 <i class="fas fa-tags"></i> Faith, Mindset</p>
-                    <p>How ancient wisdom applies to modern household management and finding peace in the chaos.</p>
-                </article>
-                <article class="blog-post">
-                    <h3><a href="#">My Top 5 Trello Hacks for Moms</a></h3>
-                    <p class="blog-meta"><i class="far fa-calendar-alt"></i> Nov 15, 2025 <i class="fas fa-tags"></i> Tools, Trello</p>
-                    <p>Learn how a simple digital tool can revolutionize your family task management and decluttering strategy.</p>
-                </article>
+            <h2 class="section-title">Visit Our Blog</h2>
+            <p style="text-align: center;">Read tips, testimonies, and faith-fueled organizing inspiration on our external blog.</p>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://your-external-blog-link.com" target="_blank" class="btn-book">Go to Blog</a>
             </div>
         </section>
 
@@ -364,11 +353,22 @@
         <div class="social-links">
             <a href="github.com" target="_blank"><i class="fab fa-github"></i></a>
             <a href="mailto:pinkeliteva@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <!-- Updated YouTube Channel Link -->
+            <a href="https://www.youtube.com/@ClarityInOrder" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
-        <p>Email: pinkeliteva@gmail.com | Book: calendly.com</p>
+        <p>Email: pinkeliteva@gmail.com | Book: https://calendly.com/pinkelitestudio</p>
         <p>© 2025 Rhina Delgado. All rights reserved.</p>
     </footer>
 
+    <!-- HUBSPOT CHAT WIDGET CODE SNIPPET START -->
+    <!-- 
+        *** IMPORTANT ***
+        You must paste your unique HubSpot Embed script here, just before the closing </body> tag.
+        It typically looks something like this (get the exact code from your HubSpot settings):
+        <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com"></script>
+    -->
+    <!-- HUBSPOT CHAT WIDGET CODE SNIPPET END -->
+
 </body>
 </html>
+
