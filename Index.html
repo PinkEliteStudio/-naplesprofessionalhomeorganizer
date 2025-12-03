@@ -3,83 +3,413 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3 Biblical Principles for Intentional Decluttering | Clarity in Order</title>
+    <title>Faith-Based Home Organizing Naples | Clarity in Order 2025</title>
+    <meta name="description" content="Declutter your mind, home, and calling with biblical peace. Free 3-Day Challenge PDF + luxury services for Christian women in Naples, FL.">
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* --- COPY CSS FROM INDEX.HTML HERE FOR BLOG POST STYLING --- */
+        /* --- Color Variables --- */
         :root {
             --gold: #C0A04C; 
-            --rose-pink: #A87D8E; 
-            --light-blush: #F5EAEF; 
+            --rose-pink: #A87D8E; /* Deeper, Elegant Rose */
+            --light-blush: #F5EAEF; /* Muted Light Blush */
+            --light-blue: #EAEFF5; 
             --navy: #1A2A44;
             --white: #FFFFFF;
             --text: #333;
         }
+        
+        /* --- Base & Typography --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; background: var(--white); color: var(--text); line-height: 1.7; padding-top: 50px; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
-        h1 { font-size: 2.8rem; }
-        h2 { font-size: 2rem; margin-top: 2rem; }
-        p { font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 300; }
-        .blog-container { max-width: 800px; margin: auto; padding: 0 5%; }
-        .blog-meta { font-size: 0.9rem; color: #777; margin-bottom: 2rem; border-bottom: 2px solid var(--light-blush); padding-bottom: 1rem; }
-        .blog-meta i { margin-right: 5px; color: var(--gold); }
-        .quote { 
-            font-family: 'Playfair Display', serif; font-style: italic; 
-            border-left: 5px solid var(--rose-pink); padding-left: 1.5rem; 
-            margin: 2rem 0; font-size: 1.3rem;
-            color: var(--navy);
+        body { font-family: 'Lato', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; }
+        h1 { font-size: 3.8rem; line-height: 1.1; }
+        h2 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+        h3 { font-size: 1.4rem; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 0.5px; text-transform: none; color: var(--navy); }
+        p { font-size: 1.1rem; margin-bottom: 1.2rem; line-height: 1.6; font-weight: 300; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* --- Header & Navigation --- */
+        header {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            padding: 1rem 0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
         }
-        .back-link { display: block; margin-top: 3rem; text-align: center; }
-        .btn-book {
+        nav { max-width: 1400px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 2.4rem; color: var(--rose-pink); font-weight: 700; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-weight: 500; position: relative; padding-bottom: 5px; font-size: 1rem; transition: color .3s; }
+        .nav-links a:hover { color: var(--rose-pink); }
+        .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--rose-pink); transition: .4s; }
+        .nav-links a:hover::after { width: 100%; }
+        
+        /* --- Buttons --- */
+        .btn-book, .btn-optin {
             background: var(--rose-pink); color: white; padding: 0.8rem 2rem; border-radius: 5px; 
             font-weight: 600; box-shadow: 0 8px 25px rgba(168,125,142,0.4); transition: .4s;
             display: inline-block; text-align: center;
             font-size: 1rem; letter-spacing: 1px;
             text-transform: uppercase;
         }
-        .btn-book:hover { background: var(--navy); transform: translateY(-3px); }
-        footer { background: var(--navy); color: white; padding: 40px 5%; text-align: center; margin-top: 50px; }
-        .social-links a { color: white; font-size: 1.5rem; margin: 0 0.8rem; opacity: 0.7; transition: .4s; }
-        /* --- END OF CSS COPY --- */
+        .btn-book:hover, .btn-optin:hover { background: var(--navy); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26,42,68,0.3); }
+        
+        /* --- Hero Section --- */
+        .hero {
+            height: 90vh; 
+            min-height: 600px;
+            background: linear-gradient(rgba(26, 42, 68, 0.45), rgba(26, 42, 68, 0.55)), url('hero-bg.jpg') center/cover no-repeat fixed; 
+            display: flex; align-items: center; justify-content: center; text-align: center;
+            position: relative;
+            padding: 120px 5%;
+        }
+        .hero-content h1 { color: var(--white); }
+        .hero-content p { color: #f0f0f0; font-size: 1.3rem; margin-bottom: 1rem; }
+        .bible {
+            font-family: 'Playfair Display', serif;
+            font-style: italic; font-size: 1.2rem;
+            background: rgba(255,255,255,0.85);
+            padding: 1.2rem 2.5rem;
+            border-left: 8px solid var(--gold);
+            display: inline-block;
+            border-radius: 5px;
+            margin: 1.5rem 0 2.5rem 0;
+            color: var(--navy);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* --- General Section Styling --- */
+        section { padding: 100px 5%; max-width: 1400px; margin: auto; } 
+        .section-title {
+            text-align: center; font-size: 2.8rem; margin-bottom: 2rem; position: relative; color: var(--navy);
+        }
+        .section-title::after {
+            content: ''; position: absolute; bottom: -15px; left: 50%;
+            transform: translateX(-50%); width: 100px; height: 3px;
+            background: var(--gold); border-radius: 3px;
+        }
+        
+        /* --- Optin Section --- */
+        .optin-section { background: var(--light-blush); padding: 80px 5%; text-align: center; }
+        .optin-section h2 { color: var(--rose-pink); }
+        .optin-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+            align-items: center; max-width: 1000px; margin: auto;
+        }
+        .optin-form { background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border: 1px solid var(--rose-pink); }
+        .optin-form input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        
+        /* --- About Section --- */
+        #about { background: var(--light-blush); }
+        .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+        .about-img img {
+            width: 350px; height: 450px; object-fit: cover;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            border: 10px solid var(--white); 
+            box-shadow: 0 15px 40px rgba(168,125,142,0.2);
+        }
+        .your-name {
+            font-size: 3.5rem; font-family: 'Playfair Display', serif; font-weight: 700;
+            color: var(--rose-pink); margin: 0.5rem 0 1rem;
+        }
+
+        /* --- Journey/Services Section (Luxury Cards) --- */
+        .journey-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem; margin-top: 3rem;
+        }
+        .journey-card {
+            background: var(--light-blue); 
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-bottom: 6px solid var(--rose-pink); 
+            transition: all .5s ease;
+        }
+        .journey-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); 
+            background: var(--white); 
+        }
+        .journey-card i { 
+            font-size: 3rem; 
+            color: var(--gold); 
+            margin-bottom: 1rem;
+            transition: color .5s;
+        }
+        .journey-card:hover i { color: var(--rose-pink); }
+        .journey-card h3 { color: var(--navy); margin-bottom: 0.8rem; }
+        .journey-card p { font-size: 1rem; margin-bottom: 0; }
+        .journey-section-button { text-align:center; margin-top:3rem; }
+        
+        /* --- YouTube Section --- */
+        .youtube-embed { margin: 2rem 0; text-align: center; }
+        .youtube-embed iframe {
+            width: 100%; max-width: 800px; height: 450px;
+            border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border: 2px solid var(--light-blush);
+        }
+        
+        /* --- Pricing Cards --- */
+        .cards-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem; margin-top: 3rem;
+        }
+        .card {
+            background: white;
+            border-radius: 10px; overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            transition: .4s;
+            border: 1px solid var(--light-blush);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .card-header { padding: 2rem 1.5rem; text-align: center; background: var(--navy); color: white; }
+        .card-header h3 { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--gold); }
+        .card-header .price { font-size: 3rem; font-weight: 700; color: var(--white); }
+        .card-body { padding: 1.5rem; }
+        .card-body li {
+            position: relative; padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            list-style: none;
+        }
+        .card-body li::before {
+            content: "\f00c"; font-family: "Font Awesome 6 Free";
+            font-weight: 900; color: var(--rose-pink);
+            position: absolute; left: 0; top: 0;
+        }
+        .card-footer { padding: 1.5rem; text-align: center; }
+
+        /* --- Blog Section --- */
+        #blog { padding-top: 60px; }
+        .blog-post { 
+            margin-bottom: 2.5rem; 
+            border-bottom: 2px solid var(--light-blush); 
+            padding-bottom: 2.5rem; 
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        .blog-post:last-child { border-bottom: none; }
+        .blog-post h3 a { color: var(--navy); transition: color .3s; }
+        .blog-post h3 a:hover { color: var(--rose-pink); }
+        .blog-meta { font-size: 0.9rem; color: #777; margin-bottom: 0.8rem; }
+        .blog-meta i { margin-right: 5px; color: var(--gold); }
+        
+        /* --- Footer --- */
+        footer { background: var(--navy); color: white; padding: 50px 5%; text-align: center; }
+        .social-links a { color: white; font-size: 2rem; margin: 0 1rem; opacity: 0.8; transition: .4s; }
+        .social-links a:hover { opacity: 1; color: var(--gold); }
+        footer p { margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8; }
+
+        /* --- Media Queries --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 3rem; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-img img { margin: auto; }
+            .your-name { font-size: 3rem; }
+            .youtube-embed iframe { height: 350px; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            nav { flex-direction: column; gap: 1rem; }
+            .nav-links { margin-top: 0.5rem; gap: 1rem; }
+            .optin-grid { grid-template-columns: 1fr; }
+            .hero { padding-top: 150px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .youtube-embed iframe { height: 250px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="blog-container">
-        <header style="text-align: center; margin-bottom: 2rem;">
-            <h1>3 Biblical Principles for Intentional Decluttering</h1>
-        </header>
+    <header>
+        <nav>
+            <div class="logo">Clarity in Order</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#journey">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="Challenge_Folder.pdf" target="_blank" style="color: var(--rose-pink); font-weight: 700;">Free Challenge</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="blog-meta">
-            <i class="fas fa-calendar-alt"></i> December 3, 2025 | <i class="fas fa-tag"></i> Faith, Declutter
-        </div>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Clarity in Order: Faith-Fueled Home Organizing in Naples, FL</h1>
+                <p>Declutter your mind, home, and calling with biblical principles.</p>
+                <div class="bible">"Let all things be done decently and in order. —1 Cor 14:40"</div>
+                <a href="Challenge_Folder.pdf" target="_blank" class="btn-optin">Download Free 3-Day Challenge PDF</a>
+            </div>
+        </section>
 
-        <p>For the Christian woman, decluttering is not just a chore—it’s a spiritual discipline. It’s an act of **good stewardship** and a path to peace, allowing us to align our physical environment with the calling God has placed on our lives. In this post, we explore three scriptural principles that transform the way we approach our possessions.</p>
+        <section class="optin-section">
+            <div class="optin-grid">
+                <div>
+                    <h2>Ready to organize your calling?</h2>
+                    <p>Get instant access to my **Free 3-Day Biblical Declutter Challenge** PDF and monthly biblical organizing tips sent to your inbox.</p>
+                    <a href="Challenge_Folder.pdf" target="_blank" class="btn-optin" style="width: 100%;">Download Now (It's Free!)</a>
+                </div>
+                <div class="optin-form">
+                    <h3>Join the Community Waitlist</h3>
+                    <p>Be the first to get updates on the upcoming community and exclusive resources.</p>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit" class="btn-optin" style="width: 100%;">Join Now</button>
+                </div>
+            </div>
+        </section>
         
-        <h2>Principle 1: Stewardship (Luke 16:10)</h2>
-        <p>The core concept of stewardship reminds us that everything we own—our time, our talents, and our possessions—is a gift from God. Being faithful in small things, including the maintenance of our homes, demonstrates our readiness for greater responsibility.</p>
-        <div class="quote">
-            "One who is faithful in a very little is also faithful in much, and one who is dishonest in a very little is also dishonest in much." — Luke 16:10 (ESV)
-        </div>
-        <p>When you declutter with stewardship in mind, you stop focusing on *what you are losing* and start focusing on *how you can use your resources wisely*. This means donating items generously and keeping only what serves your purpose and brings glory to God.</p>
+        <section id="about">
+            <h2 class="section-title">Meet Rhina Delgado</h2> 
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="rhina-delgado.jpg" alt="Rhina Delgado, Professional Organizer Naples FL">
+                </div>
+                <div class="about-text">
+                    <div class="your-name">Rhina Delgado</div>
+                    <p>I help busy Christian women in Naples, FL turn household chaos into God-given calling. My organizing services blend practical, luxury decluttering hacks with faith-fueled principles rooted in scripture.</p>
+                    <p>We work together to create systems that last, giving you peace of mind and the physical space to focus on what truly matters: your family, your faith, and your purpose. **Your order is my ministry.**</p>
+                    <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Schedule a Clarity Call</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="journey">
+            <h2 class="section-title">Your Journey to Lasting Order</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">We go beyond bins and labels, tackling the root of clutter to achieve a luxurious, faith-fueled life of purpose.</p>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Mindset Reset</h3>
+                    <p>We address the emotional and spiritual roots of clutter using biblical truths, creating mental space for growth (Phil 4:8).</p>
+                </div>
+                <div class="journey-card">
+                    <i class="fas fa-box-open"></i>
+                    <h3>Bespoke Systems</h3>
+                    <p>Implementing elegant, functional organizing systems designed specifically for your Naples home and busy, luxurious family life.</p>
+                </div>
+                <div class="journey-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Calling & Legacy</h3>
+                    <p>Reclaim your time and energy from household tasks to fully step into your God-given purpose and leave a powerful legacy (Eph 2:10).</p>
+                </div>
+            </div>
+            <div class="journey-section-button">
+                <a href="#pricing" class="btn-book">Explore Luxury Services & Pricing</a>
+            </div>
+        </section>
 
-        <h2>Principle 2: Order and Decency (1 Corinthians 14:40)</h2>
-        <p>The mandate to "let all things be done decently and in order" isn't just about church services; it's a blueprint for our lives. Chaos in the home can lead to chaos in the mind and spirit. Order fosters the peace needed for prayer, Bible study, and focused ministry.</p>
-        <p>We work together to create systems that are **sustainable** and **elegant**. This is where the luxury aspect of our service comes in—creating a beautiful and functional environment that reflects the peace of God.</p>
+        <section id="youtube">
+            <h2 class="section-title">Watch My YouTube Channel</h2>
+            <p style="text-align: center;">Tips, testimonies, and faith-fueled organizing inspiration from my channel.</p>
+            <div class="youtube-embed">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://www.youtube.com/@ClarityInOrder" target="_blank" class="btn-book" style="background: #FF0000;">Visit My YouTube Channel <i class="fab fa-youtube"></i></a>
+            </div>
+        </section>
 
-        <h2>Principle 3: Focus on the Eternal (Colossians 3:2)</h2>
-        <p>Finally, decluttering should align with the command to "Set your minds on things that are above, not on things that are on earth." Excess material possessions can distract us and tie our hearts to temporary things. By simplifying your home, you free up mental bandwidth to focus on your spiritual calling.</p>
+        <section id="pricing">
+            <h2 class="section-title">Luxury Services & Investment</h2>
+            <p style="text-align: center;">Bespoke services designed to deliver lasting clarity and peace of mind.</p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Virtual Clarity Session</h3>
+                        <div class="price">$99</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>1-hour virtual consultation</li>
+                            <li>Personalized action plan</li>
+                            <li>DIY strategy guide</li>
+                            <li>Mindset & faith resource access</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Book Session</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>The Blueprint Course</h3>
+                        <div class="price">$497</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Full digital course access</li>
+                            <li>Trello masterclass for systems</li>
+                            <li>Community access (Future Feature)</li>
+                            <li>Lifetime updates included</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn-book">Learn More</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>VIP Naples In-Home</h3>
+                        <div class="price">Custom</div>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Hands-on organizing & decluttering</li>
+                            <li>Custom storage sourcing & install</li>
+                            <li>Full implementation & luxury styling</li>
+                            <li>Personalized spiritual mentorship</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://calendly.com/pinkelitestudio" target="_blank" class="btn-book">Consult Needed</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p>Ready to start your journey? Download the Free 3-Day Challenge or book a Clarity Call to apply these principles to your Naples home today.</p>
+        <section id="blog">
+            <h2 class="section-title">Latest on the Blog</h2>
+            <p style="text-align: center;">Faith-fueled tips for bringing order to your home and purpose.</p>
+            <div style="margin-top: 3rem;">
+                
+                <div class="blog-post">
+                    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> December 3, 2025 | <i class="fas fa-tag"></i> Faith, Declutter</div>
+                    <h3><a href="post1-biblical-principles.html">3 Biblical Principles for Intentional Decluttering</a></h3>
+                    <p>Discover how the principle of 'good stewardship' (Luke 16:10) can completely transform your approach to the possessions in your home and mind. It's not about less, but about intentionality.</p>
+                </div>
 
-        <div class="back-link">
-            <a href="index.html#blog" class="btn-book">← Back to All Posts</a>
-        </div>
-    </div>
+                <div class="blog-post">
+                    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> November 28, 2025 | <i class="fas fa-tag"></i> Systems, Home</div>
+                    <h3><a href="post2-command-center.html">The Elegant Family Command Center: Function Meets Luxury</a></h3>
+                    <p>Learn how to design a central hub for your busy family that is both aesthetically stunning and supremely functional. Luxury organizing means systems that work effortlessly.</p>
+                </div>
+
+                <div class="blog-post">
+                    <div class="blog-meta"><i class="fas fa-calendar-alt"></i> November 20, 2025 | <i class="fas fa-tag"></i> Calling, Mindset</div>
+                    <h3><a href="post3-mental-clutter.html">Reclaiming Your Calling: The Hidden Cost of Mental Clutter</a></h3>
+                    <p>Your physical space mirrors your mental state. We discuss how a clear home clears the path for you to fully embrace your spiritual gifts and purpose.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://your-external-blog-link.com" target="_blank" class="btn-book">View All Posts</a>
+            </div>
+        </section>
+
+    </main>
 
     <footer id="contact">
         <div class="social-links">
@@ -91,5 +421,5 @@
         <p>© 2025 Clarity in Order by Rhina Delgado. All rights reserved.</p>
     </footer>
 
-</body>
+    </body>
 </html>
