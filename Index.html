@@ -100,8 +100,14 @@
             display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
             align-items: center; max-width: 1000px; margin: auto;
         }
-        .optin-form { background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border: 1px solid var(--rose-pink); }
-        .optin-form input { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+        /* Custom styling for the form container to match your design */
+        .hubspot-form-container { 
+            padding: 0 2.5rem 2.5rem; 
+            border-radius: 0 0 10px 10px; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1); 
+            border: 1px solid var(--rose-pink);
+            background: white;
+        }
         
         /* --- About Section --- */
         #about { background: var(--light-blush); }
@@ -263,20 +269,24 @@
                     <a href="Challenge_Folder.pdf" target="_blank" class="btn-optin" style="width: 100%;">Download Now (It's Free!)</a>
                 </div>
                 
-                <div class="optin-form" style="border: none; box-shadow: none; background: transparent; padding: 0;">
-                    <h3 style="background: white; padding: 2.5rem 2.5rem 0.5rem; border-radius: 10px 10px 0 0; margin-bottom: 0;">Join the Community Waitlist</h3>
-                    <p style="background: white; padding: 0 2.5rem 1.5rem; border-radius: 0 0 10px 10px; margin-bottom: 0;">Be the first to get updates on the upcoming community and exclusive resources.</p>
+                <div style="border: none; box-shadow: none; background: transparent; padding: 0;">
+                    <h3 style="background: white; padding: 2.5rem 2.5rem 0.5rem; border-radius: 10px 10px 0 0; margin-bottom: 0;">Newsletter & Event Updates</h3>
+                    <p style="background: white; padding: 0 2.5rem 1.5rem; border-radius: 0 0 10px 10px; margin-bottom: 0;">Sign up to get the latest newsletter, exclusive events, and ministry updates delivered professionally to your inbox.</p>
                     
-                    <div id="hubspotFormContainer" style="background: white; padding: 0 2.5rem 2.5rem; border-radius: 0 0 10px 10px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); border: 1px solid var(--rose-pink);">
-                        
-                        <div style="text-align: center; color: var(--rose-pink); font-style: italic; font-size: 0.9rem;">
-                            ***
-                            <p>Please log into HubSpot, create a simple Name and Email form, and paste the embed code snippet here to ensure leads are captured directly into your CRM.</p>
-                            ***
+                    <div class="hubspot-form-container">
+                        <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.com/forms/v2.js"></script>
+                        <script>
+                          hbspt.forms.create({
+                            region: "na2",
+                            portalId: "242889484",
+                            formId: "YOUR_FORM_GUID_HERE" // **NOTE: REPLACE THIS WITH YOUR ACTUAL FORM GUID (e.g., c924b17f-1d8f-43b6-9762-b91c0e3a5a41)**
+                          });
+                        </script>
+                        <div style="text-align: center; color: var(--rose-pink); font-style: italic; font-size: 0.9rem; margin-top: 1rem;">
+                            *** (Ensure the `formId` above is correct for your HubSpot form!) ***
                         </div>
-
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
         
@@ -429,6 +439,6 @@
         <p>© 2025 Clarity in Order by Rhina Delgado. All rights reserved. | **Luxury Home Organizing Naples, FL**</p>
     </footer>
 
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/YOUR_HUBSPOT_ID.js"></script>
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/242889484.js"></script>
     </body>
 </html>
